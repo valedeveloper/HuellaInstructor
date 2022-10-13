@@ -1,0 +1,12 @@
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.csproj.AssemblyReference.cache
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.CapaVistas.FrmAgregarUsuario.resources
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.Properties.Resources.resources
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.csproj.GenerateResource.cache
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.csproj.CoreCompileInputs.cache
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\bin\Debug\SistemaAsistencia.exe.config
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\bin\Debug\SistemaAsistencia.exe
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\bin\Debug\SistemaAsistencia.pdb
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.exe
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.pdb
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.FrmLogin.resources
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.CapaVistas.ModificarUsuario.resources

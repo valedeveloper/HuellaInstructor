@@ -11,29 +11,19 @@ using System.Windows.Forms;
 using SistemaAsistencia.CapaDatos;
 using SistemaAsistencia.CapaModelo;
 
+
 namespace SistemaAsistencia.CapaVistas
 {
-    public partial class FrmAgregarUsuario : Form
+    public partial class FrmModificarUsuario : Form
     {
-        public FrmAgregarUsuario()
+        public FrmModificarUsuario()
         {
             InitializeComponent();
         }
+        Byte[] arrayImagenUser;
         ClsUsuarioBD agregarDB = new ClsUsuarioBD();
 
-        Byte[] arrayImagenUser;
-        private void FrmAgregarUsuario_Load(object sender, EventArgs e)
-        {
-
-            ClsConexion conectar = new ClsConexion();
-            conectar.Conectar();
-            //En el evento Cargar, lleno el dataView
-        }
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(this.txtName.Text))
             {
@@ -93,12 +83,15 @@ namespace SistemaAsistencia.CapaVistas
                                         }
                                         else
                                         {
-                                            agregarDB.AgregarUsuario_db(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+                                            CapaModelo.ClsUsuario clsUser = new CapaModelo.ClsUsuario();
+                                            clsUser.ModificarUsuario_db(int.Parse(this.labelId.Text), this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+
 
                                             CapaVistas.FrmUsuarios frmUser = new CapaVistas.FrmUsuarios();
                                             DataTable dataUser = new DataTable();
                                             dataUser = agregarDB.LlenarUsuarios();
                                             frmUser.dataUsuario.DataSource = dataUser;
+
 
                                             frmUser.Show();
                                             this.Hide();
@@ -112,7 +105,13 @@ namespace SistemaAsistencia.CapaVistas
                     }
                 }
             }
+
+
+
+
+
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             ClsOpenDialogPicture abrirCadena = new ClsOpenDialogPicture(this.txtFile.Text, this.pictureUser.Image);
@@ -127,11 +126,6 @@ namespace SistemaAsistencia.CapaVistas
             }
             ClsImage imagenArray = new ClsImage();
             arrayImagenUser = imagenArray.ImageToByteArray(this.pictureUser.Image);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

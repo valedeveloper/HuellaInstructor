@@ -23,10 +23,10 @@ namespace SistemaAsistencia
         {
             DataTable dt = new DataTable();
             ClsUsuario validarExistencia = new ClsUsuario();
-            dt=validarExistencia.Loguearse(this.txtCedula.Text, this.txtPassword.Text);
-    
+            dt = validarExistencia.Loguearse(this.txtCedula.Text, this.txtPassword.Text);
 
-            if (dt.Rows.Count==0)
+
+            if (dt.Rows.Count == 0)
             {
                 MessageBox.Show("No es Usuario");
             }
@@ -34,19 +34,19 @@ namespace SistemaAsistencia
             {
                 string rolUser = dt.Rows[0][0].ToString();
                 string estadoUser = dt.Rows[0][1].ToString();
-                if (estadoUser=="Activo")
+                if (estadoUser == "Activo")
                 {
-                    if(rolUser=="ADMIN")
+                    if (rolUser == "ADMIN")
                     {
                         MessageBox.Show("Eres Admin");
-                        FrmAgregarUsuario agregar = new FrmAgregarUsuario();
-                        agregar.Show();
+                        CapaVistas.FrmUsuarios usuarios = new CapaVistas.FrmUsuarios();
+                        usuarios.Show();
                         this.Hide();
-                        
+
                     }
                     else
                     {
-                        if(rolUser=="GRABADOR")
+                        if (rolUser == "GRABADOR")
                         {
                             MessageBox.Show("Eres digitador");
                         }
@@ -61,7 +61,7 @@ namespace SistemaAsistencia
                     MessageBox.Show("No tiene permiso");
                 }
             }
-            
+
         }
     }
 }

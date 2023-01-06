@@ -52,17 +52,25 @@
     <Compile Include="CapaModelo\ClsOpenDialogPicture.cs" />
     <Compile Include="CapaModelo\ClsPersona.cs" />
     <Compile Include="CapaModelo\ClsUsuario.cs" />
+    <Compile Include="CapaModelo\ClsValidarCorreo.cs" />
+    <Compile Include="CapaModelo\ValidarPassword.cs" />
     <Compile Include="CapaVistas\FrmAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CapaVistas\FrmAgregarUsuario.Designer.cs">
       <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaVistas\ModificarUsuario.cs">
+    <Compile Include="CapaVistas\FrmModificarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaVistas\ModificarUsuario.Designer.cs">
-      <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    <Compile Include="CapaVistas\FrmModificarUsuario.Designer.cs">
+      <DependentUpon>FrmModificarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaVistas\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -80,8 +88,11 @@
     <EmbeddedResource Include="CapaVistas\FrmAgregarUsuario.resx">
       <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CapaVistas\ModificarUsuario.resx">
-      <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="CapaVistas\FrmModificarUsuario.resx">
+      <DependentUpon>FrmModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaVistas\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

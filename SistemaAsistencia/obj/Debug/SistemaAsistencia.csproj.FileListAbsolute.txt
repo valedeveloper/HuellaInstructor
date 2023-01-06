@@ -9,4 +9,5 @@ C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\bin\Debug\SistemaAsi
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.exe
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.pdb
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.FrmLogin.resources
-C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.CapaVistas.ModificarUsuario.resources
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.CapaVistas.FrmUsuarios.resources
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.CapaVistas.FrmModificarUsuario.resources

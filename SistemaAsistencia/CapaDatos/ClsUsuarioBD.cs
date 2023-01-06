@@ -13,13 +13,22 @@ namespace SistemaAsistencia.CapaDatos
     public class ClsUsuarioBD
     {
 
+        public DataTable LlenarUsuarios()
+        {
+            ClsConexion conexion = new ClsConexion();
+            string readLlenar = "SELECT * FROM USUARIOS";
+            SqlCommand sql = new SqlCommand(readLlenar, conexion.Conectar());
 
+            SqlDataAdapter sqlData = new SqlDataAdapter(sql);
+            DataTable dt = new DataTable();
+            sqlData.Fill(dt);
+            return dt;
+        }
         
 
         public DataTable Loguearse_db(string Cedula, string Password)
         {
             ClsConexion conexion = new ClsConexion();
-            conexion.Conectar();
             string comando = "SELECT Rol_Usuario, Estado_Usuario FROM USUARIOS WHERE Cedula_Usuario=@Cedula_Usuario AND Password_Usuario=@Password_Usuario";
             SqlCommand sql = new SqlCommand(comando,conexion.Conectar());
 
@@ -47,13 +56,13 @@ namespace SistemaAsistencia.CapaDatos
                 comandoInsertaUsuario.Parameters.AddWithValue("@Cedula_Usuario", Cedula);
                 comandoInsertaUsuario.Parameters.AddWithValue("@Nombre_Usuario", Nombre);
                 comandoInsertaUsuario.Parameters.AddWithValue("@Apellido_Usuario", Apellido);
-                comandoInsertaUsuario.Parameters.AddWithValue("Correo_Usuario", Correo);
-                comandoInsertaUsuario.Parameters.AddWithValue("Celular_Usuario", Celular);
-                comandoInsertaUsuario.Parameters.AddWithValue("Password_Usuario", Password);
-                comandoInsertaUsuario.Parameters.AddWithValue("Rol_Usuario", Rol_Usuario);
-                comandoInsertaUsuario.Parameters.AddWithValue("Estado_Usuario", Estado);
-                comandoInsertaUsuario.Parameters.AddWithValue("Direccion_Imagen", Direccion_Foto);
-                comandoInsertaUsuario.Parameters.AddWithValue("Photo_Usuario", Photo);
+                comandoInsertaUsuario.Parameters.AddWithValue("@Correo_Usuario", Correo);
+                comandoInsertaUsuario.Parameters.AddWithValue("@Celular_Usuario", Celular);
+                comandoInsertaUsuario.Parameters.AddWithValue("@Password_Usuario", Password);
+                comandoInsertaUsuario.Parameters.AddWithValue("@Rol_Usuario", Rol_Usuario);
+                comandoInsertaUsuario.Parameters.AddWithValue("@Estado_Usuario", Estado);
+                comandoInsertaUsuario.Parameters.AddWithValue("@Direccion_Imagen", Direccion_Foto);
+                comandoInsertaUsuario.Parameters.AddWithValue("@Photo_Usuario", Photo);
 
                 comandoInsertaUsuario.ExecuteNonQuery();
         }
@@ -61,12 +70,13 @@ namespace SistemaAsistencia.CapaDatos
 
 
 
-        public void ModificarUsuario_db(string Cedula, string Nombre, string Apellido, string Correo, string Celular, string Password, string Rol_Usuario, string Estado, string Direccion_Foto, byte[] Photo)
+        public void ModificarUsuario_db(int Id,string Cedula, string Nombre, string Apellido, string Correo, string Celular, string Password, string Rol_Usuario, string Estado, string Direccion_Foto, byte[] Photo)
         {
             ClsConexion conectar = new ClsConexion();
             conectar.Conectar();
-            string consultaModificar = "UPDATE USUARIOS SET Cedula_Usuario=@Cedula_Usuario,Nombre_Usuario=@Nombre_Usuario,Apellido_Usuario=@Apellido_Usuario,Correo_Usuario=@Correo_Usuario,Celular_Usuario=@Celular_Usuario,Password_Usuario=@Password_Usuario,Rol_Usuario=@Rol_Usuario,Estado_Usuario=@Estado_Usuario,Direccion_Imagen=@Direccion_Image,Photo_Usuario=@Photo_Usuario WHERE Cedula_Usuario=@Cedula_Usuario";
+            string consultaModificar = "UPDATE USUARIOS SET Cedula_Usuario=@Cedula_Usuario,Nombre_Usuario=@Nombre_Usuario,Apellido_Usuario=@Apellido_Usuario,Correo_Usuario=@Correo_Usuario,Celular_Usuario=@Celular_Usuario,Password_Usuario=@Password_Usuario,Rol_Usuario=@Rol_Usuario,Estado_Usuario=@Estado_Usuario,Direccion_Imagen=@Direccion_Image,Photo_Usuario=@Photo_Usuario WHERE Id_Usuario=@Id_Usuario";
             SqlCommand sql = new SqlCommand(consultaModificar,conectar.Conectar());
+            sql.Parameters.AddWithValue("@Id_Usuario",Id);
             sql.Parameters.AddWithValue("@Cedula_Usuario", Cedula);
             sql.Parameters.AddWithValue("@Nombre_Usuario", Nombre);
             sql.Parameters.AddWithValue("@Apellido_Usuario", Apellido);

@@ -58,7 +58,7 @@ namespace SistemaAsistencia
                 }
                 else
                 {
-                    MessageBox.Show("No tiene permiso");
+                    MessageBox.Show("No tienes permiso");
                 }
             }
 

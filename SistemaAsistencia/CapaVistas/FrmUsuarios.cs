@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaAsistencia.CapaVistas
@@ -41,8 +36,12 @@ namespace SistemaAsistencia.CapaVistas
         private void dataUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (dataUsuario.SelectedRows.Count > 0)
-            {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
                 CapaVistas.FrmModificarUsuario modificarUser = new CapaVistas.FrmModificarUsuario();
 
 
@@ -60,19 +59,7 @@ namespace SistemaAsistencia.CapaVistas
                 byte[] photoByte = (byte[])dataUsuario.CurrentRow.Cells[10].Value;
                 Image imagenUserPhoto = imageUser.byteArrayToImage(photoByte);
                 modificarUser.pictureUser.Image = imagenUserPhoto;
-            }
-            else
-            {
-                MessageBox.Show("Escoja una celda");
-            }
-
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CapaVistas.FrmModificarUsuario modificarUser = new CapaVistas.FrmModificarUsuario();
-            modificarUser.Show();
+                modificarUser.Show();
         }
     }
 }

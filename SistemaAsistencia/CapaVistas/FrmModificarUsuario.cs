@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using SistemaAsistencia.CapaDatos;
+﻿using SistemaAsistencia.CapaDatos;
 using SistemaAsistencia.CapaModelo;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 
 namespace SistemaAsistencia.CapaVistas
@@ -20,11 +13,16 @@ namespace SistemaAsistencia.CapaVistas
         {
             InitializeComponent();
         }
-        Byte[] arrayImagenUser;
+
         ClsUsuarioBD agregarDB = new ClsUsuarioBD();
+        ClsImage image = new ClsImage();
+        Byte[] arrayImagenUser;
+
+
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            arrayImagenUser = image.ImageToByteArray(pictureUser.Image);
             if (string.IsNullOrEmpty(this.txtName.Text))
             {
                 MessageBox.Show("Digite el Nombre de usuario", "Notificación");

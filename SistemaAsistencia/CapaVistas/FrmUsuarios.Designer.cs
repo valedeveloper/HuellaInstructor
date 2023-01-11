@@ -36,6 +36,7 @@ namespace SistemaAsistencia.CapaVistas
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.dataUsuario = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sistema_de_AsistenciaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsuario)).BeginInit();
@@ -84,11 +85,22 @@ namespace SistemaAsistencia.CapaVistas
             this.dataUsuario.TabIndex = 3;
             this.dataUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataUsuario_CellContentClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(72, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 29);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Usuario";
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataUsuario);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -102,6 +114,7 @@ namespace SistemaAsistencia.CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsuario)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -112,5 +125,6 @@ namespace SistemaAsistencia.CapaVistas
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         public System.Windows.Forms.DataGridView dataUsuario;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -10,9 +10,7 @@ namespace SistemaAsistencia.CapaModelo
 {
     public class ClsUsuario
     {
-        public ClsUsuario()
-        {
-        }
+        
 
         public string Cedula { get; set; }
         public string Nombre { get; set; }
@@ -71,9 +69,6 @@ namespace SistemaAsistencia.CapaModelo
         {
             ClsUsuarioBD userDb = new ClsUsuarioBD();
             userDb.ModificarUsuario_db(id,cedula, nombre, apellido, correo, celular, password, rol_Usuario, estado, direccion_Foto, photo);
-
-
-
         }
     }
 }

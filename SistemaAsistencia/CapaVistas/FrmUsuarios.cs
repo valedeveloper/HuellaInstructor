@@ -55,8 +55,8 @@ namespace SistemaAsistencia.CapaVistas
                 modificarUser.combotxtRol.Text = dataUsuario.CurrentRow.Cells[7].Value.ToString();
                 modificarUser.comboEstado.Text = dataUsuario.CurrentRow.Cells[8].Value.ToString();
                 modificarUser.txtFile.Text = dataUsuario.CurrentRow.Cells[9].Value.ToString();
-
                 byte[] photoByte = (byte[])dataUsuario.CurrentRow.Cells[10].Value;
+
                 Image imagenUserPhoto = imageUser.byteArrayToImage(photoByte);
                 modificarUser.pictureUser.Image = imagenUserPhoto;
                 modificarUser.Show();

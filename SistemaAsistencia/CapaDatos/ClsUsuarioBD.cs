@@ -59,6 +59,7 @@ namespace SistemaAsistencia.CapaDatos
             comandoInsertaUsuario.Parameters.AddWithValue("@Photo_Usuario", Photo);
 
             comandoInsertaUsuario.ExecuteNonQuery();
+
         }
 
 

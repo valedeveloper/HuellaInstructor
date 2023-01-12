@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapaDatos\ClsConexion.cs" />
+    <Compile Include="CapaDatos\ClsPersonaBD.cs" />
     <Compile Include="CapaDatos\ClsUsuarioBD.cs" />
     <Compile Include="CapaModelo\ClsImage.cs" />
     <Compile Include="CapaModelo\ClsOpenDialogPicture.cs" />
@@ -65,6 +66,12 @@
     </Compile>
     <Compile Include="CapaVistas\FrmModificarUsuario.Designer.cs">
       <DependentUpon>FrmModificarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaVistas\FrmPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\FrmPersonas.Designer.cs">
+      <DependentUpon>FrmPersonas.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaVistas\FrmUsuarios.cs">
       <SubType>Form</SubType>

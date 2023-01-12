@@ -299,6 +299,7 @@ namespace SistemaAsistencia.CapaVistas
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmModificarUsuario";
             this.Text = "FrmModificarUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();

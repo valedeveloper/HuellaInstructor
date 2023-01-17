@@ -55,6 +55,12 @@
     <Compile Include="CapaModelo\ClsUsuario.cs" />
     <Compile Include="CapaModelo\ClsValidarCorreo.cs" />
     <Compile Include="CapaModelo\ValidarPassword.cs" />
+    <Compile Include="CapaVistas\FrmAgregarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\FrmAgregarPersona.Designer.cs">
+      <DependentUpon>FrmAgregarPersona.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapaVistas\FrmAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     <Compile Include="CapaVistas\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaVistas\ModificarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\ModificarPersona.Designer.cs">
+      <DependentUpon>ModificarPersona.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,14 +104,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sistema_de_AsistenciaDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapaVistas\FrmAgregarPersona.resx">
+      <DependentUpon>FrmAgregarPersona.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaVistas\FrmAgregarUsuario.resx">
       <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaVistas\FrmModificarUsuario.resx">
       <DependentUpon>FrmModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CapaVistas\FrmPersonas.resx">
+      <DependentUpon>FrmPersonas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaVistas\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaVistas\ModificarPersona.resx">
+      <DependentUpon>ModificarPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

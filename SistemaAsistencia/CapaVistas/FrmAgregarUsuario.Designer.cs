@@ -122,6 +122,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtFile.Name = "txtFile";
             this.txtFile.Size = new System.Drawing.Size(240, 20);
             this.txtFile.TabIndex = 8;
+            this.txtFile.TextChanged += new System.EventHandler(this.txtFile_TextChanged);
             // 
             // button1
             // 
@@ -168,6 +169,7 @@ namespace SistemaAsistencia.CapaVistas
             this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "File :";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtPassword
             // 
@@ -251,6 +253,7 @@ namespace SistemaAsistencia.CapaVistas
             this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureUser.TabIndex = 24;
             this.pictureUser.TabStop = false;
+            this.pictureUser.Click += new System.EventHandler(this.pictureUser_Click);
             // 
             // label3
             // 

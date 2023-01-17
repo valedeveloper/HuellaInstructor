@@ -19,10 +19,9 @@ namespace SistemaAsistencia.CapaVistas
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            CapaModelo.ClsUsuario data = new CapaModelo.ClsUsuario();
-            dt = data.LlenarUsuario();
+            CapaDatos.ClsUsuarioBD data = new CapaDatos.ClsUsuarioBD();
+            dt = data.LlenarUsuarios();
             dataUsuario.DataSource = dt;
-
         }
 
 
@@ -59,6 +58,7 @@ namespace SistemaAsistencia.CapaVistas
 
                 Image imagenUserPhoto = imageUser.byteArrayToImage(photoByte);
                 modificarUser.pictureUser.Image = imagenUserPhoto;
+                modificarUser.arrayImagenUser = photoByte;
                 modificarUser.Show();
         }
     }

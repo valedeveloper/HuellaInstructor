@@ -85,5 +85,19 @@ namespace SistemaAsistencia.CapaDatos
             sql.ExecuteNonQuery();
         }
 
+        public DataTable ValidarCedula_db(string Cedula)
+        {
+            ClsConexion conexion = new ClsConexion();
+            string consultaValidar = "SELECT Id_Usuario FROM USUARIOS WHERE Cedula_Usuario=@Cedula_Usuario";
+            SqlCommand sqlValidar = new SqlCommand(consultaValidar, conexion.Conectar());
+            sqlValidar.Parameters.AddWithValue("@Cedula_Usuario", Cedula);
+
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(sqlValidar);
+            DataTable dataTable = new DataTable();
+            sqlData.Fill(dataTable);
+            return dataTable;
+        }
+
     }
 }

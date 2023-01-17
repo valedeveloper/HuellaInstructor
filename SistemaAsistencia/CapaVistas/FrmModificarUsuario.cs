@@ -16,7 +16,7 @@ namespace SistemaAsistencia.CapaVistas
 
         ClsUsuarioBD agregarDB = new ClsUsuarioBD();
         ClsImage image = new ClsImage();
-        Byte[] arrayImagenUser;
+        public Byte[] arrayImagenUser;
 
 
 
@@ -81,22 +81,30 @@ namespace SistemaAsistencia.CapaVistas
                                         }
                                         else
                                         {
-                                            CapaModelo.ClsUsuario clsUser = new CapaModelo.ClsUsuario();
-                                            clsUser.ModificarUsuario_db(int.Parse(this.labelId.Text), this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+                                            DataTable validacionCedula = new DataTable();
+                                            validacionCedula = agregarDB.ValidarCedula_db(this.txtCedula.Text);
+                                            string idUsuario = validacionCedula.Rows[0][0].ToString();
+                                            if (validacionCedula.Rows.Count== 0 || idUsuario==this.labelId.Text  )
+                                            {
+                                                CapaDatos.ClsUsuarioBD clsUser = new CapaDatos.ClsUsuarioBD();
+                                                clsUser.ModificarUsuario_db(int.Parse(this.labelId.Text), this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
 
 
-                                            CapaVistas.FrmUsuarios frmUser = new CapaVistas.FrmUsuarios();
-                                            DataTable dataUser = new DataTable();
-                                            dataUser = agregarDB.LlenarUsuarios();
-                                            frmUser.dataUsuario.DataSource = dataUser;
+                                                CapaVistas.FrmUsuarios frmUser = new CapaVistas.FrmUsuarios();
+                                                DataTable dataUser = new DataTable();
+                                                dataUser = agregarDB.LlenarUsuarios();
+                                                frmUser.dataUsuario.DataSource = dataUser;
 
 
-                                            frmUser.Show();
-                                            this.Hide();
+                                                frmUser.Show();
+                                                this.Hide();
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Ya existe usuario con esta cédula");
+                                            }
                                         }
                                     }
-
-
                                 }
                             }
                         }

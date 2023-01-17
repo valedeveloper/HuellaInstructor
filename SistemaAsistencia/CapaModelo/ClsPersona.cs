@@ -1,5 +1,5 @@
 ﻿using SistemaAsistencia.CapaDatos;
-
+using System.Data;
 
 namespace SistemaAsistencia.CapaModelo
 {
@@ -18,8 +18,9 @@ namespace SistemaAsistencia.CapaModelo
         private string Estado_Persona { get; set; }
         private string Direccion_Imagen { get; set; }
         private byte[] Photo { get; set; }
+        private int Codigo_Barras { get; set; }
 
-        public ClsPersona(byte[] huellaPersona, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string estado_Persona, string direccion_Imagen, byte[] photo)
+        public ClsPersona(byte[] huellaPersona, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string estado_Persona, string direccion_Imagen, byte[] photo,int codigo_Barras)
         {
             HuellaPersona = huellaPersona;
             Nombre = nombre;
@@ -31,24 +32,35 @@ namespace SistemaAsistencia.CapaModelo
             Estado_Persona = estado_Persona;
             Direccion_Imagen = direccion_Imagen;
             Photo = photo;
+            Codigo_Barras = codigo_Barras;
+
         }
 
-        public void AgregarPersona(byte[] huellaPersona, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string estado_Persona, string direccion_Imagen, byte[] photo)
+        public static DataTable ValidacionPersona(int codigo_Barras) {
+            CapaDatos.ClsPersonaBD clsPersonaBD = new ClsPersonaBD();
+            return clsPersonaBD.Validar_Codigo(codigo_Barras);
+        }
+
+        public static DataTable LlenarDatos()
+        {
+            CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
+            return clsPersona.LlenarDatos();
+        }
+
+        public void AgregarPersona(byte[] huellaPersona, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string estado_Persona, string direccion_Imagen, byte[] photo,int codigo_Barras)
         {
             CapaDatos.ClsPersonaBD clsPersonaB = new ClsPersonaBD();
-            clsPersonaB.AgregarPersona_db(huellaPersona, nombre, apellido, correo, celular, funcionario_Persona, ficha_Persona, estado_Persona, direccion_Imagen, photo);
+            clsPersonaB.AgregarPersona_db(huellaPersona, nombre, apellido, correo, celular, funcionario_Persona, ficha_Persona, direccion_Imagen, photo, codigo_Barras);
         }
 
-        public void ModificarPersona(int id, byte[] huellaPersona, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string estado_Persona, string direccion_Imagen, byte[] photo)
+        public void ModificarPersona(int id, byte[] huellaPersona, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string estado_Persona, string direccion_Imagen, byte[] photo,int codigo_Barras)
         {
             CapaDatos.ClsPersonaBD clsPersonaBD = new ClsPersonaBD();
-            clsPersonaBD.ModificarPersona_db(id, huellaPersona, nombre, apellido, correo, celular, funcionario_Persona, ficha_Persona, estado_Persona, direccion_Imagen, photo);
+            clsPersonaBD.ModificarPersona_db(id, huellaPersona, nombre, apellido, correo, celular, funcionario_Persona, ficha_Persona, direccion_Imagen, photo, codigo_Barras);
         }
 
 
 
-
+   
     }
-
-
 }

@@ -22,8 +22,8 @@ namespace SistemaAsistencia
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            ClsUsuario validarExistencia = new ClsUsuario();
-            dt = validarExistencia.Loguearse(this.txtCedula.Text, this.txtPassword.Text);
+            ClsUsuarioBD validarExistencia = new ClsUsuarioBD();
+            dt = validarExistencia.Loguearse_db(this.txtCedula.Text, this.txtPassword.Text);
 
 
             if (dt.Rows.Count == 0)

@@ -83,7 +83,6 @@ namespace SistemaAsistencia.CapaVistas
             this.dataUsuario.Name = "dataUsuario";
             this.dataUsuario.Size = new System.Drawing.Size(421, 148);
             this.dataUsuario.TabIndex = 3;
-            this.dataUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataUsuario_CellContentClick);
             // 
             // label1
             // 

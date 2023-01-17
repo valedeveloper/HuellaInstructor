@@ -93,19 +93,28 @@ namespace SistemaAsistencia.CapaVistas
                                         }
                                         else
                                         {
-                                            agregarDB.AgregarUsuario_db(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+                                            DataTable validacionCedula = new DataTable();
+                                            validacionCedula=agregarDB.ValidarCedula_db(this.txtCedula.Text);
 
-                                            CapaVistas.FrmUsuarios frmUser = new CapaVistas.FrmUsuarios();
-                                            DataTable dataUser = new DataTable();
-                                            dataUser = agregarDB.LlenarUsuarios();
-                                            frmUser.dataUsuario.DataSource = dataUser;
+                                            if (validacionCedula.Rows.Count == 0)
+                                            {
+                                                agregarDB.AgregarUsuario_db(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
 
-                                            frmUser.Show();
-                                            this.Hide();
+
+                                                CapaVistas.FrmUsuarios frmUser = new CapaVistas.FrmUsuarios();
+                                                DataTable dataUser = new DataTable();
+                                                dataUser = agregarDB.LlenarUsuarios();
+                                                frmUser.dataUsuario.DataSource = dataUser;
+
+                                                frmUser.Show();
+                                                this.Hide();
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Ya existe un Usuario con esta cédula");
+                                            }
                                         }
                                     }
-
-
                                 }
                             }
                         }
@@ -130,6 +139,21 @@ namespace SistemaAsistencia.CapaVistas
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFile_TextChanged(object sender, EventArgs e)
         {
 
         }

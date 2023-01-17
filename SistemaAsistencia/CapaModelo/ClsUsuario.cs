@@ -42,9 +42,7 @@ namespace SistemaAsistencia.CapaModelo
             Photo = photo;
         }
 
-
-     
-
+   
 
         public DataTable LlenarUsuario()
         {
@@ -69,6 +67,13 @@ namespace SistemaAsistencia.CapaModelo
         {
             ClsUsuarioBD userDb = new ClsUsuarioBD();
             userDb.ModificarUsuario_db(id,cedula, nombre, apellido, correo, celular, password, rol_Usuario, estado, direccion_Foto, photo);
+        }
+
+        public DataTable ValidarCedula(string Cedula)
+        {
+            ClsUsuarioBD validarCedula = new ClsUsuarioBD();
+            return validarCedula.ValidarCedula_db(Cedula);
+
         }
     }
 }

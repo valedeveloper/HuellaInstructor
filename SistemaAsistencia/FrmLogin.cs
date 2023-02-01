@@ -25,40 +25,47 @@ namespace SistemaAsistencia
             ClsUsuarioBD validarExistencia = new ClsUsuarioBD();
             dt = validarExistencia.Loguearse_db(this.txtCedula.Text, this.txtPassword.Text);
 
-
-            if (dt.Rows.Count == 0)
+            if (this.txtCedula.Text== "" || this.txtPassword.Text=="")
             {
-                MessageBox.Show("No es Usuario");
+                MessageBox.Show("Llene los datos requeridos","Notificación");
+
             }
             else
             {
-                string rolUser = dt.Rows[0][0].ToString();
-                string estadoUser = dt.Rows[0][1].ToString();
-                if (estadoUser == "Activo")
+                if (dt.Rows.Count == 0)
                 {
-                    if (rolUser == "ADMIN")
-                    {
-                        MessageBox.Show("Eres Admin");
-                        CapaVistas.FrmUsuarios usuarios = new CapaVistas.FrmUsuarios();
-                        usuarios.Show();
-                        this.Hide();
-
-                    }
-                    else
-                    {
-                        if (rolUser == "GRABADOR")
-                        {
-                            MessageBox.Show("Eres digitador");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Eres factu");
-                        }
-                    }
+                    MessageBox.Show("No es Usuario");
                 }
                 else
                 {
-                    MessageBox.Show("No tienes permiso");
+                    string rolUser = dt.Rows[0][0].ToString();
+                    string estadoUser = dt.Rows[0][1].ToString();
+                    if (estadoUser == "Activo")
+                    {
+                        if (rolUser == "ADMIN")
+                        {
+                            MessageBox.Show("Eres Admin");
+                            CapaVistas.FrmUsuarios usuarios = new CapaVistas.FrmUsuarios();
+                            usuarios.Show();
+                            this.Hide();
+
+                        }
+                        else
+                        {
+                            if (rolUser == "GRABADOR")
+                            {
+                                MessageBox.Show("Eres digitador");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Eres factu");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No tienes permiso");
+                    }
                 }
             }
 
@@ -66,6 +73,17 @@ namespace SistemaAsistencia
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

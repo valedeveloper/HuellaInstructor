@@ -62,7 +62,7 @@ namespace SistemaAsistencia.CapaVistas
                             }
                             else
                             {
-                                if (this.comboFuncionamiento.Text == "")
+                                if (this.comboFuncionario.Text == "")
                                 {
                                     MessageBox.Show("Ingrese el rol del funcionario");
                                 }
@@ -89,7 +89,21 @@ namespace SistemaAsistencia.CapaVistas
                                             dataTable = clsPersona.Validar_Codigo(int.Parse(this.txtCodigo.Text));
                                             if (dataTable.Rows.Count == 0)
                                             {
-                                                clsPersona.AgregarPersona_db(arrayImagenUser, this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionamiento.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtCodigo.Text));
+                                                clsPersona.AgregarPersona_db(arrayImagenUser, this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionario.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtCodigo.Text));
+
+
+                                                //Mensaje de Salida para que el usuario sepa que está agregado el Usuario 
+                                                MessageBox.Show("Usuario Agregado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                this.txtCodigo.Text = "";
+                                                this.txtName.Text = "";
+                                                this.txtLastName.Text = "";
+                                                this.txtCorreo.Text = "";
+                                                this.txtTelefono.Text = "";
+                                                this.comboFuncionario.Text = "";
+                                                this.txtFile.Text = "";
+                                                this.txtFicha.Text = "";
+                                                this.pictureUser.Image = null;
+
 
                                             }
                                             else

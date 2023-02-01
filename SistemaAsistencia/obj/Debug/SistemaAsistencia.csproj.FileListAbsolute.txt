@@ -14,3 +14,5 @@ C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsi
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.CapaVistas.FrmAgregarPersona.resources
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.CapaVistas.FrmPersonas.resources
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.CapaVistas.ModificarPersona.resources
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\bin\Debug\Guna.UI2.dll
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.csproj.CopyComplete

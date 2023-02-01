@@ -40,22 +40,24 @@ namespace SistemaAsistencia.CapaVistas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            CapaVistas.ModificarPersona modificarPersona = new CapaVistas.ModificarPersona();
-            modificarPersona.labelId.Text = dataPersonas.CurrentRow.Cells[0].Value.ToString();
-            modificarPersona.txtName.Text = dataPersonas.CurrentRow.Cells[2].Value.ToString();
-            modificarPersona.txtLastName.Text = dataPersonas.CurrentRow.Cells[3].Value.ToString();
-            modificarPersona.txtCorreo.Text = dataPersonas.CurrentRow.Cells[4].Value.ToString();
-            modificarPersona.txtTelefono.Text = dataPersonas.CurrentRow.Cells[5].Value.ToString();
-            modificarPersona.comboFuncionamiento.Text = dataPersonas.CurrentRow.Cells[6].Value.ToString();
-            modificarPersona.txtFicha.Text = dataPersonas.CurrentRow.Cells[7].Value.ToString();
-            modificarPersona.txtFile.Text = dataPersonas.CurrentRow.Cells[8].Value.ToString();
-            byte[] photoPerson = (byte[])dataPersonas.CurrentRow.Cells[9].Value;
-            ClsImage image = new ClsImage();
-            Image imagePerson=image.byteArrayToImage(photoPerson);
-            modificarPersona.pictureUser.Image = imagePerson;
-            modificarPersona.txtCodigo.Text = dataPersonas.CurrentRow.Cells[10].Value.ToString();
+                CapaVistas.ModificarPersona modificarPersona = new CapaVistas.ModificarPersona();
+                modificarPersona.labelId.Text = dataPersonas.CurrentRow.Cells[0].Value.ToString();
+                modificarPersona.txtName.Text = dataPersonas.CurrentRow.Cells[2].Value.ToString();
+                modificarPersona.txtLastName.Text = dataPersonas.CurrentRow.Cells[3].Value.ToString();
+                modificarPersona.txtCorreo.Text = dataPersonas.CurrentRow.Cells[4].Value.ToString();
+                modificarPersona.txtTelefono.Text = dataPersonas.CurrentRow.Cells[5].Value.ToString();
+                modificarPersona.comboFuncionario.Text = dataPersonas.CurrentRow.Cells[6].Value.ToString();
+                modificarPersona.txtFicha.Text = dataPersonas.CurrentRow.Cells[7].Value.ToString();
+                modificarPersona.txtFile.Text = dataPersonas.CurrentRow.Cells[8].Value.ToString();
+                byte[] photoPerson = (byte[])dataPersonas.CurrentRow.Cells[9].Value;
+                ClsImage image = new ClsImage();
+                Image imagePerson = image.byteArrayToImage(photoPerson);
+                modificarPersona.pictureUser.Image = imagePerson;
+                modificarPersona.txtCodigo.Text = dataPersonas.CurrentRow.Cells[10].Value.ToString();
+                modificarPersona.arrayImagenUser = photoPerson;
 
-            modificarPersona.Show();
+                modificarPersona.Show();
+           
 
         }
     }

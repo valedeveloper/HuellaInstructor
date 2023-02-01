@@ -30,226 +30,64 @@ namespace SistemaAsistencia.CapaVistas
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.combotxtRol = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtFile = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtCedula = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboEstado = new System.Windows.Forms.ComboBox();
             this.pictureUser = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtCedula = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCorreo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTelefono = new Guna.UI2.WinForms.Guna2TextBox();
+            this.combotxtRol = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboEstado = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtFile = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(63, 27);
+            this.label1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label1.Location = new System.Drawing.Point(62, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 29);
+            this.label1.Size = new System.Drawing.Size(215, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Agregar Usuario";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(137, 121);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(135, 20);
-            this.txtName.TabIndex = 1;
-            // 
-            // txtLastName
-            // 
-            this.txtLastName.Location = new System.Drawing.Point(140, 166);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(135, 20);
-            this.txtLastName.TabIndex = 2;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(136, 274);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(135, 20);
-            this.txtTelefono.TabIndex = 3;
-            // 
-            // combotxtRol
-            // 
-            this.combotxtRol.DisplayMember = "dDD";
-            this.combotxtRol.FormattingEnabled = true;
-            this.combotxtRol.Items.AddRange(new object[] {
-            "ADMIN",
-            "GRABADOR",
-            "FACTURADOR"});
-            this.combotxtRol.Location = new System.Drawing.Point(136, 325);
-            this.combotxtRol.Name = "combotxtRol";
-            this.combotxtRol.Size = new System.Drawing.Size(111, 21);
-            this.combotxtRol.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 328);
+            this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label2.Location = new System.Drawing.Point(106, 198);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(108, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Rol de usuario";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(136, 203);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(233, 20);
-            this.txtCorreo.TabIndex = 7;
-            // 
-            // txtFile
-            // 
-            this.txtFile.AllowDrop = true;
-            this.txtFile.Location = new System.Drawing.Point(472, 276);
-            this.txtFile.Name = "txtFile";
-            this.txtFile.Size = new System.Drawing.Size(240, 20);
-            this.txtFile.TabIndex = 8;
-            this.txtFile.TextChanged += new System.EventHandler(this.txtFile_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(718, 276);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 20);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Open";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(74, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Nombre";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(78, 169);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Apellido";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(64, 281);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Telefono";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(427, 280);
+            this.label7.Font = new System.Drawing.Font("Georgia", 9.75F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label7.Location = new System.Drawing.Point(465, 202);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 13);
+            this.label7.Size = new System.Drawing.Size(38, 16);
             this.label7.TabIndex = 14;
             this.label7.Text = "File :";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(136, 241);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(235, 20);
-            this.txtPassword.TabIndex = 15;
-            this.txtPassword.UseSystemPasswordChar = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(56, 244);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Contraseña";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 208);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Correo Electrónico";
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(498, 379);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(86, 26);
-            this.btnAgregar.TabIndex = 19;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(620, 379);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 26);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.Location = new System.Drawing.Point(137, 80);
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(135, 20);
-            this.txtCedula.TabIndex = 21;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(78, 87);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Cédula";
-            // 
-            // comboEstado
-            // 
-            this.comboEstado.DisplayMember = "dDD";
-            this.comboEstado.FormattingEnabled = true;
-            this.comboEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo\t"});
-            this.comboEstado.Location = new System.Drawing.Point(136, 363);
-            this.comboEstado.Name = "comboEstado";
-            this.comboEstado.Size = new System.Drawing.Size(111, 21);
-            this.comboEstado.TabIndex = 23;
-            // 
             // pictureUser
             // 
-            this.pictureUser.Location = new System.Drawing.Point(472, 92);
+            this.pictureUser.Location = new System.Drawing.Point(510, 25);
             this.pictureUser.Name = "pictureUser";
-            this.pictureUser.Size = new System.Drawing.Size(240, 165);
+            this.pictureUser.Size = new System.Drawing.Size(234, 154);
             this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureUser.TabIndex = 24;
             this.pictureUser.TabStop = false;
@@ -258,44 +96,312 @@ namespace SistemaAsistencia.CapaVistas
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 366);
+            this.label3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label3.Location = new System.Drawing.Point(99, 257);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
+            this.label3.Size = new System.Drawing.Size(115, 18);
             this.label3.TabIndex = 25;
             this.label3.Text = "Estado Usuario";
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.AutoRoundedCorners = true;
+            this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtCedula.BorderRadius = 11;
+            this.txtCedula.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtCedula.BorderThickness = 2;
+            this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCedula.DefaultText = "Ingresa la Cédula";
+            this.txtCedula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCedula.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCedula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCedula.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCedula.Location = new System.Drawing.Point(67, 81);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.PasswordChar = '\0';
+            this.txtCedula.PlaceholderText = "\r\n";
+            this.txtCedula.SelectedText = "";
+            this.txtCedula.Size = new System.Drawing.Size(163, 24);
+            this.txtCedula.TabIndex = 26;
+            // 
+            // txtName
+            // 
+            this.txtName.AutoRoundedCorners = true;
+            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtName.BorderRadius = 11;
+            this.txtName.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtName.BorderThickness = 2;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.DefaultText = "Ingresa el Nombre";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.Location = new System.Drawing.Point(67, 113);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
+            this.txtName.PlaceholderText = "\r\n";
+            this.txtName.SelectedText = "";
+            this.txtName.Size = new System.Drawing.Size(163, 24);
+            this.txtName.TabIndex = 27;
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.AutoRoundedCorners = true;
+            this.txtLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtLastName.BorderRadius = 11;
+            this.txtLastName.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtLastName.BorderThickness = 2;
+            this.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLastName.DefaultText = "Ingresa el Apellido";
+            this.txtLastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastName.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastName.Location = new System.Drawing.Point(67, 145);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.PasswordChar = '\0';
+            this.txtLastName.PlaceholderText = "\r\n";
+            this.txtLastName.SelectedText = "";
+            this.txtLastName.Size = new System.Drawing.Size(163, 24);
+            this.txtLastName.TabIndex = 28;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.AutoRoundedCorners = true;
+            this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtCorreo.BorderRadius = 11;
+            this.txtCorreo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtCorreo.BorderThickness = 2;
+            this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCorreo.DefaultText = "Ingresa el Correo";
+            this.txtCorreo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCorreo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCorreo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCorreo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCorreo.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCorreo.Location = new System.Drawing.Point(265, 81);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.PasswordChar = '\0';
+            this.txtCorreo.PlaceholderText = "\r\n";
+            this.txtCorreo.SelectedText = "";
+            this.txtCorreo.Size = new System.Drawing.Size(172, 24);
+            this.txtCorreo.TabIndex = 29;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.AutoRoundedCorners = true;
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtPassword.BorderRadius = 11;
+            this.txtPassword.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtPassword.BorderThickness = 2;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "Ingresa la Contraseña";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Location = new System.Drawing.Point(265, 113);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PlaceholderText = "\r\n";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(172, 24);
+            this.txtPassword.TabIndex = 30;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.AutoRoundedCorners = true;
+            this.txtTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtTelefono.BorderRadius = 11;
+            this.txtTelefono.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtTelefono.BorderThickness = 2;
+            this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTelefono.DefaultText = "Ingresa el Teléfono";
+            this.txtTelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTelefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTelefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelefono.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelefono.Location = new System.Drawing.Point(265, 145);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.PasswordChar = '\0';
+            this.txtTelefono.PlaceholderText = "\r\n";
+            this.txtTelefono.SelectedText = "";
+            this.txtTelefono.Size = new System.Drawing.Size(172, 24);
+            this.txtTelefono.TabIndex = 31;
+            // 
+            // combotxtRol
+            // 
+            this.combotxtRol.BackColor = System.Drawing.Color.Transparent;
+            this.combotxtRol.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.combotxtRol.BorderRadius = 5;
+            this.combotxtRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combotxtRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combotxtRol.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combotxtRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combotxtRol.Font = new System.Drawing.Font("Georgia", 9.75F);
+            this.combotxtRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.combotxtRol.ItemHeight = 30;
+            this.combotxtRol.Items.AddRange(new object[] {
+            "Aprendiz",
+            "Instructor",
+            "Funcionario "});
+            this.combotxtRol.Location = new System.Drawing.Point(236, 189);
+            this.combotxtRol.Name = "combotxtRol";
+            this.combotxtRol.Size = new System.Drawing.Size(155, 36);
+            this.combotxtRol.TabIndex = 32;
+            // 
+            // comboEstado
+            // 
+            this.comboEstado.BackColor = System.Drawing.Color.Transparent;
+            this.comboEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.comboEstado.BorderRadius = 5;
+            this.comboEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboEstado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboEstado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboEstado.Font = new System.Drawing.Font("Georgia", 9.75F);
+            this.comboEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.comboEstado.ItemHeight = 30;
+            this.comboEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.comboEstado.Location = new System.Drawing.Point(236, 249);
+            this.comboEstado.Name = "comboEstado";
+            this.comboEstado.Size = new System.Drawing.Size(155, 36);
+            this.comboEstado.TabIndex = 33;
+            // 
+            // txtFile
+            // 
+            this.txtFile.AutoRoundedCorners = true;
+            this.txtFile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtFile.BorderRadius = 11;
+            this.txtFile.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtFile.BorderThickness = 2;
+            this.txtFile.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFile.DefaultText = "";
+            this.txtFile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFile.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtFile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFile.Location = new System.Drawing.Point(510, 198);
+            this.txtFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFile.Name = "txtFile";
+            this.txtFile.PasswordChar = '\0';
+            this.txtFile.PlaceholderText = "\r\n";
+            this.txtFile.SelectedText = "";
+            this.txtFile.Size = new System.Drawing.Size(212, 24);
+            this.txtFile.TabIndex = 34;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BorderRadius = 10;
+            this.btnAgregar.DefaultAutoSize = true;
+            this.btnAgregar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAgregar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAgregar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAgregar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(210)))));
+            this.btnAgregar.Font = new System.Drawing.Font("Georgia", 12F);
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(510, 245);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(88, 30);
+            this.btnAgregar.TabIndex = 35;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BorderRadius = 10;
+            this.btnCancelar.DefaultAutoSize = true;
+            this.btnCancelar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancelar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancelar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(61)))), ((int)(((byte)(238)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Georgia", 12F);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(627, 245);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(95, 30);
+            this.btnCancelar.TabIndex = 36;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DefaultAutoSize = true;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Gray;
+            this.guna2Button1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(729, 198);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(59, 25);
+            this.guna2Button1.TabIndex = 37;
+            this.guna2Button1.Text = "Open";
+            this.guna2Button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(811, 458);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureUser);
-            this.Controls.Add(this.comboEstado);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtCedula);
-            this.Controls.Add(this.button2);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(811, 299);
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtFile);
-            this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboEstado);
             this.Controls.Add(this.combotxtRol);
             this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureUser);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAgregarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Usuario";
+            this.Load += new System.EventHandler(this.FrmAgregarUsuario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -305,27 +411,21 @@ namespace SistemaAsistencia.CapaVistas
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.ComboBox combotxtRol;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtFile;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtCedula;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboEstado;
         private System.Windows.Forms.PictureBox pictureUser;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txtCedula;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
+        private Guna.UI2.WinForms.Guna2TextBox txtLastName;
+        private Guna.UI2.WinForms.Guna2TextBox txtCorreo;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtTelefono;
+        private Guna.UI2.WinForms.Guna2ComboBox combotxtRol;
+        private Guna.UI2.WinForms.Guna2ComboBox comboEstado;
+        private Guna.UI2.WinForms.Guna2TextBox txtFile;
+        private Guna.UI2.WinForms.Guna2Button btnAgregar;
+        private Guna.UI2.WinForms.Guna2Button btnCancelar;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

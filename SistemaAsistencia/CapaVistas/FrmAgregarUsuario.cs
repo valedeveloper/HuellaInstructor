@@ -108,6 +108,22 @@ namespace SistemaAsistencia.CapaVistas
 
                                                 frmUser.Show();
                                                 this.Hide();
+
+
+
+
+                                                //Mensaje de Salida para que el usuario sepa que está agregado el Usuario 
+                                                MessageBox.Show("Usuario Agregado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                this.txtCedula.Text = "";
+                                                this.txtName.Text = "";
+                                                this.txtLastName.Text = "";
+                                                this.txtCorreo.Text = "";
+                                                this.txtTelefono.Text = "";
+                                                this.txtPassword.Text = "";
+                                                this.txtFile.Text = "";
+                                                this.combotxtRol.Text = "";
+                                                this.comboEstado.Text = "";
+                                                this.pictureUser.Image = null;
                                             }
                                             else
                                             {
@@ -140,7 +156,20 @@ namespace SistemaAsistencia.CapaVistas
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Desea cancelar el proceso?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.txtCedula.Text = "";
+                this.txtName.Text = "";
+                this.txtLastName.Text = "";
+                this.txtCorreo.Text = "";
+                this.txtTelefono.Text = "";
+                this.txtPassword.Text = "";
+                this.txtFile.Text = "";
+                this.combotxtRol.Text = "";
+                this.comboEstado.Text = "";
+                this.pictureUser.Image = null;
 
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -154,6 +183,16 @@ namespace SistemaAsistencia.CapaVistas
         }
 
         private void txtFile_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmAgregarUsuario_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combotxtRol_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

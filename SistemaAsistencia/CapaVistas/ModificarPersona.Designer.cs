@@ -45,7 +45,7 @@ namespace SistemaAsistencia.CapaVistas
             this.label4 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboFuncionamiento = new System.Windows.Forms.ComboBox();
+            this.comboFuncionario = new System.Windows.Forms.ComboBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -194,18 +194,18 @@ namespace SistemaAsistencia.CapaVistas
             this.label2.TabIndex = 55;
             this.label2.Text = "Funcionario";
             // 
-            // comboFuncionamiento
+            // comboFuncionario
             // 
-            this.comboFuncionamiento.DisplayMember = "dDD";
-            this.comboFuncionamiento.FormattingEnabled = true;
-            this.comboFuncionamiento.Items.AddRange(new object[] {
+            this.comboFuncionario.DisplayMember = "dDD";
+            this.comboFuncionario.FormattingEnabled = true;
+            this.comboFuncionario.Items.AddRange(new object[] {
             "Instructor",
             "Aprendiz ",
             "Personal"});
-            this.comboFuncionamiento.Location = new System.Drawing.Point(129, 268);
-            this.comboFuncionamiento.Name = "comboFuncionamiento";
-            this.comboFuncionamiento.Size = new System.Drawing.Size(111, 21);
-            this.comboFuncionamiento.TabIndex = 54;
+            this.comboFuncionario.Location = new System.Drawing.Point(129, 268);
+            this.comboFuncionario.Name = "comboFuncionario";
+            this.comboFuncionario.Size = new System.Drawing.Size(111, 21);
+            this.comboFuncionario.TabIndex = 54;
             // 
             // txtTelefono
             // 
@@ -270,7 +270,7 @@ namespace SistemaAsistencia.CapaVistas
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboFuncionamiento);
+            this.Controls.Add(this.comboFuncionario);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtName);
@@ -301,7 +301,7 @@ namespace SistemaAsistencia.CapaVistas
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtCorreo;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.ComboBox comboFuncionamiento;
+        public System.Windows.Forms.ComboBox comboFuncionario;
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtLastName;
         public System.Windows.Forms.TextBox txtName;

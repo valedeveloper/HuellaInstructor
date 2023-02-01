@@ -34,7 +34,7 @@ namespace SistemaAsistencia.CapaVistas
             this.comboEstado = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCedula = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -102,14 +102,15 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCedula.Size = new System.Drawing.Size(135, 20);
             this.txtCedula.TabIndex = 44;
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(617, 388);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 26);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(617, 388);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(86, 26);
+            this.btnCancelar.TabIndex = 43;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnModificar
             // 
@@ -281,7 +282,7 @@ namespace SistemaAsistencia.CapaVistas
             this.Controls.Add(this.comboEstado);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtCedula);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -312,7 +313,7 @@ namespace SistemaAsistencia.CapaVistas
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;

@@ -14,7 +14,7 @@ namespace SistemaAsistencia.CapaVistas
 {
     public partial class ModificarPersona : Form
     {
-        Byte[] arrayImagenUser;
+       public Byte[] arrayImagenUser;
 
         public ModificarPersona()
         {
@@ -54,7 +54,7 @@ namespace SistemaAsistencia.CapaVistas
                             }
                             else
                             {
-                                if (this.comboFuncionamiento.Text == "")
+                                if (this.comboFuncionario.Text == "")
                                 {
                                     MessageBox.Show("Ingrese el rol del funcionario");
                                 }
@@ -85,8 +85,22 @@ namespace SistemaAsistencia.CapaVistas
                                             if (dataTable.Rows.Count == 0 || idPersona == int.Parse(this.labelId.Text))
                                             {
                                                 idPersona = int.Parse(dataTable.Rows[0][0].ToString());
-                                                clsPersona.ModificarPersona_db(int.Parse(this.labelId.Text), arrayImagenUser, this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionamiento.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtCodigo.Text));
-
+                                                clsPersona.ModificarPersona_db(int.Parse(this.labelId.Text), arrayImagenUser, this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionario.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtCodigo.Text));
+                                               
+                                                
+                                                
+                                                
+                                                //Mensaje de Salida para que el usuario sepa que está agregado el Usuario 
+                                                MessageBox.Show("Usuario Modificado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                this.txtCodigo.Text = "";
+                                                this.txtName.Text = "";
+                                                this.txtLastName.Text = "";
+                                                this.txtCorreo.Text = "";
+                                                this.txtTelefono.Text = "";
+                                                this.comboFuncionario.Text = "";
+                                                this.txtFile.Text = "";
+                                                this.txtFicha.Text = "";
+                                                this.pictureUser.Image = null;
                                             }
                                             else
                                             {

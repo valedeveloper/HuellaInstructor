@@ -98,6 +98,19 @@ namespace SistemaAsistencia.CapaVistas
 
                                                 frmUser.Show();
                                                 this.Hide();
+
+
+                                                MessageBox.Show("Usuario Modificado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                this.txtCedula.Text = "";
+                                                this.txtName.Text = "";
+                                                this.txtLastName.Text = "";
+                                                this.txtCorreo.Text = "";
+                                                this.txtTelefono.Text = "";
+                                                this.txtPassword.Text = "";
+                                                this.txtFile.Text = "";
+                                                this.combotxtRol.Text = "";
+                                                this.comboEstado.Text = "";
+                                                this.pictureUser.Image = null;
                                             }
                                             else
                                             {
@@ -132,6 +145,25 @@ namespace SistemaAsistencia.CapaVistas
             }
             ClsImage imagenArray = new ClsImage();
             arrayImagenUser = imagenArray.ImageToByteArray(this.pictureUser.Image);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("¿Desea cancelar el proceso?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.txtCedula.Text = "";
+                this.txtName.Text = "";
+                this.txtLastName.Text = "";
+                this.txtCorreo.Text = "";
+                this.txtTelefono.Text = "";
+                this.txtPassword.Text = "";
+                this.txtFile.Text = "";
+                this.combotxtRol.Text = "";
+                this.comboEstado.Text = "";
+                this.pictureUser.Image = null;
+
+            }
         }
     }
 }

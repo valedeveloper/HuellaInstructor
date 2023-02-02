@@ -1,4 +1,5 @@
-﻿using SistemaAsistencia.CapaModelo;
+﻿using SistemaAsistencia.CapaDatos;
+using SistemaAsistencia.CapaModelo;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -82,8 +83,7 @@ namespace SistemaAsistencia.CapaVistas
                                         {
 
                                             //ClsPersona clsPersona1 = new ClsPersona(arrayImagenUser, this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionamiento.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtCodigo.Text));
-
-                                            CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
+                                            ClsPersonaBD clsPersona = new ClsPersonaBD();
 
                                             DataTable dataTable = new DataTable();
                                             dataTable = clsPersona.Validar_Codigo(int.Parse(this.txtCodigo.Text));
@@ -91,6 +91,12 @@ namespace SistemaAsistencia.CapaVistas
                                             {
                                                 clsPersona.AgregarPersona_db(arrayImagenUser, this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionario.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtCodigo.Text));
 
+
+
+                                                FrmPersonas frmPersonas = new FrmPersonas();
+                                                DataTable dataPeople = new DataTable();
+                                                dataPeople = clsPersona.LlenarDatos();
+                                                frmPersonas.dataPersona.DataSource = dataPeople;
 
                                                 //Mensaje de Salida para que el usuario sepa que está agregado el Usuario 
                                                 MessageBox.Show("Usuario Agregado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -103,6 +109,8 @@ namespace SistemaAsistencia.CapaVistas
                                                 this.txtFile.Text = "";
                                                 this.txtFicha.Text = "";
                                                 this.pictureUser.Image = null;
+
+
 
 
                                             }
@@ -124,6 +132,95 @@ namespace SistemaAsistencia.CapaVistas
 
 
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea cancelar el proceso?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.txtCodigo.Text = "";
+                this.txtName.Text = "";
+                this.txtLastName.Text = "";
+                this.txtCorreo.Text = "";
+                this.txtTelefono.Text = "";
+                this.comboFuncionario.Text = "";
+                this.txtFile.Text = "";
+                this.txtFicha.Text = "";
+                this.pictureUser.Image = null;
+                this.Hide();
+
+            }
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void txtFicha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void txtFile_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

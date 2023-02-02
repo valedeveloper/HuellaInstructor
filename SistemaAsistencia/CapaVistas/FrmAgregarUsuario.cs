@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using SistemaAsistencia.CapaModelo;
+using System;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemaAsistencia.CapaDatos;
-using SistemaAsistencia.CapaModelo;
 
 namespace SistemaAsistencia.CapaVistas
 {
@@ -19,7 +11,6 @@ namespace SistemaAsistencia.CapaVistas
         {
             InitializeComponent();
         }
-        ClsUsuarioBD agregarDB = new ClsUsuarioBD();
 
         Byte[] arrayImagenUser;
         private void FrmAgregarUsuario_Load(object sender, EventArgs e)
@@ -35,6 +26,8 @@ namespace SistemaAsistencia.CapaVistas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            ClsUsuario agregarDB = new ClsUsuario(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+
             if (string.IsNullOrEmpty(this.txtName.Text))
             {
                 MessageBox.Show("Digite el Nombre de usuario", "Notificación");
@@ -94,11 +87,11 @@ namespace SistemaAsistencia.CapaVistas
                                         else
                                         {
                                             DataTable validacionCedula = new DataTable();
-                                            validacionCedula=agregarDB.ValidarCedula_db(this.txtCedula.Text);
+                                            validacionCedula = agregarDB.ValidarCedula(this.txtCedula.Text);
 
                                             if (validacionCedula.Rows.Count == 0)
                                             {
-                                                agregarDB.AgregarUsuario_db(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+                                                agregarDB.AgregarUsuario(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
 
 
                                                 CapaVistas.FrmUsuarios frmUser = new CapaVistas.FrmUsuarios();
@@ -106,8 +99,6 @@ namespace SistemaAsistencia.CapaVistas
                                                 dataUser = agregarDB.LlenarUsuarios();
                                                 frmUser.dataUsuario.DataSource = dataUser;
 
-                                                frmUser.Show();
-                                                this.Hide();
 
 
 
@@ -168,6 +159,7 @@ namespace SistemaAsistencia.CapaVistas
                 this.combotxtRol.Text = "";
                 this.comboEstado.Text = "";
                 this.pictureUser.Image = null;
+                this.Hide();
 
             }
         }
@@ -195,6 +187,108 @@ namespace SistemaAsistencia.CapaVistas
         private void combotxtRol_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void combotxtRol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtFile_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+
+        }
+
+        private void combotxtRol_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

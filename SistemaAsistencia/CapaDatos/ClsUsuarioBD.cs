@@ -7,7 +7,7 @@ namespace SistemaAsistencia.CapaDatos
     public class ClsUsuarioBD
     {
 
-        public DataTable LlenarUsuarios()
+        public DataTable LlenarUsuarios_db()
         {
             ClsConexion conexion = new ClsConexion();
             string readLlenar = "SELECT * FROM USUARIOS";
@@ -34,9 +34,6 @@ namespace SistemaAsistencia.CapaDatos
             sda.Fill(dt);
             return dt;
         }
-
-
-
 
         public void AgregarUsuario_db(string Cedula, string Nombre, string Apellido, string Correo, string Celular, string Password, string Rol_Usuario, string Estado, string Direccion_Foto, byte[] Photo)
         {

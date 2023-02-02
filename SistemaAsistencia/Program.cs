@@ -16,7 +16,7 @@ namespace SistemaAsistencia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapaVistas.FrmUsuarios());
+            Application.Run(new FrmLogin());
         }
     }
 }

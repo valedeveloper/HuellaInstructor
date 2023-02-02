@@ -20,7 +20,7 @@ namespace SistemaAsistencia.CapaVistas
         {
             DataTable dt = new DataTable();
             CapaDatos.ClsUsuarioBD data = new CapaDatos.ClsUsuarioBD();
-            dt = data.LlenarUsuarios();
+            dt = data.LlenarUsuarios_db();
             dataUsuario.DataSource = dt;
 
             this.pictureUser.Image = Image.FromFile(@"C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\Assets\gifUser.gif");
@@ -55,6 +55,13 @@ namespace SistemaAsistencia.CapaVistas
             modificarUser.pictureUser.Image = imagenUserPhoto;
             modificarUser.arrayImagenUser = photoByte;
             modificarUser.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmMenu menu = new FrmMenu();
+            menu.Show();
         }
     }
 }

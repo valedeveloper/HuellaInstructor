@@ -38,29 +38,13 @@ namespace SistemaAsistencia
                 }
                 else
                 {
-                    string rolUser = dt.Rows[0][0].ToString();
                     string estadoUser = dt.Rows[0][1].ToString();
                     if (estadoUser == "Activo")
                     {
-                        if (rolUser == "ADMIN")
-                        {
                             MessageBox.Show("Eres Admin");
-                            CapaVistas.FrmUsuarios usuarios = new CapaVistas.FrmUsuarios();
-                            usuarios.Show();
+                            FrmMenu menu = new FrmMenu();
+                             menu.Show();
                             this.Hide();
-
-                        }
-                        else
-                        {
-                            if (rolUser == "GRABADOR")
-                            {
-                                MessageBox.Show("Eres digitador");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Eres factu");
-                            }
-                        }
                     }
                     else
                     {
@@ -76,14 +60,5 @@ namespace SistemaAsistencia
             Application.Exit();
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

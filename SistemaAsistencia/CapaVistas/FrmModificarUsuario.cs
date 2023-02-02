@@ -84,33 +84,33 @@ namespace SistemaAsistencia.CapaVistas
                                             DataTable validacionCedula = new DataTable();
                                             validacionCedula = agregarDB.ValidarCedula_db(this.txtCedula.Text);
                                             string idUsuario = validacionCedula.Rows[0][0].ToString();
-                                            if (validacionCedula.Rows.Count== 0 || idUsuario==this.labelId.Text  )
+                                            if (validacionCedula.Rows.Count == 0 || idUsuario == this.labelId.Text)
                                             {
-                                                CapaDatos.ClsUsuarioBD clsUser = new CapaDatos.ClsUsuarioBD();
-                                                clsUser.ModificarUsuario_db(int.Parse(this.labelId.Text), this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+                                                ClsUsuario modificarUser = new ClsUsuario(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+
+                                                modificarUser.ModificarUsuario(int.Parse(this.labelId.Text), this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
 
 
                                                 CapaVistas.FrmUsuarios frmUser = new CapaVistas.FrmUsuarios();
                                                 DataTable dataUser = new DataTable();
-                                                dataUser = agregarDB.LlenarUsuarios();
+                                                dataUser = modificarUser.LlenarUsuario();
                                                 frmUser.dataUsuario.DataSource = dataUser;
 
-
-                                                frmUser.Show();
                                                 this.Hide();
 
 
+
                                                 MessageBox.Show("Usuario Modificado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                                this.txtCedula.Text = "";
-                                                this.txtName.Text = "";
-                                                this.txtLastName.Text = "";
-                                                this.txtCorreo.Text = "";
-                                                this.txtTelefono.Text = "";
-                                                this.txtPassword.Text = "";
-                                                this.txtFile.Text = "";
-                                                this.combotxtRol.Text = "";
-                                                this.comboEstado.Text = "";
-                                                this.pictureUser.Image = null;
+                                                //this.txtCedula.Text = "";
+                                                //this.txtName.Text = "";
+                                                //this.txtLastName.Text = "";
+                                                //this.txtCorreo.Text = "";
+                                                //this.txtTelefono.Text = "";
+                                                //this.txtPassword.Text = "";
+                                                //this.txtFile.Text = "";
+                                                //this.combotxtRol.Text = "";
+                                                //this.comboEstado.Text = "";
+                                                //this.pictureUser.Image = null;
                                             }
                                             else
                                             {
@@ -162,6 +162,48 @@ namespace SistemaAsistencia.CapaVistas
                 this.combotxtRol.Text = "";
                 this.comboEstado.Text = "";
                 this.pictureUser.Image = null;
+
+
+                this.Hide();
+
+
+            }
+        }
+
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
 
             }
         }

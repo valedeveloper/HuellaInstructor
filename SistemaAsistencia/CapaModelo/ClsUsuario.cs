@@ -47,7 +47,7 @@ namespace SistemaAsistencia.CapaModelo
         public DataTable LlenarUsuario()
         {
             ClsUsuarioBD llenarUsuario = new ClsUsuarioBD();
-            return llenarUsuario.LlenarUsuarios();
+            return llenarUsuario.LlenarUsuarios_db();
 
         }
         public DataTable Loguearse(string Cedula, string Password)
@@ -63,7 +63,7 @@ namespace SistemaAsistencia.CapaModelo
             userDb.AgregarUsuario_db(cedula, nombre, apellido, correo, celular, password, rol_Usuario, estado, direccion_Foto, photo);
         }
 
-        public void ModificarUsuario_db(int id, string cedula, string nombre, string apellido, string correo, string celular, string password, string rol_Usuario, string estado, string direccion_Foto, byte[] photo)
+        public void ModificarUsuario(int id, string cedula, string nombre, string apellido, string correo, string celular, string password, string rol_Usuario, string estado, string direccion_Foto, byte[] photo)
         {
             ClsUsuarioBD userDb = new ClsUsuarioBD();
             userDb.ModificarUsuario_db(id,cedula, nombre, apellido, correo, celular, password, rol_Usuario, estado, direccion_Foto, photo);
@@ -74,6 +74,12 @@ namespace SistemaAsistencia.CapaModelo
             ClsUsuarioBD validarCedula = new ClsUsuarioBD();
             return validarCedula.ValidarCedula_db(Cedula);
 
+        }
+
+        public DataTable LlenarUsuarios()
+        {
+            ClsUsuarioBD clsUsuarioBD = new ClsUsuarioBD();
+            return clsUsuarioBD.LlenarUsuarios_db();
         }
     }
 }

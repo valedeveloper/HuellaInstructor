@@ -5,6 +5,7 @@ namespace SistemaAsistencia.CapaModelo
 {
     public class ClsPersona
     {
+  
         private byte[] HuellaPersona { get; set; }
 
 
@@ -20,7 +21,7 @@ namespace SistemaAsistencia.CapaModelo
         private byte[] Photo { get; set; }
         private int Codigo_Barras { get; set; }
 
-        public ClsPersona(byte[] huellaPersona, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string estado_Persona, string direccion_Imagen, byte[] photo,int codigo_Barras)
+        public ClsPersona(byte[] huellaPersona, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string estado_Persona, string direccion_Imagen, byte[] photo,int codigo_barras)
         {
             HuellaPersona = huellaPersona;
             Nombre = nombre;
@@ -32,9 +33,11 @@ namespace SistemaAsistencia.CapaModelo
             Estado_Persona = estado_Persona;
             Direccion_Imagen = direccion_Imagen;
             Photo = photo;
-            Codigo_Barras = codigo_Barras;
+            Codigo_Barras = codigo_barras;
 
         }
+
+
 
         public static DataTable ValidacionPersona(int codigo_Barras) {
             CapaDatos.ClsPersonaBD clsPersonaBD = new ClsPersonaBD();

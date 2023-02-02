@@ -53,10 +53,13 @@ namespace SistemaAsistencia.CapaVistas
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             this.btnModificar = new Guna.UI2.WinForms.Guna2Button();
             this.pictureUser = new System.Windows.Forms.PictureBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.sistema_de_AsistenciaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sistema_de_AsistenciaDataSet
@@ -78,7 +81,7 @@ namespace SistemaAsistencia.CapaVistas
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.label1.Location = new System.Drawing.Point(228, 145);
+            this.label1.Location = new System.Drawing.Point(239, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 43);
             this.label1.TabIndex = 27;
@@ -122,8 +125,8 @@ namespace SistemaAsistencia.CapaVistas
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataUsuario.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataUsuario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataUsuario.Location = new System.Drawing.Point(67, 275);
+            this.dataUsuario.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dataUsuario.Location = new System.Drawing.Point(57, 261);
             this.dataUsuario.Name = "dataUsuario";
             this.dataUsuario.ReadOnly = true;
             this.dataUsuario.RowHeadersVisible = false;
@@ -135,7 +138,7 @@ namespace SistemaAsistencia.CapaVistas
             this.dataUsuario.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dataUsuario.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dataUsuario.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dataUsuario.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataUsuario.ThemeStyle.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dataUsuario.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dataUsuario.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataUsuario.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,9 +249,9 @@ namespace SistemaAsistencia.CapaVistas
             this.btnAgregar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(210)))));
             this.btnAgregar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(198, 488);
+            this.btnAgregar.Location = new System.Drawing.Point(219, 465);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(145, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(145, 34);
             this.btnAgregar.TabIndex = 29;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -258,7 +261,7 @@ namespace SistemaAsistencia.CapaVistas
             this.btnModificar.Animated = true;
             this.btnModificar.AutoRoundedCorners = true;
             this.btnModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.BorderRadius = 14;
+            this.btnModificar.BorderRadius = 16;
             this.btnModificar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnModificar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnModificar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -267,9 +270,9 @@ namespace SistemaAsistencia.CapaVistas
             this.btnModificar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.IndicateFocus = true;
-            this.btnModificar.Location = new System.Drawing.Point(438, 488);
+            this.btnModificar.Location = new System.Drawing.Point(424, 465);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(145, 30);
+            this.btnModificar.Size = new System.Drawing.Size(150, 34);
             this.btnModificar.TabIndex = 30;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -277,12 +280,29 @@ namespace SistemaAsistencia.CapaVistas
             // pictureUser
             // 
             this.pictureUser.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureUser.InitialImage")));
-            this.pictureUser.Location = new System.Drawing.Point(542, 93);
+            this.pictureUser.Location = new System.Drawing.Point(493, 83);
             this.pictureUser.Name = "pictureUser";
             this.pictureUser.Size = new System.Drawing.Size(149, 144);
             this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureUser.TabIndex = 31;
             this.pictureUser.TabStop = false;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 5;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(745, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmUsuarios
             // 
@@ -290,6 +310,7 @@ namespace SistemaAsistencia.CapaVistas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(795, 600);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureUser);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -304,6 +325,7 @@ namespace SistemaAsistencia.CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,5 +351,7 @@ namespace SistemaAsistencia.CapaVistas
         private Guna.UI2.WinForms.Guna2Button btnAgregar;
         private Guna.UI2.WinForms.Guna2Button btnModificar;
         private System.Windows.Forms.PictureBox pictureUser;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -91,17 +91,23 @@
     <Compile Include="CapaVistas\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaVistas\ModificarPersona.cs">
+    <Compile Include="CapaVistas\FrmModificarPersona.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaVistas\ModificarPersona.Designer.cs">
-      <DependentUpon>ModificarPersona.cs</DependentUpon>
+    <Compile Include="CapaVistas\FrmModificarPersona.Designer.cs">
+      <DependentUpon>FrmModificarPersona.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -125,11 +131,14 @@
     <EmbeddedResource Include="CapaVistas\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CapaVistas\ModificarPersona.resx">
-      <DependentUpon>ModificarPersona.cs</DependentUpon>
+    <EmbeddedResource Include="CapaVistas\FrmModificarPersona.resx">
+      <DependentUpon>FrmModificarPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

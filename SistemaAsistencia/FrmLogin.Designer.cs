@@ -107,7 +107,6 @@ namespace SistemaAsistencia
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(222, 24);
             this.txtPassword.TabIndex = 10;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnIngresar
             // 
@@ -177,7 +176,6 @@ namespace SistemaAsistencia
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
-            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

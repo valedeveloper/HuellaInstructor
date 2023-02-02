@@ -1,7 +1,7 @@
 ﻿
 namespace SistemaAsistencia.CapaVistas
 {
-    partial class FrmModificarUsuario
+    partial class FrmModificarPersona
     {
         /// <summary>
         /// Required designer variable.
@@ -29,44 +29,82 @@ namespace SistemaAsistencia.CapaVistas
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureUser = new System.Windows.Forms.PictureBox();
             this.labelId = new System.Windows.Forms.Label();
+            this.txtCodigo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.comboFuncionario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtTelefono = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFicha = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCedula = new Guna.UI2.WinForms.Guna2TextBox();
-            this.comboEstado = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.combotxtRol = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtFile = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnOpen = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnOpen = new Guna.UI2.WinForms.Guna2Button();
+            this.txtFile = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureUser = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnModificar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureUser
-            // 
-            this.pictureUser.Location = new System.Drawing.Point(450, 86);
-            this.pictureUser.Name = "pictureUser";
-            this.pictureUser.Size = new System.Drawing.Size(320, 165);
-            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureUser.TabIndex = 47;
-            this.pictureUser.TabStop = false;
             // 
             // labelId
             // 
             this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(259, 73);
+            this.labelId.Location = new System.Drawing.Point(231, 82);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(13, 13);
-            this.labelId.TabIndex = 49;
+            this.labelId.TabIndex = 71;
             this.labelId.Text = "..";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.AutoRoundedCorners = true;
+            this.txtCodigo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtCodigo.BorderRadius = 11;
+            this.txtCodigo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtCodigo.BorderThickness = 2;
+            this.txtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigo.DefaultText = "";
+            this.txtCodigo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCodigo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCodigo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigo.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigo.Location = new System.Drawing.Point(41, 112);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.PasswordChar = '\0';
+            this.txtCodigo.PlaceholderText = "Ingrese Código de Barras";
+            this.txtCodigo.SelectedText = "";
+            this.txtCodigo.Size = new System.Drawing.Size(203, 24);
+            this.txtCodigo.TabIndex = 82;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
+            // 
+            // comboFuncionario
+            // 
+            this.comboFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.comboFuncionario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.comboFuncionario.BorderRadius = 5;
+            this.comboFuncionario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboFuncionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboFuncionario.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboFuncionario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboFuncionario.Font = new System.Drawing.Font("Georgia", 9.75F);
+            this.comboFuncionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.comboFuncionario.ItemHeight = 30;
+            this.comboFuncionario.Items.AddRange(new object[] {
+            "Aprendiz",
+            "Instructor",
+            "Funcionario "});
+            this.comboFuncionario.Location = new System.Drawing.Point(240, 269);
+            this.comboFuncionario.Name = "comboFuncionario";
+            this.comboFuncionario.Size = new System.Drawing.Size(155, 36);
+            this.comboFuncionario.TabIndex = 81;
+            this.comboFuncionario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboFuncionario_KeyPress);
             // 
             // txtTelefono
             // 
@@ -84,40 +122,41 @@ namespace SistemaAsistencia.CapaVistas
             this.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTelefono.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefono.Location = new System.Drawing.Point(238, 154);
+            this.txtTelefono.Location = new System.Drawing.Point(246, 186);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderText = "Ingresa el Teléfono\r\n";
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.Size = new System.Drawing.Size(178, 24);
-            this.txtTelefono.TabIndex = 55;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
+            this.txtTelefono.TabIndex = 80;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
-            // txtPassword
+            // txtFicha
             // 
-            this.txtPassword.AutoRoundedCorners = true;
-            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
-            this.txtPassword.BorderRadius = 11;
-            this.txtPassword.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.txtPassword.BorderThickness = 2;
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultText = "";
-            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Font = new System.Drawing.Font("Georgia", 12F);
-            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(238, 122);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
-            this.txtPassword.PlaceholderText = "Ingresa la Contraseña\r\n";
-            this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(178, 24);
-            this.txtPassword.TabIndex = 54;
+            this.txtFicha.AutoRoundedCorners = true;
+            this.txtFicha.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtFicha.BorderRadius = 11;
+            this.txtFicha.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtFicha.BorderThickness = 2;
+            this.txtFicha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFicha.DefaultText = "";
+            this.txtFicha.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFicha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFicha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFicha.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFicha.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFicha.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtFicha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFicha.Location = new System.Drawing.Point(246, 218);
+            this.txtFicha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFicha.Name = "txtFicha";
+            this.txtFicha.PasswordChar = '\0';
+            this.txtFicha.PlaceholderText = "Ingresa la Ficha";
+            this.txtFicha.SelectedText = "";
+            this.txtFicha.Size = new System.Drawing.Size(178, 24);
+            this.txtFicha.TabIndex = 79;
+            this.txtFicha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // txtCorreo
             // 
@@ -135,14 +174,14 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCorreo.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCorreo.Location = new System.Drawing.Point(238, 90);
+            this.txtCorreo.Location = new System.Drawing.Point(246, 154);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderText = "Ingresa el Correo\r\n";
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.Size = new System.Drawing.Size(178, 24);
-            this.txtCorreo.TabIndex = 53;
+            this.txtCorreo.TabIndex = 78;
             this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtLastName
@@ -161,14 +200,14 @@ namespace SistemaAsistencia.CapaVistas
             this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLastName.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastName.Location = new System.Drawing.Point(40, 154);
+            this.txtLastName.Location = new System.Drawing.Point(41, 218);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.PasswordChar = '\0';
             this.txtLastName.PlaceholderText = "Ingresa el Apellido";
             this.txtLastName.SelectedText = "";
             this.txtLastName.Size = new System.Drawing.Size(178, 24);
-            this.txtLastName.TabIndex = 52;
+            this.txtLastName.TabIndex = 77;
             this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtName
@@ -187,14 +226,14 @@ namespace SistemaAsistencia.CapaVistas
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(40, 122);
+            this.txtName.Location = new System.Drawing.Point(41, 186);
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Ingresa el Nombre\r\n";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(178, 24);
-            this.txtName.TabIndex = 51;
+            this.txtName.TabIndex = 76;
             this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtCedula
@@ -213,78 +252,55 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCedula.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCedula.Location = new System.Drawing.Point(40, 90);
+            this.txtCedula.Location = new System.Drawing.Point(41, 154);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
             this.txtCedula.PlaceholderText = "Ingresa la Cédula";
             this.txtCedula.SelectedText = "";
             this.txtCedula.Size = new System.Drawing.Size(178, 24);
-            this.txtCedula.TabIndex = 50;
-            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
-            // 
-            // comboEstado
-            // 
-            this.comboEstado.BackColor = System.Drawing.Color.Transparent;
-            this.comboEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
-            this.comboEstado.BorderRadius = 5;
-            this.comboEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboEstado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboEstado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboEstado.Font = new System.Drawing.Font("Georgia", 9.75F);
-            this.comboEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.comboEstado.ItemHeight = 30;
-            this.comboEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.comboEstado.Location = new System.Drawing.Point(239, 293);
-            this.comboEstado.Name = "comboEstado";
-            this.comboEstado.Size = new System.Drawing.Size(155, 36);
-            this.comboEstado.TabIndex = 59;
-            // 
-            // combotxtRol
-            // 
-            this.combotxtRol.BackColor = System.Drawing.Color.Transparent;
-            this.combotxtRol.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
-            this.combotxtRol.BorderRadius = 5;
-            this.combotxtRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combotxtRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combotxtRol.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combotxtRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combotxtRol.Font = new System.Drawing.Font("Georgia", 9.75F);
-            this.combotxtRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.combotxtRol.ItemHeight = 30;
-            this.combotxtRol.Items.AddRange(new object[] {
-            "Aprendiz",
-            "Instructor",
-            "Funcionario "});
-            this.combotxtRol.Location = new System.Drawing.Point(239, 227);
-            this.combotxtRol.Name = "combotxtRol";
-            this.combotxtRol.Size = new System.Drawing.Size(155, 36);
-            this.combotxtRol.TabIndex = 58;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.label3.Location = new System.Drawing.Point(77, 302);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 18);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "Estado de Usuario:";
+            this.txtCedula.TabIndex = 75;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.label2.Location = new System.Drawing.Point(102, 233);
+            this.label2.Location = new System.Drawing.Point(123, 274);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 18);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Rol de Usuario:";
+            this.label2.Size = new System.Drawing.Size(96, 18);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "Funcionario:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label1.Location = new System.Drawing.Point(36, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(240, 29);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "Modificar Persona";
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.BorderRadius = 10;
+            this.btnOpen.DefaultAutoSize = true;
+            this.btnOpen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOpen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOpen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOpen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOpen.FillColor = System.Drawing.Color.Gray;
+            this.btnOpen.Font = new System.Drawing.Font("Georgia", 9F);
+            this.btnOpen.ForeColor = System.Drawing.Color.White;
+            this.btnOpen.Location = new System.Drawing.Point(696, 267);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(59, 25);
+            this.btnOpen.TabIndex = 86;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // txtFile
             // 
@@ -302,54 +318,35 @@ namespace SistemaAsistencia.CapaVistas
             this.txtFile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFile.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtFile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFile.Location = new System.Drawing.Point(486, 267);
+            this.txtFile.Location = new System.Drawing.Point(477, 268);
             this.txtFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFile.Name = "txtFile";
             this.txtFile.PasswordChar = '\0';
             this.txtFile.PlaceholderText = "\r\n";
             this.txtFile.SelectedText = "";
             this.txtFile.Size = new System.Drawing.Size(212, 24);
-            this.txtFile.TabIndex = 61;
+            this.txtFile.TabIndex = 85;
+            this.txtFile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboFuncionario_KeyPress);
+            // 
+            // pictureUser
+            // 
+            this.pictureUser.Location = new System.Drawing.Point(435, 88);
+            this.pictureUser.Name = "pictureUser";
+            this.pictureUser.Size = new System.Drawing.Size(320, 154);
+            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureUser.TabIndex = 84;
+            this.pictureUser.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Georgia", 9.75F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.label7.Location = new System.Drawing.Point(441, 272);
+            this.label7.Location = new System.Drawing.Point(432, 272);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 16);
-            this.label7.TabIndex = 60;
+            this.label7.TabIndex = 83;
             this.label7.Text = "File :";
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.BorderRadius = 10;
-            this.btnOpen.DefaultAutoSize = true;
-            this.btnOpen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOpen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOpen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOpen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOpen.FillColor = System.Drawing.Color.Gray;
-            this.btnOpen.Font = new System.Drawing.Font("Georgia", 9F);
-            this.btnOpen.ForeColor = System.Drawing.Color.White;
-            this.btnOpen.Location = new System.Drawing.Point(705, 266);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(59, 25);
-            this.btnOpen.TabIndex = 62;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.label1.Location = new System.Drawing.Point(35, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 29);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "Modificar Usuario";
             // 
             // btnCancelar
             // 
@@ -361,57 +358,57 @@ namespace SistemaAsistencia.CapaVistas
             this.btnCancelar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(61)))), ((int)(((byte)(238)))));
             this.btnCancelar.Font = new System.Drawing.Font("Georgia", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(612, 307);
+            this.btnCancelar.Location = new System.Drawing.Point(593, 326);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(95, 30);
-            this.btnCancelar.TabIndex = 65;
+            this.btnCancelar.TabIndex = 88;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAgregar
+            // btnModificar
             // 
-            this.btnAgregar.BorderRadius = 10;
-            this.btnAgregar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(210)))));
-            this.btnAgregar.Font = new System.Drawing.Font("Georgia", 12F);
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(496, 307);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(95, 30);
-            this.btnAgregar.TabIndex = 64;
-            this.btnAgregar.Text = "Modificar";
-            this.btnAgregar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnModificar.BorderRadius = 10;
+            this.btnModificar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModificar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModificar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(210)))));
+            this.btnModificar.Font = new System.Drawing.Font("Georgia", 12F);
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(477, 326);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(95, 30);
+            this.btnModificar.TabIndex = 87;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // FrmModificarUsuario
+            // FrmModificarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(811, 361);
+            this.ClientSize = new System.Drawing.Size(782, 387);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.txtFile);
+            this.Controls.Add(this.pictureUser);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboEstado);
-            this.Controls.Add(this.combotxtRol);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.comboFuncionario);
             this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtFicha);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelId);
-            this.Controls.Add(this.pictureUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FrmModificarUsuario";
+            this.Name = "FrmModificarPersona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ModificarPersona";
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -419,23 +416,22 @@ namespace SistemaAsistencia.CapaVistas
         }
 
         #endregion
-        public System.Windows.Forms.PictureBox pictureUser;
         public System.Windows.Forms.Label labelId;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2Button btnOpen;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button btnOpen;
+        private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Button btnCancelar;
-        private Guna.UI2.WinForms.Guna2Button btnAgregar;
+        private Guna.UI2.WinForms.Guna2Button btnModificar;
+        public Guna.UI2.WinForms.Guna2TextBox txtCodigo;
+        public Guna.UI2.WinForms.Guna2ComboBox comboFuncionario;
         public Guna.UI2.WinForms.Guna2TextBox txtTelefono;
-        public Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        public Guna.UI2.WinForms.Guna2TextBox txtFicha;
         public Guna.UI2.WinForms.Guna2TextBox txtCorreo;
         public Guna.UI2.WinForms.Guna2TextBox txtLastName;
         public Guna.UI2.WinForms.Guna2TextBox txtName;
         public Guna.UI2.WinForms.Guna2TextBox txtCedula;
-        public Guna.UI2.WinForms.Guna2ComboBox comboEstado;
-        public Guna.UI2.WinForms.Guna2ComboBox combotxtRol;
         public Guna.UI2.WinForms.Guna2TextBox txtFile;
+        public System.Windows.Forms.PictureBox pictureUser;
     }
 }

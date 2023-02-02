@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using SistemaAsistencia.CapaModelo;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemaAsistencia.CapaModelo;
 
 namespace SistemaAsistencia.CapaVistas
 {
@@ -20,16 +15,18 @@ namespace SistemaAsistencia.CapaVistas
 
         private void FrmPersonas_Load(object sender, EventArgs e)
         {
+
             DataTable dt = new DataTable();
             CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
-            dt=clsPersona.LlenarDatos();
-            dataPersonas.DataSource = dt;
+            dt = clsPersona.LlenarDatos();
+            dataPersona.DataSource = dt;
+
+
+            this.picturePeople.Image = Image.FromFile(@"C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\Assets\gifPeople.gif");
+            this.picturePeople.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
-        private void dataPersonas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -40,25 +37,34 @@ namespace SistemaAsistencia.CapaVistas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-                CapaVistas.ModificarPersona modificarPersona = new CapaVistas.ModificarPersona();
-                modificarPersona.labelId.Text = dataPersonas.CurrentRow.Cells[0].Value.ToString();
-                modificarPersona.txtName.Text = dataPersonas.CurrentRow.Cells[2].Value.ToString();
-                modificarPersona.txtLastName.Text = dataPersonas.CurrentRow.Cells[3].Value.ToString();
-                modificarPersona.txtCorreo.Text = dataPersonas.CurrentRow.Cells[4].Value.ToString();
-                modificarPersona.txtTelefono.Text = dataPersonas.CurrentRow.Cells[5].Value.ToString();
-                modificarPersona.comboFuncionario.Text = dataPersonas.CurrentRow.Cells[6].Value.ToString();
-                modificarPersona.txtFicha.Text = dataPersonas.CurrentRow.Cells[7].Value.ToString();
-                modificarPersona.txtFile.Text = dataPersonas.CurrentRow.Cells[8].Value.ToString();
-                byte[] photoPerson = (byte[])dataPersonas.CurrentRow.Cells[9].Value;
-                ClsImage image = new ClsImage();
-                Image imagePerson = image.byteArrayToImage(photoPerson);
-                modificarPersona.pictureUser.Image = imagePerson;
-                modificarPersona.txtCodigo.Text = dataPersonas.CurrentRow.Cells[10].Value.ToString();
-                modificarPersona.arrayImagenUser = photoPerson;
+            ClsImage image = new ClsImage();
 
-                modificarPersona.Show();
-           
+            CapaVistas.FrmModificarPersona modificarPersona = new CapaVistas.FrmModificarPersona();
+            modificarPersona.labelId.Text = dataPersona.CurrentRow.Cells[0].Value.ToString();
+            modificarPersona.txtName.Text = dataPersona.CurrentRow.Cells[2].Value.ToString();
+            modificarPersona.txtLastName.Text = dataPersona.CurrentRow.Cells[3].Value.ToString();
+            modificarPersona.txtCorreo.Text = dataPersona.CurrentRow.Cells[4].Value.ToString();
+            modificarPersona.txtTelefono.Text = dataPersona.CurrentRow.Cells[5].Value.ToString();
+            modificarPersona.comboFuncionario.Text = dataPersona.CurrentRow.Cells[6].Value.ToString();
+            modificarPersona.txtFicha.Text = dataPersona.CurrentRow.Cells[7].Value.ToString();
+            modificarPersona.txtFile.Text = dataPersona.CurrentRow.Cells[8].Value.ToString();
+            byte[] photoPerson = (byte[])dataPersona.CurrentRow.Cells[9].Value;
+            modificarPersona.txtCodigo.Text = dataPersona.CurrentRow.Cells[10].Value.ToString();
 
+
+            Image imagePerson = image.byteArrayToImage(photoPerson);
+            modificarPersona.pictureUser.Image = imagePerson;
+            modificarPersona.arrayImagenUser = photoPerson;
+            modificarPersona.Show();
+
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmMenu menu = new FrmMenu();
+            menu.Show();
         }
     }
 }

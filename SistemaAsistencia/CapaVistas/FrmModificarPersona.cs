@@ -12,16 +12,16 @@ using SistemaAsistencia.CapaModelo;
 
 namespace SistemaAsistencia.CapaVistas
 {
-    public partial class ModificarPersona : Form
+    public partial class FrmModificarPersona : Form
     {
        public Byte[] arrayImagenUser;
 
-        public ModificarPersona()
+        public FrmModificarPersona()
         {
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
             if (this.txtCodigo.Text == "")
             {
@@ -131,6 +131,77 @@ namespace SistemaAsistencia.CapaVistas
             }
             ClsImage imagenArray = new ClsImage();
             arrayImagenUser = imagenArray.ImageToByteArray(this.pictureUser.Image);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("¿Desea cancelar el proceso?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.txtCodigo.Text = "";
+                this.txtName.Text = "";
+                this.txtLastName.Text = "";
+                this.txtCorreo.Text = "";
+                this.txtTelefono.Text = "";
+                this.comboFuncionario.Text = "";
+                this.txtFile.Text = "";
+                this.txtFicha.Text = "";
+                this.pictureUser.Image = null;
+
+
+                this.Hide();
+
+
+            }
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void comboFuncionario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     } 
 } 

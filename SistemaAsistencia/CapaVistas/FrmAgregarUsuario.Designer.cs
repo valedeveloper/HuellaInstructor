@@ -272,9 +272,7 @@ namespace SistemaAsistencia.CapaVistas
             this.combotxtRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.combotxtRol.ItemHeight = 30;
             this.combotxtRol.Items.AddRange(new object[] {
-            "Aprendiz",
-            "Instructor",
-            "Funcionario "});
+            "Administrador"});
             this.combotxtRol.Location = new System.Drawing.Point(207, 207);
             this.combotxtRol.Name = "combotxtRol";
             this.combotxtRol.Size = new System.Drawing.Size(155, 36);

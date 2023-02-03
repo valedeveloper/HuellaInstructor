@@ -417,7 +417,6 @@ namespace SistemaAsistencia.CapaVistas
 
         #endregion
         public System.Windows.Forms.Label labelId;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnOpen;
         private System.Windows.Forms.Label label7;
@@ -433,5 +432,6 @@ namespace SistemaAsistencia.CapaVistas
         public Guna.UI2.WinForms.Guna2TextBox txtCedula;
         public Guna.UI2.WinForms.Guna2TextBox txtFile;
         public System.Windows.Forms.PictureBox pictureUser;
+        public System.Windows.Forms.Label label2;
     }
 }

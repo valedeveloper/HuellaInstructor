@@ -6,7 +6,6 @@ namespace SistemaAsistencia.CapaDatos
 {
     public class ClsUsuarioBD
     {
-
         public DataTable LlenarUsuarios_db()
         {
             ClsConexion conexion = new ClsConexion();
@@ -18,8 +17,6 @@ namespace SistemaAsistencia.CapaDatos
             sqlData.Fill(dt);
             return dt;
         }
-
-
         public DataTable Loguearse_db(string Cedula, string Password)
         {
             ClsConexion conexion = new ClsConexion();

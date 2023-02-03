@@ -17,3 +17,4 @@ C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\bin\Debug\Guna.UI2.d
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.csproj.CopyComplete
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.CapaVistas.FrmModificarPersona.resources
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.FrmMenu.resources
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.CapaVistas.FrmControl.resources

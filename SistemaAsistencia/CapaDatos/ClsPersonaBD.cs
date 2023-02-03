@@ -87,6 +87,32 @@ namespace SistemaAsistencia.CapaDatos
             return dataTable;
         }
 
+        public DataTable TraerPersonaCodigo_db(int codigo_Barras)
+        {
+            ClsConexion conexion = new ClsConexion();
+            string consultaTraer = "SELECT Nombre_Persona,Apellido_Persona,Funcionario_Persona,Ficha_Persona,Photo_Persona WHERE Codigo_Barras=@Codigo_Barras";
+            SqlCommand sqlTraer = new SqlCommand(consultaTraer, conexion.Conectar());
+            sqlTraer.Parameters.AddWithValue("Codigo_Barras", codigo_Barras);
+
+            SqlDataAdapter sql = new SqlDataAdapter(sqlTraer);
+            DataTable data = new DataTable();
+            sql.Fill(data);
+            return data;
+        }
+
+        public DataTable TraerPersonaHuella_db(byte Id_Huella)
+        {
+            ClsConexion conexion = new ClsConexion();
+            string consultaTraer = "SELECT Nombre_Persona,Apellido_Persona,Funcionario_Persona,Ficha_Persona,Photo_Persona WHERE Id_Huella=@Id_Huella";
+            SqlCommand sqlTraer = new SqlCommand(consultaTraer, conexion.Conectar());
+            sqlTraer.Parameters.AddWithValue("Codigo_Barras", Id_Huella);
+
+            SqlDataAdapter sql = new SqlDataAdapter(sqlTraer);
+            DataTable data = new DataTable();
+            sql.Fill(data);
+            return data;
+        }
+
 
     }
 }

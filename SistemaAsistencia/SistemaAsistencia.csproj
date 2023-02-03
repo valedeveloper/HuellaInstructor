@@ -73,6 +73,12 @@
     <Compile Include="CapaVistas\FrmAgregarUsuario.Designer.cs">
       <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaVistas\FrmControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\FrmControl.Designer.cs">
+      <DependentUpon>FrmControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapaVistas\FrmModificarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaVistas\FrmAgregarUsuario.resx">
       <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaVistas\FrmControl.resx">
+      <DependentUpon>FrmControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaVistas\FrmModificarUsuario.resx">
       <DependentUpon>FrmModificarUsuario.cs</DependentUpon>

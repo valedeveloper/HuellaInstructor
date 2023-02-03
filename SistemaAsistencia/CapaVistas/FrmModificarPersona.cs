@@ -91,7 +91,7 @@ namespace SistemaAsistencia.CapaVistas
                                                 
                                                 
                                                 //Mensaje de Salida para que el usuario sepa que está agregado el Usuario 
-                                                MessageBox.Show("Usuario Modificado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                MessageBox.Show("Persona Modificada", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                                 this.txtCodigo.Text = "";
                                                 this.txtName.Text = "";
                                                 this.txtLastName.Text = "";

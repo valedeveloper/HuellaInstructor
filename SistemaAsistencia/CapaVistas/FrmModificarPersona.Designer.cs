@@ -37,7 +37,6 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCedula = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOpen = new Guna.UI2.WinForms.Guna2Button();
@@ -74,7 +73,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCodigo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCodigo.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigo.Location = new System.Drawing.Point(41, 112);
+            this.txtCodigo.Location = new System.Drawing.Point(41, 99);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.PasswordChar = '\0';
@@ -83,6 +82,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCodigo.Size = new System.Drawing.Size(203, 24);
             this.txtCodigo.TabIndex = 82;
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // comboFuncionario
             // 
@@ -200,7 +200,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLastName.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastName.Location = new System.Drawing.Point(41, 218);
+            this.txtLastName.Location = new System.Drawing.Point(41, 186);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.PasswordChar = '\0';
@@ -226,7 +226,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(41, 186);
+            this.txtName.Location = new System.Drawing.Point(41, 154);
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -235,32 +235,6 @@ namespace SistemaAsistencia.CapaVistas
             this.txtName.Size = new System.Drawing.Size(178, 24);
             this.txtName.TabIndex = 76;
             this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.AutoRoundedCorners = true;
-            this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
-            this.txtCedula.BorderRadius = 11;
-            this.txtCedula.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.txtCedula.BorderThickness = 2;
-            this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCedula.DefaultText = "";
-            this.txtCedula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCedula.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCedula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCedula.Font = new System.Drawing.Font("Georgia", 12F);
-            this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCedula.Location = new System.Drawing.Point(41, 154);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.PasswordChar = '\0';
-            this.txtCedula.PlaceholderText = "Ingresa la Cédula";
-            this.txtCedula.SelectedText = "";
-            this.txtCedula.Size = new System.Drawing.Size(178, 24);
-            this.txtCedula.TabIndex = 75;
-            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label2
             // 
@@ -401,7 +375,6 @@ namespace SistemaAsistencia.CapaVistas
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelId);
@@ -429,7 +402,6 @@ namespace SistemaAsistencia.CapaVistas
         public Guna.UI2.WinForms.Guna2TextBox txtCorreo;
         public Guna.UI2.WinForms.Guna2TextBox txtLastName;
         public Guna.UI2.WinForms.Guna2TextBox txtName;
-        public Guna.UI2.WinForms.Guna2TextBox txtCedula;
         public Guna.UI2.WinForms.Guna2TextBox txtFile;
         public System.Windows.Forms.PictureBox pictureUser;
         public System.Windows.Forms.Label label2;

@@ -76,15 +76,12 @@ namespace SistemaAsistencia.CapaVistas
                                             //ClsPersona clsPersona1 = new ClsPersona(arrayImagenUser, this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionamiento.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtCodigo.Text));
 
                                             CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
-
                                             DataTable dataTable = new DataTable();
                                             dataTable = clsPersona.Validar_Codigo(int.Parse(this.txtCodigo.Text));
-                                            int idPersona = int.Parse(dataTable.Rows[0][0].ToString());
 
 
-                                            if (dataTable.Rows.Count == 0 || idPersona == int.Parse(this.labelId.Text))
+                                            if (dataTable.Rows.Count == 0 || this.labelId.Text == (dataTable.Rows[0][0].ToString()))
                                             {
-                                                idPersona = int.Parse(dataTable.Rows[0][0].ToString());
                                                 clsPersona.ModificarPersona_db(int.Parse(this.labelId.Text), arrayImagenUser, this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionario.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtCodigo.Text));
                                                
                                                 
@@ -202,6 +199,12 @@ namespace SistemaAsistencia.CapaVistas
         private void comboFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void txtCodigo_Leave(object sender, EventArgs e)
+        {
+
+
         }
     } 
 } 

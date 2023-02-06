@@ -15,6 +15,7 @@ namespace SistemaAsistencia
         public FrmMenu()
         {
             InitializeComponent();
+
         }
 
         private void guna2Shapes1_Click(object sender, EventArgs e)
@@ -39,6 +40,13 @@ namespace SistemaAsistencia
 
             CapaVistas.FrmPersonas personas = new CapaVistas.FrmPersonas();
             personas.Show();
+            this.Hide();
+        }
+
+        private void imageControl_Click(object sender, EventArgs e)
+        {
+            CapaVistas.FrmControl frmControl = new CapaVistas.FrmControl();
+            frmControl.Show();
             this.Hide();
         }
     }

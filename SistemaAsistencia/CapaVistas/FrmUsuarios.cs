@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaAsistencia.CapaModelo;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -38,27 +39,36 @@ namespace SistemaAsistencia.CapaVistas
 
             CapaVistas.FrmModificarUsuario modificarUser = new CapaVistas.FrmModificarUsuario();
 
+            if (dataUsuario.Rows.Count != 0)
+            {
 
-            modificarUser.labelId.Text = dataUsuario.CurrentRow.Cells[0].Value.ToString();
-            modificarUser.txtCedula.Text = dataUsuario.CurrentRow.Cells[1].Value.ToString();
-            modificarUser.txtName.Text = dataUsuario.CurrentRow.Cells[2].Value.ToString();
-            modificarUser.txtLastName.Text = dataUsuario.CurrentRow.Cells[3].Value.ToString();
-            modificarUser.txtCorreo.Text = dataUsuario.CurrentRow.Cells[4].Value.ToString();
-            modificarUser.txtTelefono.Text = dataUsuario.CurrentRow.Cells[5].Value.ToString();
-            modificarUser.txtPassword.Text = dataUsuario.CurrentRow.Cells[6].Value.ToString();
-            modificarUser.combotxtRol.Text = dataUsuario.CurrentRow.Cells[7].Value.ToString();
-            modificarUser.comboEstado.Text = dataUsuario.CurrentRow.Cells[8].Value.ToString();
-            modificarUser.txtFile.Text = dataUsuario.CurrentRow.Cells[9].Value.ToString();
-            byte[] photoByte = (byte[])dataUsuario.CurrentRow.Cells[10].Value;
+                modificarUser.labelId.Text = dataUsuario.CurrentRow.Cells[0].Value.ToString();
+                modificarUser.txtCedula.Text = dataUsuario.CurrentRow.Cells[1].Value.ToString();
+                modificarUser.txtName.Text = dataUsuario.CurrentRow.Cells[2].Value.ToString();
+                modificarUser.txtLastName.Text = dataUsuario.CurrentRow.Cells[3].Value.ToString();
+                modificarUser.txtCorreo.Text = dataUsuario.CurrentRow.Cells[4].Value.ToString();
+                modificarUser.txtTelefono.Text = dataUsuario.CurrentRow.Cells[5].Value.ToString();
+                modificarUser.cedulaValidada = dataUsuario.CurrentRow.Cells[6].Value.ToString();
+                modificarUser.combotxtRol.Text = dataUsuario.CurrentRow.Cells[7].Value.ToString();
+                modificarUser.comboEstado.Text = dataUsuario.CurrentRow.Cells[8].Value.ToString();
+                modificarUser.txtFile.Text = dataUsuario.CurrentRow.Cells[9].Value.ToString();
+                byte[] photoByte = (byte[])dataUsuario.CurrentRow.Cells[10].Value;
 
-            Image imagenUserPhoto = imageUser.byteArrayToImage(photoByte);
-            modificarUser.pictureUser.Image = imagenUserPhoto;
-            modificarUser.arrayImagenUser = photoByte;
-            modificarUser.Show();
+                Image imagenUserPhoto = imageUser.byteArrayToImage(photoByte);
+                modificarUser.pictureUser.Image = imagenUserPhoto;
+                modificarUser.arrayImagenUser = photoByte;
+                modificarUser.Show();
+            }
+            else
+            {
+                MessageBox.Show("Elija el dato que va a modificar", "Notificación");
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+
             this.Close();
             FrmMenu menu = new FrmMenu();
             menu.Show();

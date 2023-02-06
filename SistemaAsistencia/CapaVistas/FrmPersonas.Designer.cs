@@ -37,29 +37,20 @@ namespace SistemaAsistencia.CapaVistas
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataPersona = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.huellaPersonaDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.nombrePersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celularPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funcionarioPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fichaPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.photoUsuarioDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pERSONASBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sistema_de_AsistenciaDataSet = new SistemaAsistencia.Sistema_de_AsistenciaDataSet();
-            this.pERSONASTableAdapter = new SistemaAsistencia.Sistema_de_AsistenciaDataSetTableAdapters.PERSONASTableAdapter();
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             this.btnModificar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.picturePeople = new System.Windows.Forms.PictureBox();
+            this.pERSONASBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sistema_de_AsistenciaDataSet = new SistemaAsistencia.Sistema_de_AsistenciaDataSet();
+            this.pERSONASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pERSONASTableAdapter = new SistemaAsistencia.Sistema_de_AsistenciaDataSetTableAdapters.PERSONASTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataPersona)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_de_AsistenciaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePeople)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistema_de_AsistenciaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -68,7 +59,7 @@ namespace SistemaAsistencia.CapaVistas
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(745, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
@@ -91,7 +82,6 @@ namespace SistemaAsistencia.CapaVistas
             this.dataPersona.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dataPersona.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataPersona.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,19 +92,6 @@ namespace SistemaAsistencia.CapaVistas
             this.dataPersona.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataPersona.ColumnHeadersHeight = 20;
             this.dataPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataPersona.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idPersonaDataGridViewTextBoxColumn,
-            this.huellaPersonaDataGridViewImageColumn,
-            this.nombrePersonaDataGridViewTextBoxColumn,
-            this.apellidoPersonaDataGridViewTextBoxColumn,
-            this.correoPersonaDataGridViewTextBoxColumn,
-            this.celularPersonaDataGridViewTextBoxColumn,
-            this.funcionarioPersonaDataGridViewTextBoxColumn,
-            this.fichaPersonaDataGridViewTextBoxColumn,
-            this.estadoPersonaDataGridViewTextBoxColumn,
-            this.direccionImagenDataGridViewTextBoxColumn,
-            this.photoUsuarioDataGridViewImageColumn});
-            this.dataPersona.DataSource = this.pERSONASBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,105 +128,6 @@ namespace SistemaAsistencia.CapaVistas
             this.dataPersona.ThemeStyle.RowsStyle.Height = 22;
             this.dataPersona.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataPersona.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // idPersonaDataGridViewTextBoxColumn
-            // 
-            this.idPersonaDataGridViewTextBoxColumn.DataPropertyName = "Id_Persona";
-            this.idPersonaDataGridViewTextBoxColumn.HeaderText = "Id_Persona";
-            this.idPersonaDataGridViewTextBoxColumn.Name = "idPersonaDataGridViewTextBoxColumn";
-            this.idPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idPersonaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // huellaPersonaDataGridViewImageColumn
-            // 
-            this.huellaPersonaDataGridViewImageColumn.DataPropertyName = "Huella_Persona";
-            this.huellaPersonaDataGridViewImageColumn.HeaderText = "Huella_Persona";
-            this.huellaPersonaDataGridViewImageColumn.Name = "huellaPersonaDataGridViewImageColumn";
-            this.huellaPersonaDataGridViewImageColumn.ReadOnly = true;
-            this.huellaPersonaDataGridViewImageColumn.Visible = false;
-            // 
-            // nombrePersonaDataGridViewTextBoxColumn
-            // 
-            this.nombrePersonaDataGridViewTextBoxColumn.DataPropertyName = "Nombre_Persona";
-            this.nombrePersonaDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombrePersonaDataGridViewTextBoxColumn.Name = "nombrePersonaDataGridViewTextBoxColumn";
-            this.nombrePersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellidoPersonaDataGridViewTextBoxColumn
-            // 
-            this.apellidoPersonaDataGridViewTextBoxColumn.DataPropertyName = "Apellido_Persona";
-            this.apellidoPersonaDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoPersonaDataGridViewTextBoxColumn.Name = "apellidoPersonaDataGridViewTextBoxColumn";
-            this.apellidoPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // correoPersonaDataGridViewTextBoxColumn
-            // 
-            this.correoPersonaDataGridViewTextBoxColumn.DataPropertyName = "Correo_Persona";
-            this.correoPersonaDataGridViewTextBoxColumn.HeaderText = "Correo_Persona";
-            this.correoPersonaDataGridViewTextBoxColumn.Name = "correoPersonaDataGridViewTextBoxColumn";
-            this.correoPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.correoPersonaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // celularPersonaDataGridViewTextBoxColumn
-            // 
-            this.celularPersonaDataGridViewTextBoxColumn.DataPropertyName = "Celular_Persona";
-            this.celularPersonaDataGridViewTextBoxColumn.HeaderText = "Celular_Persona";
-            this.celularPersonaDataGridViewTextBoxColumn.Name = "celularPersonaDataGridViewTextBoxColumn";
-            this.celularPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.celularPersonaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // funcionarioPersonaDataGridViewTextBoxColumn
-            // 
-            this.funcionarioPersonaDataGridViewTextBoxColumn.DataPropertyName = "Funcionario_Persona";
-            this.funcionarioPersonaDataGridViewTextBoxColumn.HeaderText = "Funcionario";
-            this.funcionarioPersonaDataGridViewTextBoxColumn.Name = "funcionarioPersonaDataGridViewTextBoxColumn";
-            this.funcionarioPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.funcionarioPersonaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fichaPersonaDataGridViewTextBoxColumn
-            // 
-            this.fichaPersonaDataGridViewTextBoxColumn.DataPropertyName = "Ficha_Persona";
-            this.fichaPersonaDataGridViewTextBoxColumn.HeaderText = "Ficha";
-            this.fichaPersonaDataGridViewTextBoxColumn.Name = "fichaPersonaDataGridViewTextBoxColumn";
-            this.fichaPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estadoPersonaDataGridViewTextBoxColumn
-            // 
-            this.estadoPersonaDataGridViewTextBoxColumn.DataPropertyName = "Estado_Persona";
-            this.estadoPersonaDataGridViewTextBoxColumn.HeaderText = "Estado_Persona";
-            this.estadoPersonaDataGridViewTextBoxColumn.Name = "estadoPersonaDataGridViewTextBoxColumn";
-            this.estadoPersonaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.estadoPersonaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // direccionImagenDataGridViewTextBoxColumn
-            // 
-            this.direccionImagenDataGridViewTextBoxColumn.DataPropertyName = "Direccion_Imagen";
-            this.direccionImagenDataGridViewTextBoxColumn.HeaderText = "Direccion_Imagen";
-            this.direccionImagenDataGridViewTextBoxColumn.Name = "direccionImagenDataGridViewTextBoxColumn";
-            this.direccionImagenDataGridViewTextBoxColumn.ReadOnly = true;
-            this.direccionImagenDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // photoUsuarioDataGridViewImageColumn
-            // 
-            this.photoUsuarioDataGridViewImageColumn.DataPropertyName = "Photo_Usuario";
-            this.photoUsuarioDataGridViewImageColumn.HeaderText = "Photo_Usuario";
-            this.photoUsuarioDataGridViewImageColumn.Name = "photoUsuarioDataGridViewImageColumn";
-            this.photoUsuarioDataGridViewImageColumn.ReadOnly = true;
-            this.photoUsuarioDataGridViewImageColumn.Visible = false;
-            // 
-            // pERSONASBindingSource
-            // 
-            this.pERSONASBindingSource.DataMember = "PERSONAS";
-            this.pERSONASBindingSource.DataSource = this.sistema_de_AsistenciaDataSet;
-            // 
-            // sistema_de_AsistenciaDataSet
-            // 
-            this.sistema_de_AsistenciaDataSet.DataSetName = "Sistema_de_AsistenciaDataSet";
-            this.sistema_de_AsistenciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pERSONASTableAdapter
-            // 
-            this.pERSONASTableAdapter.ClearBeforeFill = true;
             // 
             // btnAgregar
             // 
@@ -304,6 +182,24 @@ namespace SistemaAsistencia.CapaVistas
             this.picturePeople.TabIndex = 38;
             this.picturePeople.TabStop = false;
             // 
+            // pERSONASBindingSource1
+            // 
+            this.pERSONASBindingSource1.DataMember = "PERSONAS";
+            this.pERSONASBindingSource1.DataSource = this.sistema_de_AsistenciaDataSet;
+            // 
+            // sistema_de_AsistenciaDataSet
+            // 
+            this.sistema_de_AsistenciaDataSet.DataSetName = "Sistema_de_AsistenciaDataSet";
+            this.sistema_de_AsistenciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pERSONASBindingSource
+            // 
+            this.pERSONASBindingSource.DataMember = "PERSONAS";
+            // 
+            // pERSONASTableAdapter
+            // 
+            this.pERSONASTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmPersonas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,9 +219,10 @@ namespace SistemaAsistencia.CapaVistas
             this.Load += new System.EventHandler(this.FrmPersonas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataPersona)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_de_AsistenciaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePeople)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistema_de_AsistenciaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pERSONASBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,23 +232,13 @@ namespace SistemaAsistencia.CapaVistas
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         public Guna.UI2.WinForms.Guna2DataGridView dataPersona;
-        private Sistema_de_AsistenciaDataSet sistema_de_AsistenciaDataSet;
-        private System.Windows.Forms.BindingSource pERSONASBindingSource;
-        private Sistema_de_AsistenciaDataSetTableAdapters.PERSONASTableAdapter pERSONASTableAdapter;
         private Guna.UI2.WinForms.Guna2Button btnAgregar;
         private Guna.UI2.WinForms.Guna2Button btnModificar;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn huellaPersonaDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombrePersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correoPersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn celularPersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn funcionarioPersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fichaPersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoPersonaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionImagenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn photoUsuarioDataGridViewImageColumn;
         private System.Windows.Forms.PictureBox picturePeople;
+        private System.Windows.Forms.BindingSource pERSONASBindingSource1;
+        private Sistema_de_AsistenciaDataSet sistema_de_AsistenciaDataSet;
+        private System.Windows.Forms.BindingSource pERSONASBindingSource;
+        private Sistema_de_AsistenciaDataSetTableAdapters.PERSONASTableAdapter pERSONASTableAdapter;
     }
 }

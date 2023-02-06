@@ -73,6 +73,16 @@ namespace SistemaAsistencia.CapaDatos
             comandoModificar.Parameters.AddWithValue("Id_Persona", id);
             comandoModificar.ExecuteNonQuery();
         }
+
+        public void EntradaPersona_db(int id)
+        {
+            ClsConexion conexion = new ClsConexion();
+            SqlCommand command = new SqlCommand("RegistroAsistenciaHuella", conexion.Conectar());
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("Id_Persona", id);
+            command.BeginExecuteNonQuery();
+        }
+
         public DataTable Validar_Codigo(int Codigo)
         {
             ClsConexion conexion = new ClsConexion();
@@ -90,7 +100,7 @@ namespace SistemaAsistencia.CapaDatos
         public DataTable TraerPersonaCodigo_db(int codigo_Barras)
         {
             ClsConexion conexion = new ClsConexion();
-            string consultaTraer = "SELECT Nombre_Persona,Apellido_Persona,Funcionario_Persona,Ficha_Persona,Photo_Persona WHERE Codigo_Barras=@Codigo_Barras";
+            string consultaTraer = "SELECT Id_Persona,Nombre_Persona,Apellido_Persona,Funcionario_Persona,Ficha_Persona,Photo_Persona FROM PERSONAS WHERE Codigo_Barras=@Codigo_Barras";
             SqlCommand sqlTraer = new SqlCommand(consultaTraer, conexion.Conectar());
             sqlTraer.Parameters.AddWithValue("Codigo_Barras", codigo_Barras);
 
@@ -110,6 +120,37 @@ namespace SistemaAsistencia.CapaDatos
             SqlDataAdapter sql = new SqlDataAdapter(sqlTraer);
             DataTable data = new DataTable();
             sql.Fill(data);
+            return data;
+        }
+
+        public DataTable TraerEstadoAsistencia_db(int id)
+        {
+            //Primero instanciamos la clase de conexión
+            ClsConexion conexion = new ClsConexion();
+
+            //Luego creamos la query
+            string queryAsistencia = "SELECT Estado_Persona from ASISTENCIA_HUELLA WHERE Id_Asistencia = (SELECT MAX(Id_Asistencia) FROM ASISTENCIA_HUELLA where Id_Persona =@Id_Persona)";
+
+            SqlCommand sql = new SqlCommand(queryAsistencia, conexion.Conectar());
+            sql.Parameters.AddWithValue("Id_Persona", id);
+            sql.ExecuteNonQuery();
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(sql);
+            DataTable data = new DataTable();
+            sqlData.Fill(data);
+            return data;
+        }
+
+        public DataTable ReporteAsistencia_db()
+        {
+            ClsConexion conexion = new ClsConexion();
+            string queryReporte = "SELECT P.Nombre_Persona, P.Apellido_Persona, A.Fecha_Entrada,A.Fecha_Salida FROM PERSONAS P INNER JOIN ASISTENCIA_HUELLA A ON P.Id_Persona=P.Id_Persona";
+            SqlCommand sql = new SqlCommand(queryReporte, conexion.Conectar());
+            sql.ExecuteNonQuery();
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(sql);
+            DataTable data = new DataTable();
+            sqlData.Fill(data);
             return data;
         }
 

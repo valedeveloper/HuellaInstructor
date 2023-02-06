@@ -37,7 +37,7 @@ namespace SistemaAsistencia.CapaModelo
             return clsPersonaBD.Validar_Codigo(codigo_Barras);
         }
 
-        public static DataTable LlenarDatos()
+        public  DataTable LlenarDatos()
         {
             CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
             return clsPersona.LlenarDatos();
@@ -55,6 +55,12 @@ namespace SistemaAsistencia.CapaModelo
             clsPersonaBD.ModificarPersona_db(id, huellaPersona, nombre, apellido, correo, celular, funcionario_Persona, ficha_Persona, direccion_Imagen, photo, codigo_Barras);
         }
 
+        public void EntradaPersona(int id)
+        {
+            ClsPersonaBD clsPersona = new ClsPersonaBD();
+            clsPersona.EntradaPersona_db(id);
+        }
+
         public DataTable TraerPersonaCodigo(int codigo_Barras)
         {
             ClsPersonaBD personaBD = new ClsPersonaBD();
@@ -65,6 +71,18 @@ namespace SistemaAsistencia.CapaModelo
         {
             ClsPersonaBD personaBD = new ClsPersonaBD();
             return personaBD.TraerPersonaHuella_db(Id_Huella);
+        }
+
+        public DataTable TraerEstadoAsistencia(int id_Persona)
+        {
+            ClsPersonaBD clsPersonaBD = new ClsPersonaBD();
+            return clsPersonaBD.TraerEstadoAsistencia_db(id_Persona);
+        }
+
+        public DataTable ReporteAsistencia()
+        {
+            ClsPersonaBD clsPersonaBD = new ClsPersonaBD();
+            return clsPersonaBD.ReporteAsistencia_db();
         }
     }
 }

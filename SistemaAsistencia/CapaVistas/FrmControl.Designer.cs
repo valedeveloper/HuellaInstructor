@@ -45,6 +45,7 @@ namespace SistemaAsistencia.CapaVistas
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelFicha = new System.Windows.Forms.Label();
+            this.labelEstado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePeople)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,7 @@ namespace SistemaAsistencia.CapaVistas
             this.labelHora.AutoSize = true;
             this.labelHora.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
-            this.labelHora.Location = new System.Drawing.Point(654, 80);
+            this.labelHora.Location = new System.Drawing.Point(654, 99);
             this.labelHora.Name = "labelHora";
             this.labelHora.Size = new System.Drawing.Size(76, 29);
             this.labelHora.TabIndex = 35;
@@ -71,7 +72,7 @@ namespace SistemaAsistencia.CapaVistas
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(745, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
@@ -82,7 +83,7 @@ namespace SistemaAsistencia.CapaVistas
             this.labelFecha.AutoSize = true;
             this.labelFecha.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.labelFecha.Location = new System.Drawing.Point(454, 50);
+            this.labelFecha.Location = new System.Drawing.Point(454, 69);
             this.labelFecha.Name = "labelFecha";
             this.labelFecha.Size = new System.Drawing.Size(68, 29);
             this.labelFecha.TabIndex = 37;
@@ -95,9 +96,8 @@ namespace SistemaAsistencia.CapaVistas
             // 
             // picturePeople
             // 
-            this.picturePeople.Image = ((System.Drawing.Image)(resources.GetObject("picturePeople.Image")));
             this.picturePeople.InitialImage = ((System.Drawing.Image)(resources.GetObject("picturePeople.InitialImage")));
-            this.picturePeople.Location = new System.Drawing.Point(120, 197);
+            this.picturePeople.Location = new System.Drawing.Point(120, 216);
             this.picturePeople.Name = "picturePeople";
             this.picturePeople.Size = new System.Drawing.Size(164, 165);
             this.picturePeople.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,7 +120,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCodigo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCodigo.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigo.Location = new System.Drawing.Point(379, 195);
+            this.txtCodigo.Location = new System.Drawing.Point(379, 214);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.PasswordChar = '\0';
@@ -141,7 +141,7 @@ namespace SistemaAsistencia.CapaVistas
             this.btnEntrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(210)))));
             this.btnEntrar.Font = new System.Drawing.Font("Georgia", 12F);
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(605, 189);
+            this.btnEntrar.Location = new System.Drawing.Point(605, 208);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(79, 30);
             this.btnEntrar.TabIndex = 41;
@@ -153,40 +153,40 @@ namespace SistemaAsistencia.CapaVistas
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(188)))), ((int)(((byte)(252)))));
-            this.labelName.Location = new System.Drawing.Point(117, 138);
+            this.labelName.Location = new System.Drawing.Point(117, 157);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(74, 18);
+            this.labelName.Size = new System.Drawing.Size(13, 18);
             this.labelName.TabIndex = 57;
-            this.labelName.Text = "Nombre";
+            this.labelName.Text = ".";
             // 
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
             this.labelLastName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(188)))), ((int)(((byte)(252)))));
-            this.labelLastName.Location = new System.Drawing.Point(170, 156);
+            this.labelLastName.Location = new System.Drawing.Point(170, 175);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(79, 18);
+            this.labelLastName.Size = new System.Drawing.Size(13, 18);
             this.labelLastName.TabIndex = 58;
-            this.labelLastName.Text = "Apellido";
+            this.labelLastName.Text = ".";
             // 
             // labelFuncionario
             // 
             this.labelFuncionario.AutoSize = true;
             this.labelFuncionario.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFuncionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.labelFuncionario.Location = new System.Drawing.Point(519, 251);
+            this.labelFuncionario.Location = new System.Drawing.Point(519, 270);
             this.labelFuncionario.Name = "labelFuncionario";
-            this.labelFuncionario.Size = new System.Drawing.Size(91, 18);
+            this.labelFuncionario.Size = new System.Drawing.Size(12, 18);
             this.labelFuncionario.TabIndex = 59;
-            this.labelFuncionario.Text = "Funcionario";
+            this.labelFuncionario.Text = ".";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
-            this.label1.Location = new System.Drawing.Point(390, 251);
+            this.label1.Location = new System.Drawing.Point(390, 270);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 18);
             this.label1.TabIndex = 60;
@@ -197,7 +197,7 @@ namespace SistemaAsistencia.CapaVistas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
-            this.label2.Location = new System.Drawing.Point(376, 288);
+            this.label2.Location = new System.Drawing.Point(376, 307);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 18);
             this.label2.TabIndex = 61;
@@ -208,18 +208,30 @@ namespace SistemaAsistencia.CapaVistas
             this.labelFicha.AutoSize = true;
             this.labelFicha.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFicha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.labelFicha.Location = new System.Drawing.Point(519, 288);
+            this.labelFicha.Location = new System.Drawing.Point(519, 307);
             this.labelFicha.Name = "labelFicha";
-            this.labelFicha.Size = new System.Drawing.Size(46, 18);
+            this.labelFicha.Size = new System.Drawing.Size(12, 18);
             this.labelFicha.TabIndex = 62;
-            this.labelFicha.Text = "Ficha";
+            this.labelFicha.Text = ".";
+            // 
+            // labelEstado
+            // 
+            this.labelEstado.AutoSize = true;
+            this.labelEstado.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.labelEstado.Location = new System.Drawing.Point(456, 365);
+            this.labelEstado.Name = "labelEstado";
+            this.labelEstado.Size = new System.Drawing.Size(13, 18);
+            this.labelEstado.TabIndex = 63;
+            this.labelEstado.Text = ".";
             // 
             // FrmControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(795, 600);
+            this.Controls.Add(this.labelEstado);
             this.Controls.Add(this.labelFicha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -234,6 +246,7 @@ namespace SistemaAsistencia.CapaVistas
             this.Controls.Add(this.labelHora);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmControl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePeople)).EndInit();
             this.ResumeLayout(false);
@@ -257,5 +270,6 @@ namespace SistemaAsistencia.CapaVistas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelFicha;
+        private System.Windows.Forms.Label labelEstado;
     }
 }

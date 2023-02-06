@@ -17,7 +17,7 @@ namespace SistemaAsistencia.CapaVistas
         ClsUsuarioBD agregarDB = new ClsUsuarioBD();
         ClsImage image = new ClsImage();
         public Byte[] arrayImagenUser;
-
+        public string cedulaValidada;
 
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -61,64 +61,64 @@ namespace SistemaAsistencia.CapaVistas
                             }
                             else
                             {
-                                if (string.IsNullOrEmpty(this.txtPassword.Text))
+
+
+                                if (this.comboEstado.Text == "")
                                 {
-                                    MessageBox.Show("Digite la Constraseña de Usuario", "Notificación");
-                                    txtPassword.Focus();
+                                    MessageBox.Show("Digite el estado del Usuario", "Notificación");
+                                    comboEstado.Focus();
                                 }
                                 else
                                 {
-                                    if (this.comboEstado.Text == "")
+                                    if (this.txtFile.Text == "")
                                     {
-                                        MessageBox.Show("Digite el estado del Usuario", "Notificación");
-                                        comboEstado.Focus();
+                                        MessageBox.Show("Escoja un foto");
                                     }
                                     else
                                     {
-                                        if (this.txtFile.Text == "")
+                                        DataTable validacionCedula = new DataTable();
+                                        validacionCedula = agregarDB.ValidarCedula_db(this.txtCedula.Text);
+                                        string idUsuario = validacionCedula.Rows[0][0].ToString();
+                                        if (validacionCedula.Rows.Count == 0 || idUsuario == this.labelId.Text)
                                         {
-                                            MessageBox.Show("Escoja un foto");
+                                            if (this.txtPassword.Text != "")
+                                            {
+                                                cedulaValidada = ValidarPassword.GetSHA256(this.txtPassword.Text);
+                                            }
+
+                                            ClsUsuario modificarUser = new ClsUsuario(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, cedulaValidada, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+
+                                            modificarUser.ModificarUsuario(int.Parse(this.labelId.Text), this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, cedulaValidada, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+
+
+                                            CapaVistas.FrmUsuarios frmUser = new CapaVistas.FrmUsuarios();
+                                            DataTable dataUser = new DataTable();
+                                            dataUser = modificarUser.LlenarUsuario();
+                                            frmUser.dataUsuario.DataSource = dataUser;
+
+                                            this.Hide();
+
+
+
+                                            MessageBox.Show("Usuario Modificado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            //this.txtCedula.Text = "";
+                                            //this.txtName.Text = "";
+                                            //this.txtLastName.Text = "";
+                                            //this.txtCorreo.Text = "";
+                                            //this.txtTelefono.Text = "";
+                                            //this.txtPassword.Text = "";
+                                            //this.txtFile.Text = "";
+                                            //this.combotxtRol.Text = "";
+                                            //this.comboEstado.Text = "";
+                                            //this.pictureUser.Image = null;
                                         }
                                         else
                                         {
-                                            DataTable validacionCedula = new DataTable();
-                                            validacionCedula = agregarDB.ValidarCedula_db(this.txtCedula.Text);
-                                            string idUsuario = validacionCedula.Rows[0][0].ToString();
-                                            if (validacionCedula.Rows.Count == 0 || idUsuario == this.labelId.Text)
-                                            {
-                                                ClsUsuario modificarUser = new ClsUsuario(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
-
-                                                modificarUser.ModificarUsuario(int.Parse(this.labelId.Text), this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
-
-
-                                                CapaVistas.FrmUsuarios frmUser = new CapaVistas.FrmUsuarios();
-                                                DataTable dataUser = new DataTable();
-                                                dataUser = modificarUser.LlenarUsuario();
-                                                frmUser.dataUsuario.DataSource = dataUser;
-
-                                                this.Hide();
-
-
-
-                                                MessageBox.Show("Usuario Modificado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                                //this.txtCedula.Text = "";
-                                                //this.txtName.Text = "";
-                                                //this.txtLastName.Text = "";
-                                                //this.txtCorreo.Text = "";
-                                                //this.txtTelefono.Text = "";
-                                                //this.txtPassword.Text = "";
-                                                //this.txtFile.Text = "";
-                                                //this.combotxtRol.Text = "";
-                                                //this.comboEstado.Text = "";
-                                                //this.pictureUser.Image = null;
-                                            }
-                                            else
-                                            {
-                                                MessageBox.Show("Ya existe usuario con esta cédula");
-                                            }
+                                            MessageBox.Show("Ya existe usuario con esta cédula");
                                         }
                                     }
                                 }
+
                             }
                         }
                     }

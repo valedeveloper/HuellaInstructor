@@ -91,7 +91,9 @@ namespace SistemaAsistencia.CapaVistas
 
                                             if (validacionCedula.Rows.Count == 0)
                                             {
-                                                agregarDB.AgregarUsuario(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.txtPassword.Text, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
+                                                string cedulaValidada = ValidarPassword.GetSHA256(this.txtPassword.Text);
+
+                                                agregarDB.AgregarUsuario(this.txtCedula.Text, this.txtName.Text, txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, cedulaValidada, this.combotxtRol.Text, this.comboEstado.Text, this.txtFile.Text, this.arrayImagenUser);
 
 
                                                 CapaVistas.FrmUsuarios frmUser = new CapaVistas.FrmUsuarios();

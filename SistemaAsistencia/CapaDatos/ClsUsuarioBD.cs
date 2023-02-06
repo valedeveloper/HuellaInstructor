@@ -20,7 +20,7 @@ namespace SistemaAsistencia.CapaDatos
         public DataTable Loguearse_db(string Cedula, string Password)
         {
             ClsConexion conexion = new ClsConexion();
-            string comando = "SELECT Rol_Usuario, Estado_Usuario FROM USUARIOS WHERE Cedula_Usuario=@Cedula_Usuario AND Password_Usuario=@Password_Usuario";
+            string comando = "SELECT Nombre_Usuario, Estado_Usuario,Photo_Usuario FROM USUARIOS WHERE Cedula_Usuario=@Cedula_Usuario AND Password_Usuario=@Password_Usuario";
             SqlCommand sql = new SqlCommand(comando, conexion.Conectar());
 
             sql.Parameters.AddWithValue("@Cedula_Usuario", Cedula);

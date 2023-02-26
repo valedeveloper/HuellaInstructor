@@ -33,7 +33,7 @@ namespace SistemaAsistencia
                 FrmLogin login = new FrmLogin();
                 login.Show();
             }
-            }
+        }
 
         private void guna2Shapes2_Click(object sender, EventArgs e)
         {
@@ -48,6 +48,16 @@ namespace SistemaAsistencia
             CapaVistas.FrmControl frmControl = new CapaVistas.FrmControl();
             frmControl.Show();
             this.Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea salir?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+                FrmLogin login = new FrmLogin();
+                login.Show();
+            }
         }
     }
 }

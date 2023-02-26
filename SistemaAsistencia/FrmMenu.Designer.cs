@@ -33,7 +33,6 @@ namespace SistemaAsistencia
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureUser = new System.Windows.Forms.PictureBox();
             this.labelNombre = new System.Windows.Forms.Label();
             this.imageUser = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -41,9 +40,9 @@ namespace SistemaAsistencia
             this.imageControl = new Guna.UI2.WinForms.Guna2ImageButton();
             this.imageReporte = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.pictureSena = new System.Windows.Forms.PictureBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSena)).BeginInit();
@@ -58,52 +57,42 @@ namespace SistemaAsistencia
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.label1.Location = new System.Drawing.Point(182, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(458, 34);
             this.label1.TabIndex = 3;
             this.label1.Text = "Sistema Control de Asistencia";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(762, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // pictureUser
             // 
             this.pictureUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureUser.Image")));
             this.pictureUser.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureUser.InitialImage")));
-            this.pictureUser.Location = new System.Drawing.Point(630, 16);
+            this.pictureUser.Location = new System.Drawing.Point(594, 20);
             this.pictureUser.Name = "pictureUser";
             this.pictureUser.Size = new System.Drawing.Size(46, 46);
             this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureUser.TabIndex = 40;
             this.pictureUser.TabStop = false;
+            this.pictureUser.Visible = false;
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.labelNombre.Location = new System.Drawing.Point(681, 35);
+            this.labelNombre.ForeColor = System.Drawing.Color.White;
+            this.labelNombre.Location = new System.Drawing.Point(646, 39);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(65, 16);
             this.labelNombre.TabIndex = 41;
             this.labelNombre.Text = "Usuario";
+            this.labelNombre.Visible = false;
             // 
             // imageUser
             // 
             this.imageUser.BackColor = System.Drawing.Color.Transparent;
             this.imageUser.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageUser.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imageUser.HoverState.ImageSize = new System.Drawing.Size(180, 180);
             this.imageUser.Image = ((System.Drawing.Image)(resources.GetObject("imageUser.Image")));
             this.imageUser.ImageOffset = new System.Drawing.Point(0, 0);
             this.imageUser.ImageRotate = 0F;
@@ -118,7 +107,7 @@ namespace SistemaAsistencia
             // imagePerson
             // 
             this.imagePerson.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imagePerson.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imagePerson.HoverState.ImageSize = new System.Drawing.Size(180, 180);
             this.imagePerson.Image = ((System.Drawing.Image)(resources.GetObject("imagePerson.Image")));
             this.imagePerson.ImageOffset = new System.Drawing.Point(0, 0);
             this.imagePerson.ImageRotate = 0F;
@@ -133,7 +122,7 @@ namespace SistemaAsistencia
             // imageControl
             // 
             this.imageControl.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageControl.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imageControl.HoverState.ImageSize = new System.Drawing.Size(180, 180);
             this.imageControl.Image = ((System.Drawing.Image)(resources.GetObject("imageControl.Image")));
             this.imageControl.ImageOffset = new System.Drawing.Point(0, 0);
             this.imageControl.ImageRotate = 0F;
@@ -148,7 +137,7 @@ namespace SistemaAsistencia
             // imageReporte
             // 
             this.imageReporte.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageReporte.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imageReporte.HoverState.ImageSize = new System.Drawing.Size(180, 180);
             this.imageReporte.Image = ((System.Drawing.Image)(resources.GetObject("imageReporte.Image")));
             this.imageReporte.ImageOffset = new System.Drawing.Point(0, 0);
             this.imageReporte.ImageRotate = 0F;
@@ -161,24 +150,40 @@ namespace SistemaAsistencia
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.pictureSena);
             this.panel1.Controls.Add(this.pictureUser);
             this.panel1.Controls.Add(this.labelNombre);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(795, 78);
+            this.panel1.Size = new System.Drawing.Size(795, 85);
             this.panel1.TabIndex = 46;
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(733, 20);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(26, 41);
+            this.btnClose.TabIndex = 47;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureSena
             // 
             this.pictureSena.Image = ((System.Drawing.Image)(resources.GetObject("pictureSena.Image")));
             this.pictureSena.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureSena.InitialImage")));
-            this.pictureSena.Location = new System.Drawing.Point(45, 3);
+            this.pictureSena.Location = new System.Drawing.Point(52, 0);
             this.pictureSena.Name = "pictureSena";
-            this.pictureSena.Size = new System.Drawing.Size(72, 72);
+            this.pictureSena.Size = new System.Drawing.Size(118, 85);
             this.pictureSena.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureSena.TabIndex = 42;
             this.pictureSena.TabStop = false;
@@ -204,7 +209,6 @@ namespace SistemaAsistencia
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -217,7 +221,6 @@ namespace SistemaAsistencia
         #endregion
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.PictureBox pictureUser;
         public System.Windows.Forms.Label labelNombre;
         private Guna.UI2.WinForms.Guna2ImageButton imageUser;
@@ -227,5 +230,6 @@ namespace SistemaAsistencia
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.PictureBox pictureSena;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private System.Windows.Forms.Button btnClose;
     }
 }

@@ -55,52 +55,52 @@
     <Compile Include="CapaDatos\ClsConexion.cs" />
     <Compile Include="CapaDatos\ClsPersonaBD.cs" />
     <Compile Include="CapaDatos\ClsUsuarioBD.cs" />
-    <Compile Include="CapaModelo\ClsImage.cs" />
-    <Compile Include="CapaModelo\ClsOpenDialogPicture.cs" />
-    <Compile Include="CapaModelo\ClsPersona.cs" />
-    <Compile Include="CapaModelo\ClsUsuario.cs" />
-    <Compile Include="CapaModelo\ClsValidarCorreo.cs" />
-    <Compile Include="CapaModelo\ValidarPassword.cs" />
-    <Compile Include="CapaVistas\FrmAgregarPersona.cs">
+    <Compile Include="CapaNegocio\ClsImage.cs" />
+    <Compile Include="CapaNegocio\ClsOpenDialogPicture.cs" />
+    <Compile Include="CapaNegocio\ClsPersona.cs" />
+    <Compile Include="CapaNegocio\ClsUsuario.cs" />
+    <Compile Include="CapaNegocio\ClsValidarCorreo.cs" />
+    <Compile Include="CapaNegocio\ValidarPassword.cs" />
+    <Compile Include="CapaPresentacion\FrmAgregarPersona.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaVistas\FrmAgregarPersona.Designer.cs">
+    <Compile Include="CapaPresentacion\FrmAgregarPersona.Designer.cs">
       <DependentUpon>FrmAgregarPersona.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaVistas\FrmAgregarUsuario.cs">
+    <Compile Include="CapaPresentacion\FrmAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaVistas\FrmAgregarUsuario.Designer.cs">
+    <Compile Include="CapaPresentacion\FrmAgregarUsuario.Designer.cs">
       <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaVistas\FrmControl.cs">
+    <Compile Include="CapaPresentacion\FrmControl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaVistas\FrmControl.Designer.cs">
+    <Compile Include="CapaPresentacion\FrmControl.Designer.cs">
       <DependentUpon>FrmControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaVistas\FrmModificarUsuario.cs">
+    <Compile Include="CapaPresentacion\FrmModificarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaVistas\FrmModificarUsuario.Designer.cs">
+    <Compile Include="CapaPresentacion\FrmModificarUsuario.Designer.cs">
       <DependentUpon>FrmModificarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaVistas\FrmPersonas.cs">
+    <Compile Include="CapaPresentacion\FrmPersonas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaVistas\FrmPersonas.Designer.cs">
+    <Compile Include="CapaPresentacion\FrmPersonas.Designer.cs">
       <DependentUpon>FrmPersonas.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaVistas\FrmUsuarios.cs">
+    <Compile Include="CapaPresentacion\FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaVistas\FrmUsuarios.Designer.cs">
+    <Compile Include="CapaPresentacion\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaVistas\FrmModificarPersona.cs">
+    <Compile Include="CapaPresentacion\FrmModificarPersona.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaVistas\FrmModificarPersona.Designer.cs">
+    <Compile Include="CapaPresentacion\FrmModificarPersona.Designer.cs">
       <DependentUpon>FrmModificarPersona.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
@@ -122,25 +122,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sistema_de_AsistenciaDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CapaVistas\FrmAgregarPersona.resx">
+    <EmbeddedResource Include="CapaPresentacion\FrmAgregarPersona.resx">
       <DependentUpon>FrmAgregarPersona.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CapaVistas\FrmAgregarUsuario.resx">
+    <EmbeddedResource Include="CapaPresentacion\FrmAgregarUsuario.resx">
       <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CapaVistas\FrmControl.resx">
+    <EmbeddedResource Include="CapaPresentacion\FrmControl.resx">
       <DependentUpon>FrmControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CapaVistas\FrmModificarUsuario.resx">
+    <EmbeddedResource Include="CapaPresentacion\FrmModificarUsuario.resx">
       <DependentUpon>FrmModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CapaVistas\FrmPersonas.resx">
+    <EmbeddedResource Include="CapaPresentacion\FrmPersonas.resx">
       <DependentUpon>FrmPersonas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CapaVistas\FrmUsuarios.resx">
+    <EmbeddedResource Include="CapaPresentacion\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CapaVistas\FrmModificarPersona.resx">
+    <EmbeddedResource Include="CapaPresentacion\FrmModificarPersona.resx">
       <DependentUpon>FrmModificarPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">

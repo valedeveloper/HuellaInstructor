@@ -24,8 +24,8 @@ namespace SistemaAsistencia.CapaVistas
             dt = data.LlenarUsuarios_db();
             dataUsuario.DataSource = dt;
 
-            this.pictureUser.Image = Image.FromFile(@"C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\Assets\gifUser.gif");
-            this.pictureUser.SizeMode = PictureBoxSizeMode.StretchImage;
+            //this.pictureUser.Image = Image.FromFile(@"C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\Assets\gifUser.gif");
+            //this.pictureUser.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -66,6 +66,15 @@ namespace SistemaAsistencia.CapaVistas
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+
+            this.Close();
+            FrmMenu menu = new FrmMenu();
+            menu.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
 
 

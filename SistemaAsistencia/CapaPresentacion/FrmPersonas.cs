@@ -35,11 +35,9 @@ namespace SistemaAsistencia.CapaVistas
             dataPersona.Columns[10].HeaderText = "Código de Barras";
 
 
-            this.picturePeople.Image = Image.FromFile(@"C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\Assets\gifPeople.gif");
-            this.picturePeople.SizeMode = PictureBoxSizeMode.StretchImage;
+            //this.picturePeople.Image = Image.FromFile(@"C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\Assets\gifPeople.gif");
+            //this.picturePeople.SizeMode = PictureBoxSizeMode.StretchImage;
         }
-
-
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -89,6 +87,13 @@ namespace SistemaAsistencia.CapaVistas
 
          
 
+            this.Close();
+            FrmMenu menu = new FrmMenu();
+            menu.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
             this.Close();
             FrmMenu menu = new FrmMenu();
             menu.Show();

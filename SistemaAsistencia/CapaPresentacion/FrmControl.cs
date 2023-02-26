@@ -85,5 +85,12 @@ namespace SistemaAsistencia.CapaVistas
            
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmMenu menu = new FrmMenu();
+            menu.Show();
+        }
     }
 }

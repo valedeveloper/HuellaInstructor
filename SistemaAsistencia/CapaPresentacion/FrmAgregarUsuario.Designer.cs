@@ -53,7 +53,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.label1.Location = new System.Drawing.Point(33, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 29);
@@ -64,7 +64,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.label2.Location = new System.Drawing.Point(70, 213);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 18);
@@ -75,7 +75,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Georgia", 9.75F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.label7.Location = new System.Drawing.Point(443, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 16);
@@ -85,9 +85,9 @@ namespace SistemaAsistencia.CapaVistas
             // 
             // pictureUser
             // 
-            this.pictureUser.Location = new System.Drawing.Point(446, 77);
+            this.pictureUser.Location = new System.Drawing.Point(488, 65);
             this.pictureUser.Name = "pictureUser";
-            this.pictureUser.Size = new System.Drawing.Size(320, 154);
+            this.pictureUser.Size = new System.Drawing.Size(212, 166);
             this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureUser.TabIndex = 24;
             this.pictureUser.TabStop = false;
@@ -97,7 +97,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.label3.Location = new System.Drawing.Point(45, 282);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 18);
@@ -107,7 +107,7 @@ namespace SistemaAsistencia.CapaVistas
             // txtCedula
             // 
             this.txtCedula.AutoRoundedCorners = true;
-            this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.txtCedula.BorderRadius = 11;
             this.txtCedula.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtCedula.BorderThickness = 2;
@@ -119,6 +119,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCedula.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCedula.Location = new System.Drawing.Point(38, 77);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -133,7 +134,7 @@ namespace SistemaAsistencia.CapaVistas
             // txtName
             // 
             this.txtName.AutoRoundedCorners = true;
-            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.txtName.BorderRadius = 11;
             this.txtName.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtName.BorderThickness = 2;
@@ -145,6 +146,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Location = new System.Drawing.Point(38, 109);
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -159,7 +161,7 @@ namespace SistemaAsistencia.CapaVistas
             // txtLastName
             // 
             this.txtLastName.AutoRoundedCorners = true;
-            this.txtLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.txtLastName.BorderRadius = 11;
             this.txtLastName.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtLastName.BorderThickness = 2;
@@ -171,6 +173,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLastName.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLastName.Location = new System.Drawing.Point(38, 141);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -185,7 +188,7 @@ namespace SistemaAsistencia.CapaVistas
             // txtCorreo
             // 
             this.txtCorreo.AutoRoundedCorners = true;
-            this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.txtCorreo.BorderRadius = 11;
             this.txtCorreo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtCorreo.BorderThickness = 2;
@@ -197,6 +200,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCorreo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCorreo.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCorreo.Location = new System.Drawing.Point(236, 77);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -211,7 +215,7 @@ namespace SistemaAsistencia.CapaVistas
             // txtPassword
             // 
             this.txtPassword.AutoRoundedCorners = true;
-            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.txtPassword.BorderRadius = 11;
             this.txtPassword.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtPassword.BorderThickness = 2;
@@ -223,6 +227,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Location = new System.Drawing.Point(236, 109);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -236,7 +241,7 @@ namespace SistemaAsistencia.CapaVistas
             // txtTelefono
             // 
             this.txtTelefono.AutoRoundedCorners = true;
-            this.txtTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.txtTelefono.BorderRadius = 11;
             this.txtTelefono.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtTelefono.BorderThickness = 2;
@@ -248,6 +253,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTelefono.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTelefono.Location = new System.Drawing.Point(236, 141);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -262,14 +268,14 @@ namespace SistemaAsistencia.CapaVistas
             // combotxtRol
             // 
             this.combotxtRol.BackColor = System.Drawing.Color.Transparent;
-            this.combotxtRol.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.combotxtRol.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.combotxtRol.BorderRadius = 5;
             this.combotxtRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combotxtRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combotxtRol.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.combotxtRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.combotxtRol.Font = new System.Drawing.Font("Georgia", 9.75F);
-            this.combotxtRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.combotxtRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.combotxtRol.ItemHeight = 30;
             this.combotxtRol.Items.AddRange(new object[] {
             "Administrador"});
@@ -282,14 +288,14 @@ namespace SistemaAsistencia.CapaVistas
             // comboEstado
             // 
             this.comboEstado.BackColor = System.Drawing.Color.Transparent;
-            this.comboEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.comboEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.comboEstado.BorderRadius = 5;
             this.comboEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEstado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboEstado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboEstado.Font = new System.Drawing.Font("Georgia", 9.75F);
-            this.comboEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.comboEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.comboEstado.ItemHeight = 30;
             this.comboEstado.Items.AddRange(new object[] {
             "Activo",
@@ -303,7 +309,7 @@ namespace SistemaAsistencia.CapaVistas
             // txtFile
             // 
             this.txtFile.AutoRoundedCorners = true;
-            this.txtFile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(12)))));
+            this.txtFile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.txtFile.BorderRadius = 11;
             this.txtFile.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtFile.BorderThickness = 2;
@@ -315,6 +321,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtFile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFile.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtFile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFile.Location = new System.Drawing.Point(488, 252);
             this.txtFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -333,7 +340,7 @@ namespace SistemaAsistencia.CapaVistas
             this.btnAgregar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAgregar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAgregar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(210)))));
+            this.btnAgregar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.btnAgregar.Font = new System.Drawing.Font("Georgia", 12F);
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(502, 304);
@@ -351,7 +358,7 @@ namespace SistemaAsistencia.CapaVistas
             this.btnCancelar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCancelar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCancelar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancelar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(61)))), ((int)(((byte)(238)))));
+            this.btnCancelar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.btnCancelar.Font = new System.Drawing.Font("Georgia", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(606, 304);
@@ -369,7 +376,7 @@ namespace SistemaAsistencia.CapaVistas
             this.btnOpen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnOpen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnOpen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOpen.FillColor = System.Drawing.Color.Gray;
+            this.btnOpen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.btnOpen.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.Color.White;
             this.btnOpen.Location = new System.Drawing.Point(707, 251);

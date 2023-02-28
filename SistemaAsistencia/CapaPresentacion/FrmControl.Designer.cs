@@ -99,7 +99,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtCodigo.AutoRoundedCorners = true;
             this.txtCodigo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtCodigo.BorderRadius = 11;
+            this.txtCodigo.BorderRadius = 10;
             this.txtCodigo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtCodigo.BorderThickness = 2;
             this.txtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -108,7 +108,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCodigo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCodigo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCodigo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCodigo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.txtCodigo.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -133,6 +133,8 @@ namespace SistemaAsistencia.CapaVistas
             this.btnEntrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.btnEntrar.Font = new System.Drawing.Font("Georgia", 12F);
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
+            this.btnEntrar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.btnEntrar.Location = new System.Drawing.Point(371, 227);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(98, 30);
@@ -150,7 +152,6 @@ namespace SistemaAsistencia.CapaVistas
             this.labelName.Size = new System.Drawing.Size(13, 18);
             this.labelName.TabIndex = 57;
             this.labelName.Text = ".";
-            this.labelName.Visible = false;
             // 
             // labelLastName
             // 
@@ -162,7 +163,6 @@ namespace SistemaAsistencia.CapaVistas
             this.labelLastName.Size = new System.Drawing.Size(13, 18);
             this.labelLastName.TabIndex = 58;
             this.labelLastName.Text = ".";
-            this.labelLastName.Visible = false;
             // 
             // labelFuncionario
             // 
@@ -174,7 +174,6 @@ namespace SistemaAsistencia.CapaVistas
             this.labelFuncionario.Size = new System.Drawing.Size(12, 18);
             this.labelFuncionario.TabIndex = 59;
             this.labelFuncionario.Text = ".";
-            this.labelFuncionario.Visible = false;
             // 
             // label1
             // 
@@ -208,7 +207,6 @@ namespace SistemaAsistencia.CapaVistas
             this.labelFicha.Size = new System.Drawing.Size(12, 18);
             this.labelFicha.TabIndex = 62;
             this.labelFicha.Text = ".";
-            this.labelFicha.Visible = false;
             // 
             // labelEstado
             // 

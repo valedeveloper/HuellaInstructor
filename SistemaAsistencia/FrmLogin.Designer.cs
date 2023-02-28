@@ -45,7 +45,7 @@ namespace SistemaAsistencia
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(410, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(226, 23);
@@ -61,7 +61,7 @@ namespace SistemaAsistencia
             // 
             this.txtCedula.AutoRoundedCorners = true;
             this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtCedula.BorderRadius = 11;
+            this.txtCedula.BorderRadius = 10;
             this.txtCedula.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtCedula.BorderThickness = 2;
             this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -70,10 +70,10 @@ namespace SistemaAsistencia
             this.txtCedula.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCedula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.txtCedula.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
-            this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.txtCedula.Location = new System.Drawing.Point(414, 114);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCedula.Name = "txtCedula";
@@ -97,10 +97,10 @@ namespace SistemaAsistencia
             this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.txtPassword.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
-            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.txtPassword.Location = new System.Drawing.Point(414, 160);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
@@ -113,17 +113,19 @@ namespace SistemaAsistencia
             // 
             // btnIngresar
             // 
+            this.btnIngresar.AutoRoundedCorners = true;
             this.btnIngresar.BorderRadius = 10;
             this.btnIngresar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnIngresar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnIngresar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnIngresar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnIngresar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.btnIngresar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Font = new System.Drawing.Font("Georgia", 12F);
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
+            this.btnIngresar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.btnIngresar.Location = new System.Drawing.Point(414, 219);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(96, 30);
+            this.btnIngresar.Size = new System.Drawing.Size(92, 30);
             this.btnIngresar.TabIndex = 11;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -133,7 +135,7 @@ namespace SistemaAsistencia
             this.btnSalir.Animated = true;
             this.btnSalir.AutoRoundedCorners = true;
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.BorderRadius = 14;
+            this.btnSalir.BorderRadius = 10;
             this.btnSalir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSalir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSalir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -141,6 +143,7 @@ namespace SistemaAsistencia
             this.btnSalir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.btnSalir.Font = new System.Drawing.Font("Georgia", 12F);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.btnSalir.IndicateFocus = true;
             this.btnSalir.Location = new System.Drawing.Point(540, 219);
             this.btnSalir.Name = "btnSalir";

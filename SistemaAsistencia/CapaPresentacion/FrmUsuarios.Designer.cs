@@ -269,13 +269,13 @@ namespace SistemaAsistencia.CapaVistas
             this.btnModificar.Animated = true;
             this.btnModificar.AutoRoundedCorners = true;
             this.btnModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.BorderRadius = 16;
+            this.btnModificar.BorderRadius = 10;
             this.btnModificar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnModificar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnModificar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnModificar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnModificar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.btnModificar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Font = new System.Drawing.Font("Georgia", 12F);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.IndicateFocus = true;
             this.btnModificar.Location = new System.Drawing.Point(424, 465);

@@ -58,7 +58,7 @@ namespace SistemaAsistencia
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(182, 190);
+            this.label1.Location = new System.Drawing.Point(165, 198);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(458, 34);
             this.label1.TabIndex = 3;
@@ -97,10 +97,10 @@ namespace SistemaAsistencia
             this.imageUser.ImageOffset = new System.Drawing.Point(0, 0);
             this.imageUser.ImageRotate = 0F;
             this.imageUser.ImageSize = new System.Drawing.Size(150, 150);
-            this.imageUser.Location = new System.Drawing.Point(74, 280);
+            this.imageUser.Location = new System.Drawing.Point(51, 301);
             this.imageUser.Name = "imageUser";
             this.imageUser.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageUser.Size = new System.Drawing.Size(136, 142);
+            this.imageUser.Size = new System.Drawing.Size(185, 136);
             this.imageUser.TabIndex = 42;
             this.imageUser.Click += new System.EventHandler(this.guna2Shapes1_Click);
             // 
@@ -112,10 +112,10 @@ namespace SistemaAsistencia
             this.imagePerson.ImageOffset = new System.Drawing.Point(0, 0);
             this.imagePerson.ImageRotate = 0F;
             this.imagePerson.ImageSize = new System.Drawing.Size(150, 150);
-            this.imagePerson.Location = new System.Drawing.Point(249, 280);
+            this.imagePerson.Location = new System.Drawing.Point(242, 290);
             this.imagePerson.Name = "imagePerson";
             this.imagePerson.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imagePerson.Size = new System.Drawing.Size(136, 142);
+            this.imagePerson.Size = new System.Drawing.Size(166, 163);
             this.imagePerson.TabIndex = 43;
             this.imagePerson.Click += new System.EventHandler(this.guna2Shapes2_Click);
             // 
@@ -127,10 +127,10 @@ namespace SistemaAsistencia
             this.imageControl.ImageOffset = new System.Drawing.Point(0, 0);
             this.imageControl.ImageRotate = 0F;
             this.imageControl.ImageSize = new System.Drawing.Size(150, 150);
-            this.imageControl.Location = new System.Drawing.Point(430, 280);
+            this.imageControl.Location = new System.Drawing.Point(440, 290);
             this.imageControl.Name = "imageControl";
             this.imageControl.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageControl.Size = new System.Drawing.Size(136, 142);
+            this.imageControl.Size = new System.Drawing.Size(138, 147);
             this.imageControl.TabIndex = 44;
             this.imageControl.Click += new System.EventHandler(this.imageControl_Click);
             // 
@@ -142,11 +142,12 @@ namespace SistemaAsistencia
             this.imageReporte.ImageOffset = new System.Drawing.Point(0, 0);
             this.imageReporte.ImageRotate = 0F;
             this.imageReporte.ImageSize = new System.Drawing.Size(150, 150);
-            this.imageReporte.Location = new System.Drawing.Point(596, 280);
+            this.imageReporte.Location = new System.Drawing.Point(612, 290);
             this.imageReporte.Name = "imageReporte";
             this.imageReporte.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageReporte.Size = new System.Drawing.Size(136, 142);
+            this.imageReporte.Size = new System.Drawing.Size(143, 147);
             this.imageReporte.TabIndex = 45;
+            this.imageReporte.Click += new System.EventHandler(this.imageReporte_Click);
             // 
             // panel1
             // 

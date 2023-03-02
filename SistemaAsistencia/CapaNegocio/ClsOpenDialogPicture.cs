@@ -32,7 +32,7 @@ namespace SistemaAsistencia.CapaModelo
                 }
                 else
                 {
-                    return "";
+                    return null;
 
                 }
 

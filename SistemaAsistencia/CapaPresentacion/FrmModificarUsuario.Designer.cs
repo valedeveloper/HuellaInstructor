@@ -74,7 +74,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtTelefono.AutoRoundedCorners = true;
             this.txtTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtTelefono.BorderRadius = 10;
+            this.txtTelefono.BorderRadius = 11;
             this.txtTelefono.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtTelefono.BorderThickness = 2;
             this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -101,7 +101,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtPassword.AutoRoundedCorners = true;
             this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtPassword.BorderRadius = 10;
+            this.txtPassword.BorderRadius = 11;
             this.txtPassword.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtPassword.BorderThickness = 2;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -127,7 +127,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtCorreo.AutoRoundedCorners = true;
             this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtCorreo.BorderRadius = 10;
+            this.txtCorreo.BorderRadius = 11;
             this.txtCorreo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtCorreo.BorderThickness = 2;
             this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -154,7 +154,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtLastName.AutoRoundedCorners = true;
             this.txtLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtLastName.BorderRadius = 10;
+            this.txtLastName.BorderRadius = 11;
             this.txtLastName.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtLastName.BorderThickness = 2;
             this.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -181,7 +181,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtName.AutoRoundedCorners = true;
             this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtName.BorderRadius = 10;
+            this.txtName.BorderRadius = 11;
             this.txtName.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtName.BorderThickness = 2;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -208,7 +208,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtCedula.AutoRoundedCorners = true;
             this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtCedula.BorderRadius = 10;
+            this.txtCedula.BorderRadius = 11;
             this.txtCedula.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtCedula.BorderThickness = 2;
             this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -298,7 +298,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtFile.AutoRoundedCorners = true;
             this.txtFile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtFile.BorderRadius = 10;
+            this.txtFile.BorderRadius = 11;
             this.txtFile.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtFile.BorderThickness = 2;
             this.txtFile.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -424,6 +424,7 @@ namespace SistemaAsistencia.CapaVistas
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmModificarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmModificarUsuario_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

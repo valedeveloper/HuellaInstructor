@@ -54,9 +54,9 @@ namespace SistemaAsistencia.CapaVistas
                         {
 
 
-                            if (string.IsNullOrEmpty(this.txtCorreo.Text))
+                            if (string.IsNullOrEmpty(this.txtCorreo.Text) || ClsValidarCorreo.validarEmail(this.txtCorreo.Text) == false)
                             {
-                                MessageBox.Show("Digite el Correo de Usuario, no cumple como correo", "Notificación");
+                                MessageBox.Show("Ingrese un correo válido", "Notificación");
                                 txtCorreo.Focus();
                             }
                             else
@@ -138,13 +138,14 @@ namespace SistemaAsistencia.CapaVistas
             {
                 this.txtFile.Text = abrirCadena.AbrirCadena(this.txtFile.Text);
                 this.pictureUser.Image = abrirCadena.MostrarImagen(this.txtFile.Text);
+
+                ClsImage imagenArray = new ClsImage();
+                arrayImagenUser = imagenArray.ImageToByteArray(this.pictureUser.Image);
             }
             catch
             {
 
             }
-            ClsImage imagenArray = new ClsImage();
-            arrayImagenUser = imagenArray.ImageToByteArray(this.pictureUser.Image);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -200,12 +201,11 @@ namespace SistemaAsistencia.CapaVistas
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
+        }
 
-            }
+        private void FrmModificarUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

@@ -45,6 +45,7 @@ namespace SistemaAsistencia.CapaVistas
             this.label7 = new System.Windows.Forms.Label();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnModificar = new Guna.UI2.WinForms.Guna2Button();
+            this.txtCedula = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtCodigo.AutoRoundedCorners = true;
             this.txtCodigo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtCodigo.BorderRadius = 10;
+            this.txtCodigo.BorderRadius = 11;
             this.txtCodigo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtCodigo.BorderThickness = 2;
             this.txtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -74,13 +75,13 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCodigo.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtCodigo.Location = new System.Drawing.Point(41, 110);
+            this.txtCodigo.Location = new System.Drawing.Point(227, 206);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.PasswordChar = '\0';
             this.txtCodigo.PlaceholderText = "Ingrese Código de Barras";
             this.txtCodigo.SelectedText = "";
-            this.txtCodigo.Size = new System.Drawing.Size(203, 24);
+            this.txtCodigo.Size = new System.Drawing.Size(178, 24);
             this.txtCodigo.TabIndex = 82;
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
@@ -112,7 +113,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtTelefono.AutoRoundedCorners = true;
             this.txtTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtTelefono.BorderRadius = 10;
+            this.txtTelefono.BorderRadius = 11;
             this.txtTelefono.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtTelefono.BorderThickness = 2;
             this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -125,7 +126,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtTelefono.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtTelefono.Location = new System.Drawing.Point(240, 174);
+            this.txtTelefono.Location = new System.Drawing.Point(227, 174);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
@@ -139,7 +140,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtFicha.AutoRoundedCorners = true;
             this.txtFicha.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtFicha.BorderRadius = 10;
+            this.txtFicha.BorderRadius = 11;
             this.txtFicha.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtFicha.BorderThickness = 2;
             this.txtFicha.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -152,7 +153,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtFicha.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtFicha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtFicha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtFicha.Location = new System.Drawing.Point(41, 206);
+            this.txtFicha.Location = new System.Drawing.Point(227, 142);
             this.txtFicha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFicha.Name = "txtFicha";
             this.txtFicha.PasswordChar = '\0';
@@ -166,7 +167,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtCorreo.AutoRoundedCorners = true;
             this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtCorreo.BorderRadius = 10;
+            this.txtCorreo.BorderRadius = 11;
             this.txtCorreo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtCorreo.BorderThickness = 2;
             this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -179,7 +180,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCorreo.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtCorreo.Location = new System.Drawing.Point(41, 174);
+            this.txtCorreo.Location = new System.Drawing.Point(41, 206);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
@@ -193,7 +194,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtLastName.AutoRoundedCorners = true;
             this.txtLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtLastName.BorderRadius = 10;
+            this.txtLastName.BorderRadius = 11;
             this.txtLastName.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtLastName.BorderThickness = 2;
             this.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -206,7 +207,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtLastName.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtLastName.Location = new System.Drawing.Point(240, 142);
+            this.txtLastName.Location = new System.Drawing.Point(41, 174);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.PasswordChar = '\0';
@@ -220,7 +221,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtName.AutoRoundedCorners = true;
             this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtName.BorderRadius = 10;
+            this.txtName.BorderRadius = 11;
             this.txtName.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtName.BorderThickness = 2;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -287,7 +288,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.txtFile.AutoRoundedCorners = true;
             this.txtFile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtFile.BorderRadius = 10;
+            this.txtFile.BorderRadius = 11;
             this.txtFile.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtFile.BorderThickness = 2;
             this.txtFile.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -364,12 +365,39 @@ namespace SistemaAsistencia.CapaVistas
             this.btnModificar.Text = "Modificar";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // txtCedula
+            // 
+            this.txtCedula.AutoRoundedCorners = true;
+            this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
+            this.txtCedula.BorderRadius = 11;
+            this.txtCedula.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtCedula.BorderThickness = 2;
+            this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCedula.DefaultText = "";
+            this.txtCedula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCedula.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCedula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
+            this.txtCedula.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
+            this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
+            this.txtCedula.Location = new System.Drawing.Point(41, 110);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.PasswordChar = '\0';
+            this.txtCedula.PlaceholderText = "Ingresa la Cédula";
+            this.txtCedula.SelectedText = "";
+            this.txtCedula.Size = new System.Drawing.Size(178, 24);
+            this.txtCedula.TabIndex = 89;
+            // 
             // FrmModificarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(782, 387);
+            this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnOpen);
@@ -390,6 +418,7 @@ namespace SistemaAsistencia.CapaVistas
             this.Name = "FrmModificarPersona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarPersona";
+            this.Load += new System.EventHandler(this.FrmModificarPersona_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -413,5 +442,6 @@ namespace SistemaAsistencia.CapaVistas
         public Guna.UI2.WinForms.Guna2TextBox txtFile;
         public System.Windows.Forms.PictureBox pictureUser;
         public System.Windows.Forms.Label label2;
+        public Guna.UI2.WinForms.Guna2TextBox txtCedula;
     }
 }

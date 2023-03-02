@@ -38,6 +38,8 @@ namespace SistemaAsistencia
             this.btnIngresar = new Guna.UI2.WinForms.Guna2Button();
             this.btnSalir = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.imageVisible = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.imageInvisble = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +63,7 @@ namespace SistemaAsistencia
             // 
             this.txtCedula.AutoRoundedCorners = true;
             this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtCedula.BorderRadius = 10;
+            this.txtCedula.BorderRadius = 11;
             this.txtCedula.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtCedula.BorderThickness = 2;
             this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -82,6 +84,7 @@ namespace SistemaAsistencia
             this.txtCedula.SelectedText = "";
             this.txtCedula.Size = new System.Drawing.Size(222, 24);
             this.txtCedula.TabIndex = 9;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // txtPassword
             // 
@@ -114,7 +117,7 @@ namespace SistemaAsistencia
             // btnIngresar
             // 
             this.btnIngresar.AutoRoundedCorners = true;
-            this.btnIngresar.BorderRadius = 10;
+            this.btnIngresar.BorderRadius = 14;
             this.btnIngresar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnIngresar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnIngresar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -135,7 +138,7 @@ namespace SistemaAsistencia
             this.btnSalir.Animated = true;
             this.btnSalir.AutoRoundedCorners = true;
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.BorderRadius = 10;
+            this.btnSalir.BorderRadius = 14;
             this.btnSalir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSalir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSalir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -165,6 +168,37 @@ namespace SistemaAsistencia
             this.guna2PictureBox1.TabIndex = 13;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // imageVisible
+            // 
+            this.imageVisible.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imageVisible.HoverState.ImageSize = new System.Drawing.Size(22, 22);
+            this.imageVisible.Image = ((System.Drawing.Image)(resources.GetObject("imageVisible.Image")));
+            this.imageVisible.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imageVisible.ImageRotate = 0F;
+            this.imageVisible.ImageSize = new System.Drawing.Size(20, 20);
+            this.imageVisible.Location = new System.Drawing.Point(643, 160);
+            this.imageVisible.Name = "imageVisible";
+            this.imageVisible.PressedState.ImageSize = new System.Drawing.Size(22, 22);
+            this.imageVisible.Size = new System.Drawing.Size(32, 24);
+            this.imageVisible.TabIndex = 14;
+            this.imageVisible.Click += new System.EventHandler(this.imageVisible_Click);
+            // 
+            // imageInvisble
+            // 
+            this.imageInvisble.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imageInvisble.HoverState.ImageSize = new System.Drawing.Size(22, 22);
+            this.imageInvisble.Image = ((System.Drawing.Image)(resources.GetObject("imageInvisble.Image")));
+            this.imageInvisble.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imageInvisble.ImageRotate = 0F;
+            this.imageInvisble.ImageSize = new System.Drawing.Size(20, 20);
+            this.imageInvisble.Location = new System.Drawing.Point(643, 160);
+            this.imageInvisble.Name = "imageInvisble";
+            this.imageInvisble.PressedState.ImageSize = new System.Drawing.Size(22, 22);
+            this.imageInvisble.Size = new System.Drawing.Size(32, 24);
+            this.imageInvisble.TabIndex = 15;
+            this.imageInvisble.Visible = false;
+            this.imageInvisble.Click += new System.EventHandler(this.imageInvisble_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +206,8 @@ namespace SistemaAsistencia
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(700, 305);
+            this.Controls.Add(this.imageVisible);
+            this.Controls.Add(this.imageInvisble);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIngresar);
@@ -196,5 +232,7 @@ namespace SistemaAsistencia
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2Button btnSalir;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2ImageButton imageVisible;
+        private Guna.UI2.WinForms.Guna2ImageButton imageInvisble;
     }
 }

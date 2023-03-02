@@ -62,5 +62,55 @@ namespace SistemaAsistencia
             Application.Exit();
         }
 
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void imageVisible_Click(object sender, EventArgs e)
+        {
+            if(this.txtPassword.UseSystemPasswordChar == false)
+            {
+                this.txtPassword.UseSystemPasswordChar = true;
+            }
+            this.imageVisible.Visible = false;
+            this.imageInvisble.Visible = true;
+            
+
+        }
+
+        private void imageInvisble_Click(object sender, EventArgs e)
+        {
+            this.imageVisible.Visible = true;
+            this.imageInvisble.Visible = false;
+
+            if (this.txtPassword.UseSystemPasswordChar == true)
+            {
+                this.txtPassword.UseSystemPasswordChar = false;
+            }
+        }
     }
 }

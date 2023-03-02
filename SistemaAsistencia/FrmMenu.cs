@@ -59,5 +59,12 @@ namespace SistemaAsistencia
                 login.Show();
             }
         }
+
+        private void imageReporte_Click(object sender, EventArgs e)
+        {
+            CapaPresentacion.FrmReportes reportes = new CapaPresentacion.FrmReportes();
+            reportes.Show();
+            this.Hide();
+        }
     }
 }

@@ -26,9 +26,23 @@ namespace SistemaAsistencia.CapaPresentacion
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            Reportes.FrmReportePersona frmReporteConsumo = new Reportes.FrmReportePersona();
-            frmReporteConsumo.ShowDialog();
-            frmReporteConsumo.Close();
+            Reportes.FrmReportePersona frmReportePersona= new Reportes.FrmReportePersona();
+            frmReportePersona.ShowDialog();
+            frmReportePersona.Close();
+        }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+            Reportes.FrmReporteDias frmReporteDias = new Reportes.FrmReporteDias();
+            frmReporteDias.ShowDialog();
+            frmReporteDias.Close();
+        }
+
+        private void guna2ImageButton3_Click(object sender, EventArgs e)
+        {
+            Reportes.FrmReporteFicha frmReporteFicha = new Reportes.FrmReporteFicha();
+            frmReporteFicha.ShowDialog();
+            frmReporteFicha.Close();
         }
     }
 }

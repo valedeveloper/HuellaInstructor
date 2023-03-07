@@ -39,3 +39,5 @@ C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\bin\Debug\CrystalDec
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\bin\Debug\stdole.dll
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.Reportes.FrmReportePersona.resources
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.Reportes.FrmReporteDias.resources
+C:\Users\PC01AQ\Desktop\SistemaAsistencia\SistemaAsistencia\obj\Debug\SistemaAsistencia.Reportes.FrmReporteFicha.resources

@@ -228,6 +228,7 @@ namespace SistemaAsistencia.CapaPresentacion
             this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton2.Size = new System.Drawing.Size(70, 42);
             this.guna2ImageButton2.TabIndex = 11;
+            this.guna2ImageButton2.Click += new System.EventHandler(this.guna2ImageButton2_Click);
             // 
             // label2
             // 
@@ -268,6 +269,7 @@ namespace SistemaAsistencia.CapaPresentacion
             this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton3.Size = new System.Drawing.Size(70, 42);
             this.guna2ImageButton3.TabIndex = 11;
+            this.guna2ImageButton3.Click += new System.EventHandler(this.guna2ImageButton3_Click);
             // 
             // txtFicha
             // 

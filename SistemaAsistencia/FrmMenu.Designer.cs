@@ -92,7 +92,7 @@ namespace SistemaAsistencia
             // 
             this.imageUser.BackColor = System.Drawing.Color.Transparent;
             this.imageUser.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageUser.HoverState.ImageSize = new System.Drawing.Size(180, 180);
+            this.imageUser.HoverState.ImageSize = new System.Drawing.Size(150, 150);
             this.imageUser.Image = ((System.Drawing.Image)(resources.GetObject("imageUser.Image")));
             this.imageUser.ImageOffset = new System.Drawing.Point(0, 0);
             this.imageUser.ImageRotate = 0F;
@@ -107,7 +107,7 @@ namespace SistemaAsistencia
             // imagePerson
             // 
             this.imagePerson.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imagePerson.HoverState.ImageSize = new System.Drawing.Size(180, 180);
+            this.imagePerson.HoverState.ImageSize = new System.Drawing.Size(150, 150);
             this.imagePerson.Image = ((System.Drawing.Image)(resources.GetObject("imagePerson.Image")));
             this.imagePerson.ImageOffset = new System.Drawing.Point(0, 0);
             this.imagePerson.ImageRotate = 0F;
@@ -122,7 +122,7 @@ namespace SistemaAsistencia
             // imageControl
             // 
             this.imageControl.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageControl.HoverState.ImageSize = new System.Drawing.Size(180, 180);
+            this.imageControl.HoverState.ImageSize = new System.Drawing.Size(160, 160);
             this.imageControl.Image = ((System.Drawing.Image)(resources.GetObject("imageControl.Image")));
             this.imageControl.ImageOffset = new System.Drawing.Point(0, 0);
             this.imageControl.ImageRotate = 0F;
@@ -137,7 +137,7 @@ namespace SistemaAsistencia
             // imageReporte
             // 
             this.imageReporte.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageReporte.HoverState.ImageSize = new System.Drawing.Size(180, 180);
+            this.imageReporte.HoverState.ImageSize = new System.Drawing.Size(160, 160);
             this.imageReporte.Image = ((System.Drawing.Image)(resources.GetObject("imageReporte.Image")));
             this.imageReporte.ImageOffset = new System.Drawing.Point(0, 0);
             this.imageReporte.ImageRotate = 0F;

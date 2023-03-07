@@ -66,5 +66,6 @@ namespace SistemaAsistencia
             reportes.Show();
             this.Hide();
         }
+
     }
 }

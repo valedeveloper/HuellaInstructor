@@ -43,8 +43,8 @@ namespace SistemaAsistencia
                     {
                         MessageBox.Show("Eres Admin");
                         FrmMenu menu = new FrmMenu();
-                        menu.labelNombre.Text = nameUser;
-                        menu.pictureUser.Image = clsImage.byteArrayToImage(photoUser);
+                        //menu.labelNombre.Text = nameUser;
+                        //menu.pictureUser.Image = clsImage.byteArrayToImage(photoUser);
                         menu.Show();
                         this.Hide();
                     }
@@ -96,16 +96,16 @@ namespace SistemaAsistencia
             {
                 this.txtPassword.UseSystemPasswordChar = true;
             }
-            this.imageVisible.Visible = false;
-            this.imageInvisble.Visible = true;
+            //this.imageVisible.Visible = false;
+            //this.imageInvisble.Visible = true;
             
 
         }
 
         private void imageInvisble_Click(object sender, EventArgs e)
         {
-            this.imageVisible.Visible = true;
-            this.imageInvisble.Visible = false;
+            //this.imageVisible.Visible = true;
+            //this.imageInvisble.Visible = false;
 
             if (this.txtPassword.UseSystemPasswordChar == true)
             {

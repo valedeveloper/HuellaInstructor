@@ -44,17 +44,22 @@ namespace SistemaAsistencia.CapaModelo
             CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
             return clsPersona.LlenarDatos();
         }
-
-        public void AgregarPersona(byte[] huellaPersona, string cedula, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string direccion_Imagen, byte[] photo, int codigo_Barras)
+        public DataTable TraerCedulaYHuella()
         {
-            CapaDatos.ClsPersonaBD clsPersonaB = new ClsPersonaBD();
-            clsPersonaB.AgregarPersona_db(huellaPersona, cedula, nombre, apellido, correo, celular, funcionario_Persona, ficha_Persona, direccion_Imagen, photo, codigo_Barras);
+            CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
+            return clsPersona.TraerCedulaYHuella();
         }
 
-        public void ModificarPersona(int id, byte[] huellaPersona, string cedula, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string direccion_Imagen, byte[] photo, int codigo_Barras)
+        public void AgregarPersona(byte[] huellaPersona, string cedula, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string direccion_Imagen, byte[] photo, int no_dedo)
+        {
+            CapaDatos.ClsPersonaBD clsPersonaB = new ClsPersonaBD();
+            clsPersonaB.AgregarPersona_db(huellaPersona, cedula, nombre, apellido, correo, celular, funcionario_Persona, ficha_Persona, direccion_Imagen, photo, no_dedo);
+        }
+
+        public void ModificarPersona(int id, byte[] huellaPersona, string cedula, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string direccion_Imagen, byte[] photo, int no_dedo)
         {
             CapaDatos.ClsPersonaBD clsPersonaBD = new ClsPersonaBD();
-            clsPersonaBD.ModificarPersona_db(id, huellaPersona,cedula, nombre, apellido, correo, celular, funcionario_Persona, ficha_Persona, direccion_Imagen, photo, codigo_Barras);
+            clsPersonaBD.ModificarPersona_db(id, huellaPersona,cedula, nombre, apellido, correo, celular, funcionario_Persona, ficha_Persona, direccion_Imagen, photo, no_dedo);
         }
 
         public void EntradaPersona(int id)
@@ -63,10 +68,10 @@ namespace SistemaAsistencia.CapaModelo
             clsPersona.EntradaPersona_db(id);
         }
 
-        public DataTable TraerPersonaCodigo(int codigo_Barras)
+        public DataTable TraerPersonaCedula(string cedula)
         {
             ClsPersonaBD personaBD = new ClsPersonaBD();
-            return personaBD.TraerPersonaCodigo_db(codigo_Barras);
+            return personaBD.TraerPersonaCedula_db(cedula);
         }
 
         public DataTable TraerPersonaHuella(byte Id_Huella)

@@ -146,7 +146,7 @@ namespace SistemaAsistencia.CapaVistas
             {
 
             }
-   
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -168,31 +168,7 @@ namespace SistemaAsistencia.CapaVistas
             }
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFile_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmAgregarUsuario_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void combotxtRol_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -287,6 +263,16 @@ namespace SistemaAsistencia.CapaVistas
         private void combotxtRol_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -68,7 +68,7 @@ namespace SistemaAsistencia.CapaVistas
 
                 modificarPersona.txtFile.Text = dataPersona.CurrentRow.Cells[9].Value.ToString();
                 byte[] photoPerson = (byte[])dataPersona.CurrentRow.Cells[10].Value;
-                modificarPersona.txtCodigo.Text = dataPersona.CurrentRow.Cells[11].Value.ToString();
+                modificarPersona.txtNoDedo.Text = dataPersona.CurrentRow.Cells[11].Value.ToString();
 
 
                 Image imagePerson = image.byteArrayToImage(photoPerson);
@@ -100,6 +100,12 @@ namespace SistemaAsistencia.CapaVistas
             this.Close();
             FrmMenu menu = new FrmMenu();
             menu.Show();
+        }
+
+        private void panelPersona_Resize(object sender, EventArgs e)
+        {
+            panelPersona.Left = (Width - panelPersona.Width) / 2;
+            panelPersona.Top = (Height - panelPersona.Height) / 2;
         }
     }
 }

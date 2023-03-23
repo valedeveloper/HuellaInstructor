@@ -29,69 +29,67 @@ namespace SistemaAsistencia
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtCedula = new Guna.UI2.WinForms.Guna2TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnIngresar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSalir = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.imageVisible = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.imageInvisble = new Guna.UI2.WinForms.Guna2ImageButton();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.txtCedula = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 14F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(125, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Registro";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 14F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(91, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Entrada y Salida";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(410, 64);
+            this.label3.Font = new System.Drawing.Font("Georgia", 12F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(82, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 23);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "¡Bienvenido, Usuario!";
+            this.label3.Size = new System.Drawing.Size(164, 18);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "CBI Ver 1.0 22-02-23";
             // 
-            // guna2Elipse1
+            // groupBox1
             // 
-            this.guna2Elipse1.BorderRadius = 5;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.AutoRoundedCorners = true;
-            this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtCedula.BorderRadius = 11;
-            this.txtCedula.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.txtCedula.BorderThickness = 2;
-            this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCedula.DefaultText = "";
-            this.txtCedula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCedula.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCedula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtCedula.Font = new System.Drawing.Font("Georgia", 12F);
-            this.txtCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
-            this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtCedula.Location = new System.Drawing.Point(414, 114);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.PasswordChar = '\0';
-            this.txtCedula.PlaceholderText = "Ingrese su Cédula\r\n";
-            this.txtCedula.SelectedText = "";
-            this.txtCedula.Size = new System.Drawing.Size(222, 24);
-            this.txtCedula.TabIndex = 9;
-            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
+            this.groupBox1.Controls.Add(this.txtPassword);
+            this.groupBox1.Controls.Add(this.txtCedula);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(63, 142);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 168);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
             // 
             // txtPassword
             // 
-            this.txtPassword.Animated = true;
-            this.txtPassword.AutoRoundedCorners = true;
-            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.txtPassword.BorderRadius = 11;
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtPassword.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtPassword.BorderThickness = 2;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -104,135 +102,133 @@ namespace SistemaAsistencia
             this.txtPassword.Font = new System.Drawing.Font("Georgia", 12F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtPassword.Location = new System.Drawing.Point(414, 160);
+            this.txtPassword.Location = new System.Drawing.Point(15, 121);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '●';
-            this.txtPassword.PlaceholderText = "Ingrese su Contraseña\r\n";
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(222, 24);
-            this.txtPassword.TabIndex = 10;
-            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Size = new System.Drawing.Size(178, 24);
+            this.txtPassword.TabIndex = 44;
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
+            this.txtCedula.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtCedula.BorderThickness = 2;
+            this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCedula.DefaultText = "";
+            this.txtCedula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCedula.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCedula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
+            this.txtCedula.Font = new System.Drawing.Font("Georgia", 12F);
+            this.txtCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
+            this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
+            this.txtCedula.Location = new System.Drawing.Point(15, 56);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.PasswordChar = '\0';
+            this.txtCedula.PlaceholderText = "";
+            this.txtCedula.SelectedText = "";
+            this.txtCedula.Size = new System.Drawing.Size(178, 24);
+            this.txtCedula.TabIndex = 43;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Georgia", 12F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(54, 97);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 18);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Contraseña";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Georgia", 12F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(68, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 18);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Cédula";
             // 
             // btnIngresar
             // 
-            this.btnIngresar.AutoRoundedCorners = true;
-            this.btnIngresar.BorderRadius = 14;
-            this.btnIngresar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnIngresar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnIngresar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnIngresar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnIngresar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.btnIngresar.Font = new System.Drawing.Font("Georgia", 12F);
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIngresar.FlatAppearance.BorderSize = 0;
+            this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.btnIngresar.Location = new System.Drawing.Point(414, 219);
+            this.btnIngresar.Location = new System.Drawing.Point(85, 336);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(92, 30);
-            this.btnIngresar.TabIndex = 11;
-            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.Size = new System.Drawing.Size(75, 38);
+            this.btnIngresar.TabIndex = 4;
+            this.btnIngresar.Text = "Entrar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Animated = true;
-            this.btnSalir.AutoRoundedCorners = true;
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.BorderRadius = 14;
-            this.btnSalir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSalir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSalir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSalir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSalir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.btnSalir.Font = new System.Drawing.Font("Georgia", 12F);
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.btnSalir.IndicateFocus = true;
-            this.btnSalir.Location = new System.Drawing.Point(540, 219);
+            this.btnSalir.Location = new System.Drawing.Point(167, 336);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(96, 30);
-            this.btnSalir.TabIndex = 12;
+            this.btnSalir.Size = new System.Drawing.Size(75, 38);
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 80;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-47, -17);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(390, 336);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 13;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // imageVisible
-            // 
-            this.imageVisible.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageVisible.HoverState.ImageSize = new System.Drawing.Size(22, 22);
-            this.imageVisible.Image = ((System.Drawing.Image)(resources.GetObject("imageVisible.Image")));
-            this.imageVisible.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imageVisible.ImageRotate = 0F;
-            this.imageVisible.ImageSize = new System.Drawing.Size(20, 20);
-            this.imageVisible.Location = new System.Drawing.Point(643, 160);
-            this.imageVisible.Name = "imageVisible";
-            this.imageVisible.PressedState.ImageSize = new System.Drawing.Size(22, 22);
-            this.imageVisible.Size = new System.Drawing.Size(32, 24);
-            this.imageVisible.TabIndex = 14;
-            this.imageVisible.Click += new System.EventHandler(this.imageVisible_Click);
-            // 
-            // imageInvisble
-            // 
-            this.imageInvisble.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageInvisble.HoverState.ImageSize = new System.Drawing.Size(22, 22);
-            this.imageInvisble.Image = ((System.Drawing.Image)(resources.GetObject("imageInvisble.Image")));
-            this.imageInvisble.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imageInvisble.ImageRotate = 0F;
-            this.imageInvisble.ImageSize = new System.Drawing.Size(20, 20);
-            this.imageInvisble.Location = new System.Drawing.Point(643, 160);
-            this.imageInvisble.Name = "imageInvisble";
-            this.imageInvisble.PressedState.ImageSize = new System.Drawing.Size(22, 22);
-            this.imageInvisble.Size = new System.Drawing.Size(32, 24);
-            this.imageInvisble.TabIndex = 15;
-            this.imageInvisble.Visible = false;
-            this.imageInvisble.Click += new System.EventHandler(this.imageInvisble_Click);
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(700, 305);
-            this.Controls.Add(this.imageVisible);
-            this.Controls.Add(this.imageInvisble);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(326, 399);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLogin";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmLogin";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.Text = "Form1";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnSalir;
         private Guna.UI2.WinForms.Guna2TextBox txtCedula;
-        private Guna.UI2.WinForms.Guna2Button btnIngresar;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
-        private Guna.UI2.WinForms.Guna2Button btnSalir;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2ImageButton imageVisible;
-        private Guna.UI2.WinForms.Guna2ImageButton imageInvisble;
     }
-}
+} 

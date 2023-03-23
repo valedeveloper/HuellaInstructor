@@ -20,6 +20,17 @@ namespace SistemaAsistencia.CapaDatos
             return dataTable;
         }
 
+        public DataTable TraerCedulaYHuella()
+        {
+            ClsConexion conexion = new ClsConexion();
+            string consulta = "SELECT Huella_Persona, Cedula_Persona FROM PERSONAS";
+            SqlCommand sql = new SqlCommand(consulta, conexion.Conectar());
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(sql);
+            DataTable dataTable = new DataTable();
+            sqlData.Fill(dataTable);
+            return dataTable;
+        }
 
         //public DataTable ValidacionPersona(int codigo_Barras)
         //{
@@ -32,10 +43,10 @@ namespace SistemaAsistencia.CapaDatos
         //    sqlData.Fill(dataTable);
         //    return dataTable;
         //}
-        public void AgregarPersona_db(byte[] huellaPersona, string cedula,string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string direccion_Imagen, byte[] photo, int codigo_Barras)
+        public void AgregarPersona_db(byte[] huellaPersona, string cedula,string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string direccion_Imagen, byte[] photo, int no_dedo)
         {
             ClsConexion conexion = new ClsConexion();
-            string consultaInsertar = "INSERT INTO PERSONAS (Huella_Persona,Cedula_Persona,Nombre_Persona,Apellido_Persona,Correo_Persona,Celular_Persona,Funcionario_Persona,Ficha_Persona,Direccion_Imagen,Photo_Persona,Codigo_Barras) VALUES (@Huella_Persona,@Cedula_Persona,@Nombre_Persona,@Apellido_Persona,@Correo_Persona,@Celular_Persona,@Funcionario_Persona,@Ficha_Persona,@Direccion_Imagen,@Photo_Persona,@Codigo_Barras)";
+            string consultaInsertar = "INSERT INTO PERSONAS (Huella_Persona,Cedula_Persona,Nombre_Persona,Apellido_Persona,Correo_Persona,Celular_Persona,Funcionario_Persona,Ficha_Persona,Direccion_Imagen,Photo_Persona,No_Dedo) VALUES (@Huella_Persona,@Cedula_Persona,@Nombre_Persona,@Apellido_Persona,@Correo_Persona,@Celular_Persona,@Funcionario_Persona,@Ficha_Persona,@Direccion_Imagen,@Photo_Persona,@No_Dedo)";
 
             SqlCommand comandoInsertarPersonas = new SqlCommand(consultaInsertar, conexion.Conectar());
 
@@ -49,17 +60,17 @@ namespace SistemaAsistencia.CapaDatos
             comandoInsertarPersonas.Parameters.AddWithValue("@Ficha_Persona", ficha_Persona);
             comandoInsertarPersonas.Parameters.AddWithValue("@Direccion_Imagen", direccion_Imagen);
             comandoInsertarPersonas.Parameters.AddWithValue("@Photo_Persona", photo);
-            comandoInsertarPersonas.Parameters.AddWithValue("@Codigo_Barras", codigo_Barras);
+            comandoInsertarPersonas.Parameters.AddWithValue("@No_Dedo", no_dedo);
 
             comandoInsertarPersonas.ExecuteNonQuery();
         }
 
 
-        public void ModificarPersona_db(int id, byte[] huellaPersona, string cedula, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string direccion_Imagen, byte[] photo, int codigo_Barras)
+        public void ModificarPersona_db(int id, byte[] huellaPersona, string cedula, string nombre, string apellido, string correo, string celular, string funcionario_Persona, string ficha_Persona, string direccion_Imagen, byte[] photo, int no_dedo)
         {
             ClsConexion conexion = new ClsConexion();
 
-            string consultaModificar = "UPDATE PERSONAS SET Huella_Persona=@Huella_Persona,Cedula_Persona=@Cedula_Persona,Nombre_Persona=@Nombre_Persona,Apellido_Persona=@Apellido_Persona,Correo_Persona=@Correo_Persona,Celular_Persona=@Celular_Persona,Funcionario_Persona=@Funcionario_Persona,Ficha_Persona=@Ficha_Persona,Direccion_Imagen=@Direccion_Imagen,Photo_Persona=@Photo_Persona,Codigo_Barras=@Codigo_Barras WHERE Id_Persona=@Id_Persona";
+            string consultaModificar = "UPDATE PERSONAS SET Huella_Persona=@Huella_Persona,Cedula_Persona=@Cedula_Persona,Nombre_Persona=@Nombre_Persona,Apellido_Persona=@Apellido_Persona,Correo_Persona=@Correo_Persona,Celular_Persona=@Celular_Persona,Funcionario_Persona=@Funcionario_Persona,Ficha_Persona=@Ficha_Persona,Direccion_Imagen=@Direccion_Imagen,Photo_Persona=@Photo_Persona,No_Dedo=@No_dedo WHERE Id_Persona=@Id_Persona";
             SqlCommand comandoModificar = new SqlCommand(consultaModificar, conexion.Conectar());
             comandoModificar.Parameters.AddWithValue("@Huella_Persona", huellaPersona);
             comandoModificar.Parameters.AddWithValue("@Cedula_Persona", cedula);
@@ -71,7 +82,7 @@ namespace SistemaAsistencia.CapaDatos
             comandoModificar.Parameters.AddWithValue("@Ficha_Persona", ficha_Persona);
             comandoModificar.Parameters.AddWithValue("Direccion_Imagen", direccion_Imagen);
             comandoModificar.Parameters.AddWithValue("Photo_Persona", photo);
-            comandoModificar.Parameters.AddWithValue("@Codigo_Barras", codigo_Barras);
+            comandoModificar.Parameters.AddWithValue("@No_Dedo", no_dedo);
             comandoModificar.Parameters.AddWithValue("Id_Persona", id);
             comandoModificar.ExecuteNonQuery();
         }
@@ -85,12 +96,12 @@ namespace SistemaAsistencia.CapaDatos
             command.BeginExecuteNonQuery();
         }
 
-        public DataTable Validar_Codigo(int Codigo)
+        public DataTable Validar_Codigo(int no_dedo)
         {
             ClsConexion conexion = new ClsConexion();
-            string consultaValidar = "SELECT Id_Persona FROM PERSONAS WHERE Codigo_Barras=@Codigo_Barras";
+            string consultaValidar = "SELECT Id_Persona FROM PERSONAS WHERE No_Dedo=@No_Dedo";
             SqlCommand sqlValidar = new SqlCommand(consultaValidar, conexion.Conectar());
-            sqlValidar.Parameters.AddWithValue("@Codigo_Barras", Codigo);
+            sqlValidar.Parameters.AddWithValue("@No_Dedo", no_dedo);
 
 
             SqlDataAdapter sqlData = new SqlDataAdapter(sqlValidar);
@@ -113,12 +124,12 @@ namespace SistemaAsistencia.CapaDatos
         }
 
 
-        public DataTable TraerPersonaCodigo_db(int codigo_Barras)
+        public DataTable TraerPersonaCedula_db(string cedula)
         {
             ClsConexion conexion = new ClsConexion();
-            string consultaTraer = "SELECT Id_Persona,Nombre_Persona,Apellido_Persona,Funcionario_Persona,Ficha_Persona,Photo_Persona FROM PERSONAS WHERE Codigo_Barras=@Codigo_Barras";
+            string consultaTraer = "SELECT Id_Persona,Nombre_Persona,Apellido_Persona,Funcionario_Persona,Ficha_Persona,Photo_Persona,Huella_Persona FROM PERSONAS WHERE Cedula_Persona=@Cedula_Persona";
             SqlCommand sqlTraer = new SqlCommand(consultaTraer, conexion.Conectar());
-            sqlTraer.Parameters.AddWithValue("Codigo_Barras", codigo_Barras);
+            sqlTraer.Parameters.AddWithValue("Cedula_Persona", cedula);
 
             SqlDataAdapter sql = new SqlDataAdapter(sqlTraer);
             DataTable data = new DataTable();

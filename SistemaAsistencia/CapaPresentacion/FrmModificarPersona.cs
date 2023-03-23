@@ -23,7 +23,7 @@ namespace SistemaAsistencia.CapaVistas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (this.txtCodigo.Text == "")
+            if (this.txtNoDedo.Text == "")
             {
                 MessageBox.Show("Ingrese el código de barras");
             }
@@ -78,19 +78,19 @@ namespace SistemaAsistencia.CapaVistas
                                             CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
                                             DataTable dataTable = new DataTable();
                                             DataTable data = new DataTable();
-                                            dataTable = clsPersona.Validar_Codigo(int.Parse(this.txtCodigo.Text));
+                                            dataTable = clsPersona.Validar_Codigo(int.Parse(this.txtNoDedo.Text));
                                             data = clsPersona.Validar_Cedula(this.txtCedula.Text);
 
                                             if (dataTable.Rows.Count == 0 || this.labelId.Text==(data.Rows[0][0].ToString()) ||  this.labelId.Text == (dataTable.Rows[0][0].ToString()))
                                             {
-                                                clsPersona.ModificarPersona_db(int.Parse(this.labelId.Text), arrayImagenUser, this.txtCedula.Text,this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionario.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtCodigo.Text));
+                                                clsPersona.ModificarPersona_db(int.Parse(this.labelId.Text), arrayImagenUser, this.txtCedula.Text,this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionario.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtNoDedo.Text));
                                                
                                                 
                                                 
                                                 
                                                 //Mensaje de Salida para que el usuario sepa que está agregado el Usuario 
                                                 MessageBox.Show("Persona Modificada", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                                this.txtCodigo.Text = "";
+                                                this.txtNoDedo.Text = "";
                                                 this.txtName.Text = "";
                                                 this.txtLastName.Text = "";
                                                 this.txtCorreo.Text = "";
@@ -142,7 +142,7 @@ namespace SistemaAsistencia.CapaVistas
 
             if (MessageBox.Show("¿Desea cancelar el proceso?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                this.txtCodigo.Text = "";
+                this.txtNoDedo.Text = "";
                 this.txtName.Text = "";
                 this.txtLastName.Text = "";
                 this.txtCorreo.Text = "";
@@ -206,6 +206,11 @@ namespace SistemaAsistencia.CapaVistas
         private void FrmModificarPersona_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     } 
 } 

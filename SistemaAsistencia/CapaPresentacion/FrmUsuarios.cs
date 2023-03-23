@@ -31,7 +31,7 @@ namespace SistemaAsistencia.CapaVistas
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             CapaVistas.FrmAgregarUsuario agregarUsuario = new CapaVistas.FrmAgregarUsuario();
-            agregarUsuario.Show();
+            agregarUsuario.ShowDialog();
 
         }
         private void btnModificar_Click(object sender, EventArgs e)
@@ -81,6 +81,12 @@ namespace SistemaAsistencia.CapaVistas
             this.Close();
             FrmMenu menu = new FrmMenu();
             menu.Show();
+        }
+
+        private void panel1_Resize(object sender, EventArgs e)
+        {
+            panelUsuario.Left = (Width - panelUsuario.Width) / 2;
+            panelUsuario.Top = (Height - panelUsuario.Height) / 2;
         }
     }
 }

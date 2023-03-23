@@ -1,9 +1,12 @@
 ﻿using SistemaAsistencia.CapaModelo;
+using SistemaAsistencia.CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,14 +20,16 @@ namespace SistemaAsistencia.CapaVistas
         public FrmControl()
         {
             InitializeComponent();
+            Data = new AppData();
         }
+        private AppData Data;
+        string cedula = string.Empty;
+        byte[] huella;
         byte[] photoPerson;
 
         private void timerCurrent_Tick(object sender, EventArgs e)
         {
-            labelHora.Text = DateTime.Now.ToString("h:mm:ss");
-            labelFecha.Text = DateTime.Now.ToLongDateString();
-
+            labelHora.Text = DateTime.Now.ToString();
         }
         int idPersona;
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -41,26 +46,26 @@ namespace SistemaAsistencia.CapaVistas
             CapaVistas.FrmModificarPersona personas = new FrmModificarPersona();
             CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
             CapaModelo.ClsImage clsImage = new CapaModelo.ClsImage();
-            if (this.txtCodigo.Text == "")
+            if (this.txtCedula.Text == "")
             {
-                MessageBox.Show("Ingrese el código de barras","Notificación");
+                MessageBox.Show("Ingrese la cédula","Notificación");
             }
             else
             {
-                DataTable dataControl = clsPersona.TraerPersonaCodigo_db(int.Parse(this.txtCodigo.Text));
+                DataTable dataControl = clsPersona.TraerPersonaCedula_db(this.txtCedula.Text);
                 if (dataControl.Rows.Count != 0)
                 {
                     idPersona = (int)dataControl.Rows[0][0];
-                    this.labelName.Text = dataControl.Rows[0][1].ToString();
-                    this.labelLastName.Text = dataControl.Rows[0][2].ToString();
-                    this.labelFuncionario.Text = dataControl.Rows[0][3].ToString();
-                    this.labelFicha.Text = dataControl.Rows[0][4].ToString();
+                   
+                    this.txtName.Text = dataControl.Rows[0][1].ToString();
+                    this.txtLastName.Text = dataControl.Rows[0][2].ToString();
+                    this.txtFuncionario.Text = dataControl.Rows[0][3].ToString();
+                    this.txtFicha.Text = dataControl.Rows[0][4].ToString();
                     photoPerson = (byte[])dataControl.Rows[0][5];
+                    huella = (byte[])dataControl.Rows[0][6];
                     ClsImage image = new ClsImage();
 
                     this.picturePeople.Image = image.byteArrayToImage(photoPerson);
-
-
                     clsPersona.EntradaPersona_db(idPersona);
 
 
@@ -78,7 +83,7 @@ namespace SistemaAsistencia.CapaVistas
                 else
                 {
                     MessageBox.Show("El código no pertenece a ninguna persona, vuelva a intentarlo", "Notificación");
-                    this.txtCodigo.Focus();
+                    this.txtNoDedo.Focus();
                 }
             }
 
@@ -91,6 +96,43 @@ namespace SistemaAsistencia.CapaVistas
             this.Close();
             FrmMenu menu = new FrmMenu();
             menu.Show();
+        }
+
+        private void panelControl_Resize(object sender, EventArgs e)
+        {
+            panelControl.Left = (Width - panelControl.Width) / 2;
+            panelControl.Top = (Height - panelControl.Height) / 2;
+        }
+
+        private void verificationControl1_OnComplete(object Control, DPFP.FeatureSet FeatureSet, ref DPFP.Gui.EventHandlerStatus EventHandlerStatus)
+        {
+            //DPFP.Verification.Verification ver = new DPFP.Verification.Verification();
+            //DPFP.Verification.Verification.Result res = new DPFP.Verification.Verification.Result();
+ 
+            
+            //CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
+            //DataTable dataControl = clsPersona.TraerCedulaYHuella();
+
+            //huella = (byte[])dataControl.Rows[0][0];
+            //cedula = dataControl.Rows[0][1].ToString();
+            //MemoryStream memoryStream = new MemoryStream(huella);
+            //DPFP.Template tmpObj = new DPFP.Template();
+            //tmpObj.DeSerialize(memoryStream);
+            //if (tmpObj != null)
+            //{
+            //    ver.Verify(FeatureSet, tmpObj, ref res);
+            //    Data.IsFeatureSetMatched = res.Verified;
+            //    Data.FalseAcceptRate = res.FARAchieved;
+            //    if (res.Verified)
+            //    {
+
+            //    }
+            //}
+
+            //if (!res.Verified)
+            //{
+            //    EventHandlerStatus = DPFP.Gui.EventHandlerStatus.Failure;
+            //}
         }
     }
 }

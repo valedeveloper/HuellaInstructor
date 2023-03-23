@@ -29,208 +29,216 @@ namespace SistemaAsistencia
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureUser = new System.Windows.Forms.PictureBox();
-            this.labelNombre = new System.Windows.Forms.Label();
-            this.imageUser = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.imagePerson = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.imageControl = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.imageReporte = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.pictureSena = new System.Windows.Forms.PictureBox();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.btnControl = new System.Windows.Forms.Button();
+            this.btnPerson = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSena)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 5;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(165, 198);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(458, 34);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Sistema Control de Asistencia";
-            // 
-            // pictureUser
-            // 
-            this.pictureUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureUser.Image")));
-            this.pictureUser.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureUser.InitialImage")));
-            this.pictureUser.Location = new System.Drawing.Point(594, 20);
-            this.pictureUser.Name = "pictureUser";
-            this.pictureUser.Size = new System.Drawing.Size(46, 46);
-            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureUser.TabIndex = 40;
-            this.pictureUser.TabStop = false;
-            this.pictureUser.Visible = false;
-            // 
-            // labelNombre
-            // 
-            this.labelNombre.AutoSize = true;
-            this.labelNombre.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.ForeColor = System.Drawing.Color.White;
-            this.labelNombre.Location = new System.Drawing.Point(646, 39);
-            this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(65, 16);
-            this.labelNombre.TabIndex = 41;
-            this.labelNombre.Text = "Usuario";
-            this.labelNombre.Visible = false;
-            // 
-            // imageUser
-            // 
-            this.imageUser.BackColor = System.Drawing.Color.Transparent;
-            this.imageUser.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageUser.HoverState.ImageSize = new System.Drawing.Size(150, 150);
-            this.imageUser.Image = ((System.Drawing.Image)(resources.GetObject("imageUser.Image")));
-            this.imageUser.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imageUser.ImageRotate = 0F;
-            this.imageUser.ImageSize = new System.Drawing.Size(150, 150);
-            this.imageUser.Location = new System.Drawing.Point(51, 301);
-            this.imageUser.Name = "imageUser";
-            this.imageUser.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageUser.Size = new System.Drawing.Size(185, 136);
-            this.imageUser.TabIndex = 42;
-            this.imageUser.Click += new System.EventHandler(this.guna2Shapes1_Click);
-            // 
-            // imagePerson
-            // 
-            this.imagePerson.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imagePerson.HoverState.ImageSize = new System.Drawing.Size(150, 150);
-            this.imagePerson.Image = ((System.Drawing.Image)(resources.GetObject("imagePerson.Image")));
-            this.imagePerson.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imagePerson.ImageRotate = 0F;
-            this.imagePerson.ImageSize = new System.Drawing.Size(150, 150);
-            this.imagePerson.Location = new System.Drawing.Point(242, 290);
-            this.imagePerson.Name = "imagePerson";
-            this.imagePerson.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imagePerson.Size = new System.Drawing.Size(166, 163);
-            this.imagePerson.TabIndex = 43;
-            this.imagePerson.Click += new System.EventHandler(this.guna2Shapes2_Click);
-            // 
-            // imageControl
-            // 
-            this.imageControl.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageControl.HoverState.ImageSize = new System.Drawing.Size(160, 160);
-            this.imageControl.Image = ((System.Drawing.Image)(resources.GetObject("imageControl.Image")));
-            this.imageControl.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imageControl.ImageRotate = 0F;
-            this.imageControl.ImageSize = new System.Drawing.Size(150, 150);
-            this.imageControl.Location = new System.Drawing.Point(440, 290);
-            this.imageControl.Name = "imageControl";
-            this.imageControl.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageControl.Size = new System.Drawing.Size(138, 147);
-            this.imageControl.TabIndex = 44;
-            this.imageControl.Click += new System.EventHandler(this.imageControl_Click);
-            // 
-            // imageReporte
-            // 
-            this.imageReporte.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageReporte.HoverState.ImageSize = new System.Drawing.Size(160, 160);
-            this.imageReporte.Image = ((System.Drawing.Image)(resources.GetObject("imageReporte.Image")));
-            this.imageReporte.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imageReporte.ImageRotate = 0F;
-            this.imageReporte.ImageSize = new System.Drawing.Size(150, 150);
-            this.imageReporte.Location = new System.Drawing.Point(612, 290);
-            this.imageReporte.Name = "imageReporte";
-            this.imageReporte.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imageReporte.Size = new System.Drawing.Size(143, 147);
-            this.imageReporte.TabIndex = 45;
-            this.imageReporte.Click += new System.EventHandler(this.imageReporte_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.pictureSena);
-            this.panel1.Controls.Add(this.pictureUser);
-            this.panel1.Controls.Add(this.labelNombre);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(795, 85);
-            this.panel1.TabIndex = 46;
+            this.panel1.Size = new System.Drawing.Size(876, 53);
+            this.panel1.TabIndex = 0;
             // 
             // btnClose
             // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(733, 20);
+            this.btnClose.Location = new System.Drawing.Point(828, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(26, 41);
-            this.btnClose.TabIndex = 47;
+            this.btnClose.Size = new System.Drawing.Size(48, 53);
+            this.btnClose.TabIndex = 6;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureSena
+            // label1
             // 
-            this.pictureSena.Image = ((System.Drawing.Image)(resources.GetObject("pictureSena.Image")));
-            this.pictureSena.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureSena.InitialImage")));
-            this.pictureSena.Location = new System.Drawing.Point(52, 0);
-            this.pictureSena.Name = "pictureSena";
-            this.pictureSena.Size = new System.Drawing.Size(118, 85);
-            this.pictureSena.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureSena.TabIndex = 42;
-            this.pictureSena.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(207, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Control Entrada - Salida";
             // 
-            // guna2Elipse2
+            // label2
             // 
-            this.guna2Elipse2.BorderRadius = 50;
-            this.guna2Elipse2.TargetControl = this.pictureUser;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Green;
+            this.label2.Location = new System.Drawing.Point(229, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(579, 31);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "CENTRO DE BIOTECNOLOGIA INDUSTRIAL";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(96, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(107, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporte.FlatAppearance.BorderSize = 0;
+            this.btnReporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
+            this.btnReporte.Location = new System.Drawing.Point(557, 127);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(142, 114);
+            this.btnReporte.TabIndex = 17;
+            this.btnReporte.Text = "Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.imageReporte_Click);
+            // 
+            // btnControl
+            // 
+            this.btnControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnControl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnControl.FlatAppearance.BorderSize = 0;
+            this.btnControl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnControl.Image = ((System.Drawing.Image)(resources.GetObject("btnControl.Image")));
+            this.btnControl.Location = new System.Drawing.Point(421, 127);
+            this.btnControl.Name = "btnControl";
+            this.btnControl.Size = new System.Drawing.Size(142, 114);
+            this.btnControl.TabIndex = 16;
+            this.btnControl.Text = "Registro Entrada/Salida";
+            this.btnControl.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnControl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnControl.UseVisualStyleBackColor = true;
+            this.btnControl.Click += new System.EventHandler(this.imageControl_Click);
+            // 
+            // btnPerson
+            // 
+            this.btnPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnPerson.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPerson.FlatAppearance.BorderSize = 0;
+            this.btnPerson.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPerson.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerson.Image = ((System.Drawing.Image)(resources.GetObject("btnPerson.Image")));
+            this.btnPerson.Location = new System.Drawing.Point(273, 127);
+            this.btnPerson.Name = "btnPerson";
+            this.btnPerson.Size = new System.Drawing.Size(142, 114);
+            this.btnPerson.TabIndex = 15;
+            this.btnPerson.Text = "Registro de Personas";
+            this.btnPerson.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPerson.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPerson.UseVisualStyleBackColor = true;
+            this.btnPerson.Click += new System.EventHandler(this.guna2Shapes2_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
+            this.btnUser.Location = new System.Drawing.Point(125, 127);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(142, 114);
+            this.btnUser.TabIndex = 14;
+            this.btnUser.Text = "Usuarios del Sistema";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.guna2Shapes1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.btnUser);
+            this.groupBox1.Controls.Add(this.btnReporte);
+            this.groupBox1.Controls.Add(this.btnPerson);
+            this.groupBox1.Controls.Add(this.btnControl);
+            this.groupBox1.Location = new System.Drawing.Point(35, 179);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(811, 341);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(795, 600);
+            this.ClientSize = new System.Drawing.Size(876, 549);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.imageReporte);
-            this.Controls.Add(this.imageControl);
-            this.Controls.Add(this.imagePerson);
-            this.Controls.Add(this.imageUser);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMenu";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMenu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
+            this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSena)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.PictureBox pictureUser;
-        public System.Windows.Forms.Label labelNombre;
-        private Guna.UI2.WinForms.Guna2ImageButton imageUser;
-        private Guna.UI2.WinForms.Guna2ImageButton imagePerson;
-        private Guna.UI2.WinForms.Guna2ImageButton imageReporte;
-        private Guna.UI2.WinForms.Guna2ImageButton imageControl;
+
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.PictureBox pictureSena;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Button btnControl;
+        private System.Windows.Forms.Button btnPerson;
+        private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

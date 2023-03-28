@@ -34,6 +34,19 @@ namespace SistemaAsistencia.CapaVistas
             }
         }
 
+
+        public static void SeleccionarDedo()
+        {
+            //if ((string.IsNullOrEmpty(this.txtNoDedo.Text))
+            //{
+            //    this.txt
+            //}
+
+        }
+
+
+
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
@@ -121,38 +134,38 @@ namespace SistemaAsistencia.CapaVistas
 
                                                             if (data.Rows.Count == 0)
                                                             {
-                                                                DataTable dataTable = new DataTable();
-                                                                dataTable = clsPersona.Validar_Codigo(int.Parse(this.txtNoDedo.Text));
+                                                                //{
+                                                                //    DataTable dataTable = new DataTable();
+                                                                //    dataTable = clsPersona.Validar_Codigo(int.Parse(this.txtNoDedo.Text));
 
-                                                                if (dataTable.Rows.Count == 0)
-                                                                {
+                                                                //if (dataTable.Rows.Count == 0)
+                                                                //{
 
-                                                                    clsPersona.AgregarPersona_db(Data.Templates[i].Bytes, this.txtCedula.Text, this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionario.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtNoDedo.Text));
+                                                                clsPersona.AgregarPersona_db(Data.Templates[i].Bytes, this.txtCedula.Text, this.txtName.Text, this.txtLastName.Text, this.txtCorreo.Text, this.txtTelefono.Text, this.comboFuncionario.Text, this.txtFicha.Text, this.txtFile.Text, arrayImagenUser, int.Parse(this.txtNoDedo.Text));
 
 
-                                                                    FrmPersonas frmPersonas = new FrmPersonas();
-                                                                    DataTable dataPeople = new DataTable();
-                                                                    dataPeople = clsPersona.LlenarDatos();
-                                                                    frmPersonas.dataPersona.DataSource = dataPeople;
+                                                                FrmPersonas frmPersonas = new FrmPersonas();
+                                                                DataTable dataPeople = new DataTable();
+                                                                dataPeople = clsPersona.LlenarDatos();
+                                                                frmPersonas.dataPersona.DataSource = dataPeople;
 
-                                                                    //Mensaje de Salida para que el usuario sepa que está agregado el Usuario 
-                                                                    MessageBox.Show("Usuario Agregado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                                                    this.txtNoDedo.Text = "";
-                                                                    this.txtName.Text = "";
-                                                                    this.txtLastName.Text = "";
-                                                                    this.txtCorreo.Text = "";
-                                                                    this.txtTelefono.Text = "";
-                                                                    this.comboFuncionario.Text = "";
-                                                                    this.txtFile.Text = "";
-                                                                    this.txtFicha.Text = "";
-                                                                    this.pictureUser.Image = null;
-
-                                                                }
-                                                                else
-                                                                {
-                                                                    MessageBox.Show("Este código ya existe", "Notificación");
-                                                                }
+                                                                //Mensaje de Salida para que el usuario sepa que está agregado el Usuario 
+                                                                MessageBox.Show("Usuario Agregado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                                this.txtNoDedo.Text = "";
+                                                                this.txtName.Text = "";
+                                                                this.txtLastName.Text = "";
+                                                                this.txtCorreo.Text = "";
+                                                                this.txtTelefono.Text = "";
+                                                                this.comboFuncionario.Text = "";
+                                                                this.txtFile.Text = "";
+                                                                this.txtFicha.Text = "";
+                                                                this.pictureUser.Image = null;
                                                             }
+                                                            //}
+                                                            //else
+                                                            //{
+                                                            //    MessageBox.Show("Este código ya existe", "Notificación");
+                                                            //}
                                                             else
                                                             {
                                                                 MessageBox.Show("Ya existe una persona con esta cédula");
@@ -160,29 +173,31 @@ namespace SistemaAsistencia.CapaVistas
 
                                                             }
                                                         }
+                                                       
                                                     }
+                                                
                                                 }
                                                 catch (Exception e1)
-                                                {
-                                                    MessageBox.Show("No se puede guardar el registro en la base de datos" + e1.ToString(), "Error");
-                                                    this.txtNoDedo.Focus();
+                                            {
+                                                MessageBox.Show("No se puede guardar el registro en la base de datos" + e1.ToString(), "Error");
+                                                this.txtNoDedo.Focus();
 
-                                                }
                                             }
                                         }
-
                                     }
+
                                 }
                             }
                         }
                     }
                 }
             }
-
-
-
-
         }
+
+    } 
+
+
+        
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

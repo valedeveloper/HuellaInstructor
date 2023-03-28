@@ -70,15 +70,15 @@ namespace SistemaAsistencia.CapaVistas
 
 
                     //Funciona, solo es encontrar la manera de que actualice apenas se haya ejecutado el procedimiento almacenado
-                    //DataTable dataEstado = clsPersona.TraerEstadoAsistencia_db(idPersona);
-                    //if(dataEstado.Rows[0][0].ToString() == "0")
-                    //{
-                    //    this.labelEstado.Text = "Usted está entrando";
-                    //}
-                    //else
-                    //{
-                    //    this.labelEstado.Text = "Usted está saliendo";
-                    //}
+                    DataTable dataEstado = clsPersona.TraerEstadoAsistencia_db(idPersona);
+                    if (dataEstado.Rows[0][0].ToString() == "0")
+                    {
+                        this.labelEstado.Text = "Usted está entrando";
+                    }
+                    else
+                    {
+                        this.labelEstado.Text = "Usted está saliendo";
+                    }
                 }
                 else
                 {
@@ -106,33 +106,80 @@ namespace SistemaAsistencia.CapaVistas
 
         private void verificationControl1_OnComplete(object Control, DPFP.FeatureSet FeatureSet, ref DPFP.Gui.EventHandlerStatus EventHandlerStatus)
         {
-            //DPFP.Verification.Verification ver = new DPFP.Verification.Verification();
-            //DPFP.Verification.Verification.Result res = new DPFP.Verification.Verification.Result();
- 
-            
+            DPFP.Verification.Verification ver = new DPFP.Verification.Verification();
+            DPFP.Verification.Verification.Result res = new DPFP.Verification.Verification.Result();
+
+            //private DPFP.Gui.Verification.VerificationControl verificationControl1;
+
+
             //CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
             //DataTable dataControl = clsPersona.TraerCedulaYHuella();
 
             //huella = (byte[])dataControl.Rows[0][0];
             //cedula = dataControl.Rows[0][1].ToString();
-            //MemoryStream memoryStream = new MemoryStream(huella);
-            //DPFP.Template tmpObj = new DPFP.Template();
-            //tmpObj.DeSerialize(memoryStream);
-            //if (tmpObj != null)
-            //{
-            //    ver.Verify(FeatureSet, tmpObj, ref res);
-            //    Data.IsFeatureSetMatched = res.Verified;
-            //    Data.FalseAcceptRate = res.FARAchieved;
-            //    if (res.Verified)
-            //    {
+            ClsConexion conexion = new ClsConexion();
+            SqlCommand command = new SqlCommand("SELECT Cedula_Persona,Huella_Persona FROM PERSONAS",conexion.Conectar());
+            SqlDataReader reader = command.ExecuteReader();
+            cedula = string.Empty;
 
-            //    }
-            //}
+            while (reader.Read())
+            {
+                byte[] Huella = (byte[])reader["Huella_Persona"];
+                cedula = reader["Cedula_Persona"].ToString();
+                MemoryStream memoryStream = new MemoryStream(Huella);
+                DPFP.Template tmpObj = new DPFP.Template();
 
-            //if (!res.Verified)
-            //{
-            //    EventHandlerStatus = DPFP.Gui.EventHandlerStatus.Failure;
-            //}
+                tmpObj.DeSerialize(memoryStream);
+                if (tmpObj != null)
+                {
+                    ver.Verify(FeatureSet, tmpObj, ref res);
+                    Data.IsFeatureSetMatched = res.Verified;
+                    Data.FalseAcceptRate = res.FARAchieved;
+                    if (res.Verified)
+                    {
+                        this.txtCedula.Text = cedula;
+
+
+                        CapaDatos.ClsPersonaBD clsPersona = new CapaDatos.ClsPersonaBD();
+                        DataTable dataControl = clsPersona.TraerPersonaCedula_db(this.txtCedula.Text);
+                        idPersona = (int)dataControl.Rows[0][0];
+
+                        this.txtName.Text = dataControl.Rows[0][1].ToString();
+                        this.txtLastName.Text = dataControl.Rows[0][2].ToString();
+                        this.txtFuncionario.Text = dataControl.Rows[0][3].ToString();
+                        this.txtFicha.Text = dataControl.Rows[0][4].ToString();
+                        photoPerson = (byte[])dataControl.Rows[0][5];
+                        huella = (byte[])dataControl.Rows[0][6];
+                        ClsImage image = new ClsImage();
+
+                        this.picturePeople.Image = image.byteArrayToImage(photoPerson);
+                        clsPersona.EntradaPersona_db(idPersona);
+
+                      
+
+
+                        //Funciona, solo es encontrar la manera de que actualice apenas se haya ejecutado el procedimiento almacenado
+                        DataTable dataEstado = clsPersona.TraerEstadoAsistencia_db(idPersona);
+                        if (dataEstado.Rows[0][0].ToString() == "0")
+                        {
+                            this.labelEstado.Text = "Usted está entrando";
+                        }
+                        else
+                        {
+                            this.labelEstado.Text = "Usted está saliendo";
+                        }
+                        break;
+                    }
+                }
+            }
+
+            if (!res.Verified)
+            {
+                EventHandlerStatus = DPFP.Gui.EventHandlerStatus.Failure;
+           
+            
+            
+            }
         }
     }
 }

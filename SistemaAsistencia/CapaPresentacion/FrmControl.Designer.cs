@@ -285,9 +285,8 @@ namespace SistemaAsistencia.CapaVistas
             this.labelEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.labelEstado.Location = new System.Drawing.Point(375, 241);
             this.labelEstado.Name = "labelEstado";
-            this.labelEstado.Size = new System.Drawing.Size(281, 37);
+            this.labelEstado.Size = new System.Drawing.Size(0, 37);
             this.labelEstado.TabIndex = 87;
-            this.labelEstado.Text = "Entrando/Saliendo";
             // 
             // btnEntrar
             // 

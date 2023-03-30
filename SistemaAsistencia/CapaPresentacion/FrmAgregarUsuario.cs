@@ -10,9 +10,14 @@ namespace SistemaAsistencia.CapaVistas
         public FrmAgregarUsuario()
         {
             InitializeComponent();
+
+
+
+
         }
 
         Byte[] arrayImagenUser;
+
         private void FrmAgregarUsuario_Load(object sender, EventArgs e)
         {
 
@@ -120,7 +125,7 @@ namespace SistemaAsistencia.CapaVistas
                                             }
                                             else
                                             {
-                                                MessageBox.Show("Ya existe un Usuario con esta cédula");
+                                                MessageBox.Show("Ya existe un Usuario con esta cédula","Notificación");
                                             }
                                         }
                                     }
@@ -144,7 +149,7 @@ namespace SistemaAsistencia.CapaVistas
             }
             catch
             {
-
+                MessageBox.Show("Escoja una foto", "Notificación");
             }
 
         }
@@ -168,7 +173,7 @@ namespace SistemaAsistencia.CapaVistas
             }
         }
 
-       
+
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -274,5 +279,23 @@ namespace SistemaAsistencia.CapaVistas
         {
 
         }
+
+        private void combotxtRol_KeyPress_2(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboEstado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+
+        }
+
+        private void FrmAgregarUsuario_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

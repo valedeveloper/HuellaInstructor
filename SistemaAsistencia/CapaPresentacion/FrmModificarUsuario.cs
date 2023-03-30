@@ -72,14 +72,13 @@ namespace SistemaAsistencia.CapaVistas
                                 {
                                     if (this.txtFile.Text == "")
                                     {
-                                        MessageBox.Show("Escoja un foto");
+                                        MessageBox.Show("Escoja un foto","Notificación");
                                     }
                                     else
                                     {
                                         DataTable validacionCedula = new DataTable();
                                         validacionCedula = agregarDB.ValidarCedula_db(this.txtCedula.Text);
-                                        string idUsuario = validacionCedula.Rows[0][0].ToString();
-                                        if (validacionCedula.Rows.Count == 0 || idUsuario == this.labelId.Text)
+                                        if (validacionCedula.Rows.Count == 0 || validacionCedula.Rows[0][0].ToString() == this.labelId.Text)
                                         {
                                             if (this.txtPassword.Text != "")
                                             {
@@ -114,7 +113,7 @@ namespace SistemaAsistencia.CapaVistas
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Ya existe usuario con esta cédula");
+                                            MessageBox.Show("Ya existe usuario con esta cédula","Notificación");
                                         }
                                     }
                                 }
@@ -144,6 +143,7 @@ namespace SistemaAsistencia.CapaVistas
             }
             catch
             {
+                MessageBox.Show("Escoja una foto", "Notificación");
 
             }
         }
@@ -201,16 +201,63 @@ namespace SistemaAsistencia.CapaVistas
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+
+            }
         }
 
-        private void FrmModificarUsuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
+        
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+      
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void txtCedula_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtName_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtFile_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

@@ -87,13 +87,19 @@ namespace SistemaAsistencia.CapaDatos
             comandoModificar.ExecuteNonQuery();
         }
 
-        public void EntradaPersona_db(int id)
+        public int EntradaPersona_db(int id)
         {
             ClsConexion conexion = new ClsConexion();
             SqlCommand command = new SqlCommand("RegistroAsistenciaHuella", conexion.Conectar());
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("Id_Persona", id);
-            command.BeginExecuteNonQuery();
+            SqlParameter returnValue = command.Parameters.Add("ReturnValue", SqlDbType.Int);
+            returnValue.Direction = ParameterDirection.ReturnValue;
+            // Ejecutamos el procedimiento almacenado
+            command.ExecuteNonQuery();
+            // Obtenemos el valor de retorno del procedimiento almacenado
+            int resultado = (int)returnValue.Value;
+            return resultado;
         }
 
         public DataTable Validar_Codigo(int no_dedo)

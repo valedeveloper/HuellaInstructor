@@ -89,16 +89,16 @@ namespace SistemaAsistencia.CapaVistas
             this.txtNoDedo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNoDedo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNoDedo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtNoDedo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoDedo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNoDedo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtNoDedo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.txtNoDedo.Location = new System.Drawing.Point(39, 99);
             this.txtNoDedo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNoDedo.Name = "txtNoDedo";
             this.txtNoDedo.PasswordChar = '\0';
-            this.txtNoDedo.PlaceholderText = "Ingrese Código de Barras";
+            this.txtNoDedo.PlaceholderText = "No Dedo\r\n";
             this.txtNoDedo.SelectedText = "";
-            this.txtNoDedo.Size = new System.Drawing.Size(201, 24);
+            this.txtNoDedo.Size = new System.Drawing.Size(87, 24);
             this.txtNoDedo.TabIndex = 114;
             // 
             // comboFuncionario
@@ -121,6 +121,7 @@ namespace SistemaAsistencia.CapaVistas
             this.comboFuncionario.Name = "comboFuncionario";
             this.comboFuncionario.Size = new System.Drawing.Size(155, 36);
             this.comboFuncionario.TabIndex = 113;
+            this.comboFuncionario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboFuncionario_KeyPress_1);
             // 
             // txtTelefono
             // 
@@ -145,6 +146,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.Size = new System.Drawing.Size(178, 24);
             this.txtTelefono.TabIndex = 112;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtFicha
             // 
@@ -169,6 +171,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtFicha.SelectedText = "";
             this.txtFicha.Size = new System.Drawing.Size(178, 24);
             this.txtFicha.TabIndex = 111;
+            this.txtFicha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFicha_KeyPress);
             // 
             // txtCorreo
             // 
@@ -193,6 +196,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.Size = new System.Drawing.Size(178, 24);
             this.txtCorreo.TabIndex = 110;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtLastName
             // 
@@ -217,6 +221,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtLastName.SelectedText = "";
             this.txtLastName.Size = new System.Drawing.Size(178, 24);
             this.txtLastName.TabIndex = 109;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtName
             // 
@@ -241,6 +246,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(178, 24);
             this.txtName.TabIndex = 108;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtCedula
             // 
@@ -265,15 +271,16 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCedula.SelectedText = "";
             this.txtCedula.Size = new System.Drawing.Size(178, 24);
             this.txtCedula.TabIndex = 107;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.label2.Location = new System.Drawing.Point(73, 239);
+            this.label2.Location = new System.Drawing.Point(84, 245);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 18);
+            this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 106;
             this.label2.Text = "Funcionario:";
             // 
@@ -306,6 +313,7 @@ namespace SistemaAsistencia.CapaVistas
             this.btnModificar.Size = new System.Drawing.Size(95, 30);
             this.btnModificar.TabIndex = 104;
             this.btnModificar.Text = "Modificar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnOpen
             // 
@@ -348,6 +356,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtFile.SelectedText = "";
             this.txtFile.Size = new System.Drawing.Size(212, 24);
             this.txtFile.TabIndex = 102;
+            this.txtFile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFile_KeyPress);
             // 
             // pictureUser
             // 

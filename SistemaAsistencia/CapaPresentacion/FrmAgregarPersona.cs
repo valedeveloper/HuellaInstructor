@@ -30,7 +30,7 @@ namespace SistemaAsistencia.CapaVistas
             }
             catch
             {
-
+                MessageBox.Show("Escoja una foto", "Notificación");
             }
         }
 
@@ -150,7 +150,7 @@ namespace SistemaAsistencia.CapaVistas
                                                                 frmPersonas.dataPersona.DataSource = dataPeople;
 
                                                                 //Mensaje de Salida para que el usuario sepa que está agregado el Usuario 
-                                                                MessageBox.Show("Usuario Agregado", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                                MessageBox.Show("Persona Agregada", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                                                 this.txtNoDedo.Text = "";
                                                                 this.txtName.Text = "";
                                                                 this.txtLastName.Text = "";
@@ -327,6 +327,118 @@ namespace SistemaAsistencia.CapaVistas
         private void enrollmentControl1_OnStartEnroll(object Control, string ReaderSerialNumber, int Finger)
         {
             this.txtNoDedo.Text = Finger.ToString();
+        }
+
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void txtFicha_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsPunctuation(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+
+
+            }
+        }
+
+        private void comboFuncionario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtFile_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtName_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            {
+                if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+                {
+                    e.Handled = true;
+                    return;
+
+                }
+            }
         }
     }
 }

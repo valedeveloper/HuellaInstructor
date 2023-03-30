@@ -186,12 +186,14 @@ namespace SistemaAsistencia.CapaVistas
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.txtTelefono.Location = new System.Drawing.Point(578, 108);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderText = "Ingresa el Teléfono\r\n";
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.Size = new System.Drawing.Size(178, 24);
             this.txtTelefono.TabIndex = 81;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtPassword
             // 
@@ -211,11 +213,12 @@ namespace SistemaAsistencia.CapaVistas
             this.txtPassword.Location = new System.Drawing.Point(578, 76);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderText = "Ingresa la Contraseña\r\n";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(178, 24);
             this.txtPassword.TabIndex = 80;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtCorreo
             // 
@@ -264,6 +267,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtLastName.SelectedText = "";
             this.txtLastName.Size = new System.Drawing.Size(178, 24);
             this.txtLastName.TabIndex = 78;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtName
             // 
@@ -288,6 +292,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(178, 24);
             this.txtName.TabIndex = 77;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtCedula
             // 
@@ -306,12 +311,14 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.txtCedula.Location = new System.Drawing.Point(380, 44);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
             this.txtCedula.PlaceholderText = "Ingresa la Cédula";
             this.txtCedula.SelectedText = "";
             this.txtCedula.Size = new System.Drawing.Size(178, 24);
             this.txtCedula.TabIndex = 76;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // label3
             // 
@@ -425,6 +432,7 @@ namespace SistemaAsistencia.CapaVistas
             this.txtFile.SelectedText = "";
             this.txtFile.Size = new System.Drawing.Size(212, 24);
             this.txtFile.TabIndex = 69;
+            this.txtFile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFile_KeyPress);
             // 
             // pictureUser
             // 

@@ -34,10 +34,8 @@ namespace SistemaAsistencia.CapaVistas
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtNoDedo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnOpen = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
-            this.txtFile = new Guna.UI2.WinForms.Guna2TextBox();
             this.comboFuncionario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtTelefono = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFicha = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,10 +43,12 @@ namespace SistemaAsistencia.CapaVistas
             this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCedula = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureUser = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.enrollmentControl1 = new DPFP.Gui.Enrollment.EnrollmentControl();
+            this.btnOpen = new Guna.UI2.WinForms.Guna2Button();
+            this.txtFile = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureUser = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
@@ -97,10 +97,8 @@ namespace SistemaAsistencia.CapaVistas
             // panel2
             // 
             this.panel2.Controls.Add(this.txtNoDedo);
-            this.panel2.Controls.Add(this.btnOpen);
             this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.btnAgregar);
-            this.panel2.Controls.Add(this.txtFile);
             this.panel2.Controls.Add(this.comboFuncionario);
             this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.txtFicha);
@@ -108,10 +106,8 @@ namespace SistemaAsistencia.CapaVistas
             this.panel2.Controls.Add(this.txtLastName);
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.txtCedula);
-            this.panel2.Controls.Add(this.pictureUser);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(51, 134);
+            this.panel2.Location = new System.Drawing.Point(62, 427);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(780, 335);
             this.panel2.TabIndex = 68;
@@ -131,32 +127,15 @@ namespace SistemaAsistencia.CapaVistas
             this.txtNoDedo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNoDedo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtNoDedo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtNoDedo.Location = new System.Drawing.Point(36, 78);
+            this.txtNoDedo.Location = new System.Drawing.Point(112, 49);
             this.txtNoDedo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNoDedo.Name = "txtNoDedo";
             this.txtNoDedo.PasswordChar = '\0';
-            this.txtNoDedo.PlaceholderText = "Ingrese No Dedo";
+            this.txtNoDedo.PlaceholderText = "No Dedo";
             this.txtNoDedo.SelectedText = "";
-            this.txtNoDedo.Size = new System.Drawing.Size(201, 24);
+            this.txtNoDedo.Size = new System.Drawing.Size(83, 24);
             this.txtNoDedo.TabIndex = 53;
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.BorderRadius = 10;
-            this.btnOpen.DefaultAutoSize = true;
-            this.btnOpen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOpen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOpen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOpen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOpen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
-            this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpen.ForeColor = System.Drawing.Color.White;
-            this.btnOpen.Location = new System.Drawing.Point(700, 221);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(63, 26);
-            this.btnOpen.TabIndex = 52;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            this.txtNoDedo.Visible = false;
             // 
             // btnCancelar
             // 
@@ -170,7 +149,7 @@ namespace SistemaAsistencia.CapaVistas
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
             this.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.btnCancelar.Location = new System.Drawing.Point(606, 283);
+            this.btnCancelar.Location = new System.Drawing.Point(423, 272);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(97, 30);
             this.btnCancelar.TabIndex = 51;
@@ -187,36 +166,12 @@ namespace SistemaAsistencia.CapaVistas
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
             this.btnAgregar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.btnAgregar.Location = new System.Drawing.Point(502, 283);
+            this.btnAgregar.Location = new System.Drawing.Point(319, 272);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(88, 30);
             this.btnAgregar.TabIndex = 50;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // txtFile
-            // 
-            this.txtFile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
-            this.txtFile.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.txtFile.BorderThickness = 2;
-            this.txtFile.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFile.DefaultText = "";
-            this.txtFile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
-            this.txtFile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtFile.Location = new System.Drawing.Point(481, 222);
-            this.txtFile.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFile.Name = "txtFile";
-            this.txtFile.PasswordChar = '\0';
-            this.txtFile.PlaceholderText = "\r\n";
-            this.txtFile.SelectedText = "";
-            this.txtFile.Size = new System.Drawing.Size(212, 24);
-            this.txtFile.TabIndex = 49;
             // 
             // comboFuncionario
             // 
@@ -234,10 +189,11 @@ namespace SistemaAsistencia.CapaVistas
             "Aprendiz",
             "Instructor",
             "Funcionario "});
-            this.comboFuncionario.Location = new System.Drawing.Point(185, 221);
+            this.comboFuncionario.Location = new System.Drawing.Point(365, 193);
             this.comboFuncionario.Name = "comboFuncionario";
             this.comboFuncionario.Size = new System.Drawing.Size(155, 36);
             this.comboFuncionario.TabIndex = 48;
+            this.comboFuncionario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboFuncionario_KeyPress);
             // 
             // txtTelefono
             // 
@@ -254,14 +210,15 @@ namespace SistemaAsistencia.CapaVistas
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtTelefono.Location = new System.Drawing.Point(241, 142);
+            this.txtTelefono.Location = new System.Drawing.Point(477, 113);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderText = "Ingresa el Teléfono\r\n";
             this.txtTelefono.SelectedText = "";
-            this.txtTelefono.Size = new System.Drawing.Size(178, 24);
+            this.txtTelefono.Size = new System.Drawing.Size(215, 24);
             this.txtTelefono.TabIndex = 47;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtFicha
             // 
@@ -278,14 +235,15 @@ namespace SistemaAsistencia.CapaVistas
             this.txtFicha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFicha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtFicha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtFicha.Location = new System.Drawing.Point(241, 174);
+            this.txtFicha.Location = new System.Drawing.Point(477, 145);
             this.txtFicha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFicha.Name = "txtFicha";
             this.txtFicha.PasswordChar = '\0';
             this.txtFicha.PlaceholderText = "Ingresa la Ficha";
             this.txtFicha.SelectedText = "";
-            this.txtFicha.Size = new System.Drawing.Size(178, 24);
+            this.txtFicha.Size = new System.Drawing.Size(215, 24);
             this.txtFicha.TabIndex = 46;
+            this.txtFicha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFicha_KeyPress);
             // 
             // txtCorreo
             // 
@@ -302,14 +260,15 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtCorreo.Location = new System.Drawing.Point(241, 110);
+            this.txtCorreo.Location = new System.Drawing.Point(477, 81);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderText = "Ingresa el Correo\r\n";
             this.txtCorreo.SelectedText = "";
-            this.txtCorreo.Size = new System.Drawing.Size(178, 24);
+            this.txtCorreo.Size = new System.Drawing.Size(215, 24);
             this.txtCorreo.TabIndex = 45;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress_1);
             // 
             // txtLastName
             // 
@@ -326,14 +285,15 @@ namespace SistemaAsistencia.CapaVistas
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtLastName.Location = new System.Drawing.Point(36, 174);
+            this.txtLastName.Location = new System.Drawing.Point(112, 145);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.PasswordChar = '\0';
             this.txtLastName.PlaceholderText = "Ingresa el Apellido";
             this.txtLastName.SelectedText = "";
-            this.txtLastName.Size = new System.Drawing.Size(178, 24);
+            this.txtLastName.Size = new System.Drawing.Size(215, 24);
             this.txtLastName.TabIndex = 44;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtName
             // 
@@ -350,14 +310,15 @@ namespace SistemaAsistencia.CapaVistas
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtName.Location = new System.Drawing.Point(36, 142);
+            this.txtName.Location = new System.Drawing.Point(112, 113);
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Ingresa el Nombre\r\n";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(178, 24);
+            this.txtName.Size = new System.Drawing.Size(215, 24);
             this.txtName.TabIndex = 43;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress_1);
             // 
             // txtCedula
             // 
@@ -374,41 +335,22 @@ namespace SistemaAsistencia.CapaVistas
             this.txtCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
-            this.txtCedula.Location = new System.Drawing.Point(36, 110);
+            this.txtCedula.Location = new System.Drawing.Point(112, 81);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
             this.txtCedula.PlaceholderText = "Ingresa la Cédula";
             this.txtCedula.SelectedText = "";
-            this.txtCedula.Size = new System.Drawing.Size(178, 24);
+            this.txtCedula.Size = new System.Drawing.Size(215, 24);
             this.txtCedula.TabIndex = 42;
-            // 
-            // pictureUser
-            // 
-            this.pictureUser.Location = new System.Drawing.Point(481, 32);
-            this.pictureUser.Name = "pictureUser";
-            this.pictureUser.Size = new System.Drawing.Size(212, 166);
-            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureUser.TabIndex = 41;
-            this.pictureUser.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.label7.Location = new System.Drawing.Point(436, 226);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 16);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "File :";
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.label2.Location = new System.Drawing.Point(68, 226);
+            this.label2.Location = new System.Drawing.Point(248, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 39;
@@ -418,7 +360,7 @@ namespace SistemaAsistencia.CapaVistas
             // 
             this.enrollmentControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.enrollmentControl1.EnrolledFingerMask = 0;
-            this.enrollmentControl1.Location = new System.Drawing.Point(54, 417);
+            this.enrollmentControl1.Location = new System.Drawing.Point(62, 107);
             this.enrollmentControl1.MaxEnrollFingerCount = 10;
             this.enrollmentControl1.Name = "enrollmentControl1";
             this.enrollmentControl1.ReaderSerialNumber = "00000000-0000-0000-0000-000000000000";
@@ -428,12 +370,79 @@ namespace SistemaAsistencia.CapaVistas
             this.enrollmentControl1.OnEnroll += new DPFP.Gui.Enrollment.EnrollmentControl._OnEnroll(this.enrollmentControl1_OnEnroll);
             this.enrollmentControl1.OnStartEnroll += new DPFP.Gui.Enrollment.EnrollmentControl._OnStartEnroll(this.enrollmentControl1_OnStartEnroll);
             // 
+            // btnOpen
+            // 
+            this.btnOpen.BorderRadius = 10;
+            this.btnOpen.DefaultAutoSize = true;
+            this.btnOpen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOpen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOpen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOpen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOpen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
+            this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpen.ForeColor = System.Drawing.Color.White;
+            this.btnOpen.Location = new System.Drawing.Point(831, 341);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(63, 26);
+            this.btnOpen.TabIndex = 73;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // txtFile
+            // 
+            this.txtFile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
+            this.txtFile.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtFile.BorderThickness = 2;
+            this.txtFile.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFile.DefaultText = "";
+            this.txtFile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
+            this.txtFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
+            this.txtFile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(62)))));
+            this.txtFile.Location = new System.Drawing.Point(612, 342);
+            this.txtFile.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFile.Name = "txtFile";
+            this.txtFile.PasswordChar = '\0';
+            this.txtFile.PlaceholderText = "\r\n";
+            this.txtFile.SelectedText = "";
+            this.txtFile.Size = new System.Drawing.Size(212, 24);
+            this.txtFile.TabIndex = 72;
+            this.txtFile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFile_KeyPress_1);
+            // 
+            // pictureUser
+            // 
+            this.pictureUser.Location = new System.Drawing.Point(612, 152);
+            this.pictureUser.Name = "pictureUser";
+            this.pictureUser.Size = new System.Drawing.Size(212, 166);
+            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureUser.TabIndex = 71;
+            this.pictureUser.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.label7.Location = new System.Drawing.Point(567, 346);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 16);
+            this.label7.TabIndex = 70;
+            this.label7.Text = "File :";
+            // 
             // FrmAgregarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(903, 788);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.txtFile);
+            this.Controls.Add(this.pictureUser);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.enrollmentControl1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -446,6 +455,7 @@ namespace SistemaAsistencia.CapaVistas
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -455,10 +465,8 @@ namespace SistemaAsistencia.CapaVistas
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2TextBox txtNoDedo;
-        private Guna.UI2.WinForms.Guna2Button btnOpen;
         private Guna.UI2.WinForms.Guna2Button btnCancelar;
         private Guna.UI2.WinForms.Guna2Button btnAgregar;
-        private Guna.UI2.WinForms.Guna2TextBox txtFile;
         private Guna.UI2.WinForms.Guna2ComboBox comboFuncionario;
         private Guna.UI2.WinForms.Guna2TextBox txtTelefono;
         private Guna.UI2.WinForms.Guna2TextBox txtFicha;
@@ -466,9 +474,11 @@ namespace SistemaAsistencia.CapaVistas
         private Guna.UI2.WinForms.Guna2TextBox txtLastName;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2TextBox txtCedula;
-        private System.Windows.Forms.PictureBox pictureUser;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private DPFP.Gui.Enrollment.EnrollmentControl enrollmentControl1;
+        private Guna.UI2.WinForms.Guna2Button btnOpen;
+        private Guna.UI2.WinForms.Guna2TextBox txtFile;
+        private System.Windows.Forms.PictureBox pictureUser;
+        private System.Windows.Forms.Label label7;
     }
 }
